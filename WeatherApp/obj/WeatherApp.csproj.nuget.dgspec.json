@@ -50,6 +50,10 @@
         "net6.0-android31.0": {
           "targetAlias": "net6.0-android",
           "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.7.0, )"
+            },
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
               "version": "[6.0.553, )",
@@ -160,6 +164,10 @@
         "net6.0-ios16.1": {
           "targetAlias": "net6.0-ios",
           "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.7.0, )"
+            },
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
               "version": "[6.0.553, )",
@@ -251,6 +259,10 @@
         "net6.0-maccatalyst16.1": {
           "targetAlias": "net6.0-maccatalyst",
           "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.7.0, )"
+            },
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
               "version": "[6.0.553, )",
