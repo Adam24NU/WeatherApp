@@ -83,10 +83,4 @@
     <Import Project="$(NuGetPackageRoot)xamarin.android.glide/4.12.0.8/buildTransitive/net6.0-android31.0/Xamarin.Android.Glide.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.android.glide/4.12.0.8/buildTransitive/net6.0-android31.0/Xamarin.Android.Glide.targets')" />
     <Import Project="$(NuGetPackageRoot)system.text.json/8.0.5/buildTransitive/net6.0/System.Text.Json.targets" Condition="Exists('$(NuGetPackageRoot)system.text.json/8.0.5/buildTransitive/net6.0/System.Text.Json.targets')" />
   </ImportGroup>
-  <ImportGroup Condition=" '$(TargetFramework)' == 'net6.0-ios' AND '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)system.text.json/8.0.5/buildTransitive/net6.0/System.Text.Json.targets" Condition="Exists('$(NuGetPackageRoot)system.text.json/8.0.5/buildTransitive/net6.0/System.Text.Json.targets')" />
-  </ImportGroup>
-  <ImportGroup Condition=" '$(TargetFramework)' == 'net6.0-maccatalyst' AND '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)system.text.json/8.0.5/buildTransitive/net6.0/System.Text.Json.targets" Condition="Exists('$(NuGetPackageRoot)system.text.json/8.0.5/buildTransitive/net6.0/System.Text.Json.targets')" />
-  </ImportGroup>
 </Project>

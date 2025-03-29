@@ -1,51 +1,57 @@
-﻿using OfficeOpenXml; // EPPlus
-using System.Text;    // For StringBuilder
-using System.Reflection;
-using System.Data;
+﻿using OfficeOpenXml;
+using System.Text;
+using System.IO;
+using Microsoft.Maui.Storage; // Required for FileSystem access
 
-public partial class MainPage : ContentPage
+namespace WeatherApp
 {
-    public MainPage()
+    public partial class MainPage : ContentPage
     {
-        InitializeComponent();
-        LoadExcelData();
-    }
-
-    private async void LoadExcelData()
-    {
-        var fileName = "Air_quality.xlsx";
-        var filePath = Path.Combine(FileSystem.AppDataDirectory, fileName);
-
-        if (!File.Exists(filePath))
+        [Obsolete]
+        public MainPage()
         {
-            using var stream = await FileSystem.OpenAppPackageFileAsync(fileName);
-            using var outStream = File.Create(filePath);
-            await stream.CopyToAsync(outStream);
+            InitializeComponent();
+            // ✅ Set the license for non-commercial student use
+            ExcelPackage.License.SetNonCommercialPersonal("Adam");
+            LoadExcelData();
         }
 
-        ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-        using var package = new ExcelPackage(new FileInfo(filePath));
-        var worksheet = package.Workbook.Worksheets[0];
-
-        var sb = new StringBuilder();
-
-        // Start from the row where actual data begins – adjust as needed
-        int startRow = 6;
-        int endRow = worksheet.Dimension.End.Row;
-
-        for (int row = startRow; row <= endRow; row++)
+        [Obsolete]
+        private async void LoadExcelData()
         {
-            var siteName = worksheet.Cells[1, 2].Text; // Or extract from header area if needed
-            var value1 = worksheet.Cells[row, 1].Text; // e.g., Timestamp
-            var value2 = worksheet.Cells[row, 2].Text; // e.g., NO2
-            var value3 = worksheet.Cells[row, 3].Text; // e.g., PM2.5
+            var fileName = "Air_quality.xlsx";
+            var filePath = Path.Combine(FileSystem.AppDataDirectory, fileName);
 
-            if (!string.IsNullOrWhiteSpace(value1))
+            if (!File.Exists(filePath))
             {
-                sb.AppendLine($"{value1} | {value2} | {value3}");
+                using var stream = await FileSystem.OpenAppPackageFileAsync(fileName);
+                using var outStream = File.Create(filePath);
+                await stream.CopyToAsync(outStream);
             }
-        }
 
-        DataLabel.Text = sb.ToString();
+            using var package = new ExcelPackage(new FileInfo(filePath));
+            var worksheet = package.Workbook.Worksheets[0];
+
+            var sb = new StringBuilder();
+
+            // Adjust start row as needed
+            int startRow = 6;
+            int endRow = worksheet.Dimension.End.Row;
+
+            for (int row = startRow; row <= endRow; row++)
+            {
+                var siteName = worksheet.Cells[1, 2].Text; // Site name (if needed)
+                var value1 = worksheet.Cells[row, 1].Text; // Timestamp
+                var value2 = worksheet.Cells[row, 2].Text; // NO2
+                var value3 = worksheet.Cells[row, 3].Text; // PM2.5
+
+                if (!string.IsNullOrWhiteSpace(value1))
+                {
+                    sb.AppendLine($"{value1} | {value2} | {value3}");
+                }
+            }
+
+            DataLabel.Text = sb.ToString();
+        }
     }
 }
