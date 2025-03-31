@@ -1,5 +1,5 @@
 ﻿using OfficeOpenXml;
-using System.Text;
+using WeatherApp.Models;
 
 namespace WeatherApp
 {
@@ -30,26 +30,29 @@ namespace WeatherApp
             using var package = new ExcelPackage(new FileInfo(filePath));
             var worksheet = package.Workbook.Worksheets[0];
 
-            var sb = new StringBuilder();
-
-            // Adjust start row as needed
             int startRow = 6;
             int endRow = worksheet.Dimension.End.Row;
 
+            var readings = new List<AirReading>();
+
             for (int row = startRow; row <= endRow; row++)
             {
-                var siteName = worksheet.Cells[1, 2].Text; // Site name (if needed)
-                var value1 = worksheet.Cells[row, 1].Text; // Timestamp
-                var value2 = worksheet.Cells[row, 2].Text; // NO2
-                var value3 = worksheet.Cells[row, 3].Text; // PM2.5
+                var time = worksheet.Cells[row, 1].Text;
+                var no2 = worksheet.Cells[row, 2].Text;
+                var pm25 = worksheet.Cells[row, 3].Text;
 
-                if (!string.IsNullOrWhiteSpace(value1))
+                if (!string.IsNullOrWhiteSpace(time))
                 {
-                    sb.AppendLine($"{value1} | {value2} | {value3}");
+                    readings.Add(new AirReading
+                    {
+                        Time = time,
+                        NO2 = no2,
+                        PM25 = pm25
+                    });
                 }
             }
 
-            DataLabel.Text = sb.ToString();
+            DataList.ItemsSource = readings;
         }
     }
 }
