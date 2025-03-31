@@ -1,8 +1,9 @@
 ﻿using OfficeOpenXml;
 using WeatherApp.Models;
 
-namespace WeatherApp
+namespace WeatherApp.Pages
 {
+
     public partial class MainPage : ContentPage
     {
         [Obsolete]

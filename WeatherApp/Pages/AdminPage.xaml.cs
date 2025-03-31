@@ -1,0 +1,9 @@
+﻿namespace WeatherApp.Pages;
+
+public partial class AdminPage : ContentPage
+{
+	public AdminPage()
+	{
+		InitializeComponent();
+	}
+}
