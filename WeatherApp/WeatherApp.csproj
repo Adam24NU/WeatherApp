@@ -54,4 +54,12 @@
 	<ItemGroup>
 	  <PackageReference Include="EPPlus" Version="8.0.1" />
 	</ItemGroup>
+	<ItemGroup>
+	  <None Remove="Authentication\" />
+	  <None Remove="Pages\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Authentication\" />
+	  <Folder Include="Pages\" />
+	</ItemGroup>
 </Project>
