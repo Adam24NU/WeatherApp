@@ -2234,6 +2234,16 @@
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
         }
+      },
+      "WeatherApp.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/WeatherApp.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WeatherApp.Core.dll": {}
+        }
       }
     },
     "net6.0-android31.0/android-arm": {
@@ -4450,6 +4460,16 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
+        }
+      },
+      "WeatherApp.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/WeatherApp.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WeatherApp.Core.dll": {}
         }
       }
     },
@@ -6668,6 +6688,16 @@
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
         }
+      },
+      "WeatherApp.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/WeatherApp.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WeatherApp.Core.dll": {}
+        }
       }
     },
     "net6.0-android31.0/android-x64": {
@@ -8885,6 +8915,16 @@
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
         }
+      },
+      "WeatherApp.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/WeatherApp.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WeatherApp.Core.dll": {}
+        }
       }
     },
     "net6.0-android31.0/android-x86": {
@@ -11101,6 +11141,16 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
+        }
+      },
+      "WeatherApp.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/WeatherApp.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WeatherApp.Core.dll": {}
         }
       }
     }
@@ -13866,13 +13916,19 @@
         "xamarin.kotlinx.coroutines.core.jvm.1.6.0.1.nupkg.sha512",
         "xamarin.kotlinx.coroutines.core.jvm.nuspec"
       ]
+    },
+    "WeatherApp.Core/1.0.0": {
+      "type": "project",
+      "path": "../WeatherApp.Core/WeatherApp.Core.csproj",
+      "msbuildProject": "../WeatherApp.Core/WeatherApp.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-android31.0": [
       "EPPlus >= 8.0.1",
       "Microsoft.Maui.Dependencies >= 6.0.553",
-      "Microsoft.Maui.Extensions >= 6.0.553"
+      "Microsoft.Maui.Extensions >= 6.0.553",
+      "WeatherApp.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -13881,11 +13937,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/adam/Documents/SE class/WeatherApp/WeatherApp/WeatherApp.csproj",
+      "projectUniqueName": "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/WeatherApp.csproj",
       "projectName": "WeatherApp",
-      "projectPath": "/Users/adam/Documents/SE class/WeatherApp/WeatherApp/WeatherApp.csproj",
+      "projectPath": "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/WeatherApp.csproj",
       "packagesPath": "/Users/adam/.nuget/packages/",
-      "outputPath": "/Users/adam/Documents/SE class/WeatherApp/WeatherApp/obj/",
+      "outputPath": "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/obj/",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "configFilePaths": [
@@ -13901,7 +13957,11 @@
       "frameworks": {
         "net6.0-android31.0": {
           "targetAlias": "net6.0-android",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Core/WeatherApp.Core.csproj": {
+              "projectPath": "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Core/WeatherApp.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

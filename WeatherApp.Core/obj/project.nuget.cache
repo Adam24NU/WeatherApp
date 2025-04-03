@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "g6pmDEUI9JJgbWodbZmjnFnMaKclX+6z49CE3Et6H+r/q2dIMmUUBJ5Kj2Tl1kVNaMIFOpe8qFmAG+AXC1yqng==",
+  "success": true,
+  "projectFilePath": "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Core/WeatherApp.Core.csproj",
+  "expectedPackageFiles": [
+    "/Users/adam/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.31/microsoft.aspnetcore.app.ref.6.0.31.nupkg.sha512",
+    "/Users/adam/.nuget/packages/microsoft.netcore.app.ref/6.0.31/microsoft.netcore.app.ref.6.0.31.nupkg.sha512"
+  ],
+  "logs": []
+}

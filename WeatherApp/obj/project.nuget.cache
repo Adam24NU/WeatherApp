@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5qiwaP2iJDcufGr/LZhzbMKU8lGIPjeO95bl5FZcWjOHPN8xr5yxuih95DCJmIFRVMirnO486/VQ7YvsnxEO6w==",
+  "dgSpecHash": "4Wfl92cEpDFtDCJNSakk21nTNsJf8XS0t61XlQOUaax8ZpWlYr+zrtygHG1mOBECOz9VUtM3mUkTINJNa4zuGA==",
   "success": true,
-  "projectFilePath": "/Users/adam/Documents/SE class/WeatherApp/WeatherApp/WeatherApp.csproj",
+  "projectFilePath": "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/WeatherApp.csproj",
   "expectedPackageFiles": [
     "/Users/adam/.nuget/packages/epplus/8.0.1/epplus.8.0.1.nupkg.sha512",
     "/Users/adam/.nuget/packages/epplus.interfaces/8.0.0/epplus.interfaces.8.0.0.nupkg.sha512",

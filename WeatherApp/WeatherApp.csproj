@@ -53,13 +53,17 @@
 
 	<ItemGroup>
 	  <PackageReference Include="EPPlus" Version="8.0.1" />
+	  <ProjectReference Include="..\WeatherApp.Core\WeatherApp.Core.csproj" />
+
 	</ItemGroup>
 	<ItemGroup>
 	  <None Remove="Authentication\" />
 	  <None Remove="Pages\" />
+	  <None Remove="Diagrams\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Authentication\" />
 	  <Folder Include="Pages\" />
+	  <Folder Include="Diagrams\" />
 	</ItemGroup>
 </Project>

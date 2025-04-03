@@ -1,0 +1,12 @@
+/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Core/bin/Debug/net6.0/WeatherApp.Core.deps.json
+/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Core/bin/Debug/net6.0/WeatherApp.Core.dll
+/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Core/bin/Debug/net6.0/WeatherApp.Core.pdb
+/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Core/obj/Debug/net6.0/WeatherApp.Core.csproj.AssemblyReference.cache
+/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Core/obj/Debug/net6.0/WeatherApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Core/obj/Debug/net6.0/WeatherApp.Core.AssemblyInfoInputs.cache
+/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Core/obj/Debug/net6.0/WeatherApp.Core.AssemblyInfo.cs
+/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Core/obj/Debug/net6.0/WeatherApp.Core.csproj.CoreCompileInputs.cache
+/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Core/obj/Debug/net6.0/WeatherApp.Core.dll
+/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Core/obj/Debug/net6.0/refint/WeatherApp.Core.dll
+/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Core/obj/Debug/net6.0/WeatherApp.Core.pdb
+/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Core/obj/Debug/net6.0/ref/WeatherApp.Core.dll
