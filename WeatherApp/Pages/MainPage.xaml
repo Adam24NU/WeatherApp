@@ -2,7 +2,17 @@
 <TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="WeatherApp.Pages.MainPage"
-            xmlns:local="clr-namespace:WeatherApp.Pages">
+            xmlns:local="clr-namespace:WeatherApp.Pages"
+            xmlns:converters="clr-namespace:WeatherApp.Converters">
+
+    <TabbedPage.Resources>
+        <ResourceDictionary>
+            <converters:BoolToColorConverter x:Key="BoolToColorConverter" />
+        </ResourceDictionary>
+    </TabbedPage.Resources>
+
+
+
 
     <ContentPage Title="Air Quality">
         <CollectionView x:Name="DataList"
@@ -10,13 +20,17 @@
                         ItemsLayout="VerticalList">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame BorderColor="LightGray" CornerRadius="10" Padding="10" Margin="5">
+                    <Frame BorderColor="LightGray"
+                           CornerRadius="10"
+                           Padding="10"
+                           Margin="5"
+                           BackgroundColor="{Binding IsThresholdBreached, Converter={StaticResource BoolToColorConverter}}">
+
                         <StackLayout>
                             <Label Text="{Binding Timestamp}" FontAttributes="Bold" FontSize="16"/>
-                            <Label Text="{Binding NO2,StringFormat='NO₂: {0}'}" FontSize="14"/>
-                            <Label Text="{Binding Su,StringFormat='Su: {0}'}" FontSize="14"/>
-                            <Label Text="{Binding PM25,StringFormat='PM2.5: {0}'}" FontSize="14"/>
-                            <Label Text="{Binding PM10,StringFormat='PM10: {0}'}" FontSize="14"/>
+                            <Label Text="{Binding NO2, StringFormat='NO₂: {0}'}" FontSize="14"/>
+                            <Label Text="{Binding PM25, StringFormat='PM2.5: {0}'}" FontSize="14"/>
+                            <Label Text="{Binding PM10, StringFormat='PM10: {0}'}" FontSize="14"/>
                         </StackLayout>
                     </Frame>
                 </DataTemplate>

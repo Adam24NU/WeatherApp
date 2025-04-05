@@ -1,6 +1,9 @@
 ﻿using OfficeOpenXml;
 using WeatherApp.Models;
 
+
+
+
 namespace WeatherApp.Pages
 {
 
@@ -24,6 +27,7 @@ namespace WeatherApp.Pages
             var fileName = "WaterQuality.xlsx";
             var filePath = Path.Combine(FileSystem.AppDataDirectory, fileName);
             ExcelPackage.License.SetNonCommercialPersonal("Adam");
+            
 
             if (!File.Exists(filePath))
             {
@@ -100,6 +104,7 @@ namespace WeatherApp.Pages
         {
             var fileName = "Air_quality.xlsx";
             var filePath = Path.Combine(FileSystem.AppDataDirectory, fileName);
+       
 
             if (!File.Exists(filePath))
             {
@@ -115,6 +120,7 @@ namespace WeatherApp.Pages
             int endRow = worksheet.Dimension.End.Row;
 
             var readings = new List<AirReading>();
+            
 
             for (int row = startRow; row <= endRow; row++)
             {
