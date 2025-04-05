@@ -44,4 +44,26 @@
     </CollectionView>
 </ContentPage>
 
+    <ContentPage Title="Water">
+    <CollectionView x:Name="WaterList"
+                    Margin="10"
+                    ItemsLayout="VerticalList">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame BorderColor="LightGray" CornerRadius="10" Padding="10" Margin="5">
+                    <StackLayout>
+                        <Label Text="{Binding Date}" FontAttributes="Bold" FontSize="16"/>
+                        <Label Text="{Binding Time}" FontSize="14" />
+                        <Label Text="{Binding Nitrate, StringFormat='🧪 Nitrate: {0}'}" FontSize="14" />
+                        <Label Text="{Binding Nitrite, StringFormat='🧪 Nitrite: {0}'}" FontSize="14" />
+                        <Label Text="{Binding Phosphate, StringFormat='🧫 Phosphate: {0}'}" FontSize="14" />
+                        <Label Text="{Binding EC, StringFormat='🌊 EC (cfu/100ml): {0}'}" FontSize="14" />
+                    </StackLayout>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
+
+
 </TabbedPage>

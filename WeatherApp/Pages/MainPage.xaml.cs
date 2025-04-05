@@ -14,7 +14,46 @@ namespace WeatherApp.Pages
             ExcelPackage.License.SetNonCommercialPersonal("Adam");
             LoadExcelData();
             LoadWeatherData();
+            LoadWaterData();
 
+        }
+
+        [Obsolete]
+        private async void LoadWaterData() // Water_Quality.xlsx
+        {
+            var fileName = "WaterQuality.xlsx";
+            var filePath = Path.Combine(FileSystem.AppDataDirectory, fileName);
+            ExcelPackage.License.SetNonCommercialPersonal("Adam");
+
+            if (!File.Exists(filePath))
+            {
+                using var stream = await FileSystem.OpenAppPackageFileAsync(fileName);
+                using var outStream = File.Create(filePath);
+                await stream.CopyToAsync(outStream);
+            }
+
+            var readings = new List<WaterReading>();
+
+            using var package = new ExcelPackage(new FileInfo(filePath));
+            var worksheet = package.Workbook.Worksheets[0];
+
+            int startRow = 6; // Actual data starts from row 6
+            int endRow = worksheet.Dimension.End.Row;
+
+            for (int row = startRow; row <= endRow; row++)
+            {
+                readings.Add(new WaterReading
+                {
+                    Date = worksheet.Cells[row, 1].Text,
+                    Time = worksheet.Cells[row, 2].Text,
+                    Nitrate = worksheet.Cells[row, 3].Text,
+                    Nitrite = worksheet.Cells[row, 4].Text,
+                    Phosphate = worksheet.Cells[row, 5].Text,
+                    EC = worksheet.Cells[row, 6].Text
+                });
+            }
+
+            WaterList.ItemsSource = readings;
         }
 
 
