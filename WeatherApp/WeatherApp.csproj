@@ -62,4 +62,9 @@
 	  <Folder Include="Authentication\" />
 	  <Folder Include="Pages\" />
 	</ItemGroup>
+	<ItemGroup>
+	  <MauiAsset Update="Resources\Raw\Water_quality.xlsx">
+	    <LogicalName>Water_quality.xlsx</LogicalName>
+	  </MauiAsset>
+	</ItemGroup>
 </Project>

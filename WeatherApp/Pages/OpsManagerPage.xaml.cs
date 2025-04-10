@@ -66,11 +66,21 @@ namespace WeatherApp.Pages
             {
                 var sensor = new SensorMeta
                 {
-                    SensorID = worksheet.Cells[row, 1].Text,
-                    Type = worksheet.Cells[row, 2].Text,
-                    Location = worksheet.Cells[row, 3].Text,
-                    Installed = DateTime.TryParse(worksheet.Cells[row, 4].Text, out var date) ? date : DateTime.MinValue,
-                    Status = worksheet.Cells[row, 5].Text
+                    Category = worksheet.Cells[row, 1].Text,
+                    SensorID = worksheet.Cells[row, 2].Text,
+                    Symbol = worksheet.Cells[row, 3].Text,
+                    Unit = worksheet.Cells[row, 4].Text,
+                    UnitDescription = worksheet.Cells[row, 5].Text,
+                    Frequency = worksheet.Cells[row, 6].Text,
+                    SafeLevel = worksheet.Cells[row, 7].Text,
+                    Reference = worksheet.Cells[row, 8].Text,
+                    Model = worksheet.Cells[row, 9].Text,
+
+                    // Dummy data for now (you can refine later)
+                    Location = "Zone A",
+                    Installed = DateTime.MinValue,
+                    Status = "Operational",
+                    MaintenanceDate = DateTime.Now.AddDays(7)
                 };
 
                 result.Add(sensor);
@@ -106,5 +116,7 @@ namespace WeatherApp.Pages
             }
         }
 
+
     }
+
 }
