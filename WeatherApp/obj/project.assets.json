@@ -13881,11 +13881,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/adam/Documents/SE class/WeatherApp/WeatherApp/WeatherApp.csproj",
+      "projectUniqueName": "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/WeatherApp.csproj",
       "projectName": "WeatherApp",
-      "projectPath": "/Users/adam/Documents/SE class/WeatherApp/WeatherApp/WeatherApp.csproj",
+      "projectPath": "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/WeatherApp.csproj",
       "packagesPath": "/Users/adam/.nuget/packages/",
-      "outputPath": "/Users/adam/Documents/SE class/WeatherApp/WeatherApp/obj/",
+      "outputPath": "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/obj/",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "configFilePaths": [
