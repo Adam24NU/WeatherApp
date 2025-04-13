@@ -116,7 +116,5 @@ namespace WeatherApp.Pages
             }
         }
 
-
     }
-
 }
