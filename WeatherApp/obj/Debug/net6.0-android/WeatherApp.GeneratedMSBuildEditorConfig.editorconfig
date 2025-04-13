@@ -52,6 +52,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = WeatherApp.Pages.OpsManage
 build_metadata.AdditionalFiles.TargetPath = Pages/OpsManagerPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/OpsManagerPage.xaml
 
+[/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/Pages/ScientistMapPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = WeatherApp.Pages.ScientistMapPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/ScientistMapPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/ScientistMapPage.xaml
+
 [/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = WeatherApp.Resources.Styles.Colors.xaml

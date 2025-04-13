@@ -1162,6 +1162,8 @@
 /Users/adam/Documents/SE_class/WeatherApp/WeatherApp/obj/Debug/net6.0-android/android/assets/Microsoft.Maui.Controls.Compatibility.dll
 /Users/adam/Documents/SE_class/WeatherApp/WeatherApp/obj/Debug/net6.0-android/android/assets/Microsoft.Maui.Controls.Compatibility.pdb
 /Users/adam/Documents/SE_class/WeatherApp/WeatherApp/obj/Debug/net6.0-android/android/assets/Microsoft.Maui.Controls.dll
+/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/obj/Debug/net6.0-android/android/assets/Microsoft.Maui.Controls.Maps.dll
+/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/obj/Debug/net6.0-android/android/assets/Microsoft.Maui.Controls.Maps.pdb
 /Users/adam/Documents/SE_class/WeatherApp/WeatherApp/obj/Debug/net6.0-android/android/assets/Microsoft.Maui.Controls.pdb
 /Users/adam/Documents/SE_class/WeatherApp/WeatherApp/obj/Debug/net6.0-android/android/assets/Microsoft.Maui.Controls.Xaml.dll
 /Users/adam/Documents/SE_class/WeatherApp/WeatherApp/obj/Debug/net6.0-android/android/assets/Microsoft.Maui.Controls.Xaml.pdb
@@ -1170,6 +1172,8 @@
 /Users/adam/Documents/SE_class/WeatherApp/WeatherApp/obj/Debug/net6.0-android/android/assets/Microsoft.Maui.Essentials.pdb
 /Users/adam/Documents/SE_class/WeatherApp/WeatherApp/obj/Debug/net6.0-android/android/assets/Microsoft.Maui.Graphics.dll
 /Users/adam/Documents/SE_class/WeatherApp/WeatherApp/obj/Debug/net6.0-android/android/assets/Microsoft.Maui.Graphics.pdb
+/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/obj/Debug/net6.0-android/android/assets/Microsoft.Maui.Maps.dll
+/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/obj/Debug/net6.0-android/android/assets/Microsoft.Maui.Maps.pdb
 /Users/adam/Documents/SE_class/WeatherApp/WeatherApp/obj/Debug/net6.0-android/android/assets/Microsoft.Maui.pdb
 /Users/adam/Documents/SE_class/WeatherApp/WeatherApp/obj/Debug/net6.0-android/android/assets/Microsoft.VisualBasic.Core.dll
 /Users/adam/Documents/SE_class/WeatherApp/WeatherApp/obj/Debug/net6.0-android/android/assets/Microsoft.VisualBasic.dll
