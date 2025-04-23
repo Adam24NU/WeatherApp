@@ -1,0 +1,183 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Tests/WeatherApp.Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Tests/WeatherApp.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Tests/WeatherApp.Tests.csproj",
+        "projectName": "WeatherApp.Tests",
+        "projectPath": "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Tests/WeatherApp.Tests.csproj",
+        "packagesPath": "/Users/adam/.nuget/packages/",
+        "outputPath": "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/adam/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-android"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-android21.0": {
+            "targetAlias": "net6.0-android",
+            "projectReferences": {
+              "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/WeatherApp.csproj": {
+                "projectPath": "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/WeatherApp.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0-android21.0": {
+          "targetAlias": "net6.0-android",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.8.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.5.3, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.5.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.405/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/WeatherApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/WeatherApp.csproj",
+        "projectName": "WeatherApp",
+        "projectPath": "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/WeatherApp.csproj",
+        "packagesPath": "/Users/adam/.nuget/packages/",
+        "outputPath": "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/obj/",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "/Users/adam/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-android33"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-android21.0": {
+            "targetAlias": "net6.0-android33",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0-android21.0": {
+          "targetAlias": "net6.0-android33",
+          "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-arm64",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.405/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

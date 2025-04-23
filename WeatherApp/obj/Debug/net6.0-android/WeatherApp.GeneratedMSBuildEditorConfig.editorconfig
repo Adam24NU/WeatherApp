@@ -22,18 +22,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = WeatherApp.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-<<<<<<< HEAD
-[/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/MainPage.xaml]
-=======
 [/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/Authentication/LoginPage.xaml]
->>>>>>> feature/scientist-map
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = WeatherApp.Authentication.LoginPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Authentication/LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Authentication/LoginPage.xaml
 
-<<<<<<< HEAD
-=======
 [/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/Authentication/RegisterPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = WeatherApp.Authentication.RegisterPage.xaml
@@ -64,7 +58,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = WeatherApp.Pages.Scientist
 build_metadata.AdditionalFiles.TargetPath = Pages/ScientistMapPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/ScientistMapPage.xaml
 
->>>>>>> feature/scientist-map
 [/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = WeatherApp.Resources.Styles.Colors.xaml
