@@ -1,0 +1,74 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.Pages.OpsManagerPage"
+             xmlns:converters="clr-namespace:WeatherApp"
+             Title="Sensor Status">
+
+     <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:InstalledDateVisibilityConverter x:Key="InstalledDateVisibilityConverter" />
+            <converters:InvertedInstalledDateVisibilityConverter x:Key="InvertedInstalledDateVisibilityConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="10">
+        <Label Text="Sensor Maintenance Overview"
+               FontSize="24"
+               HorizontalOptions="Center" 
+               Margin="0,10"/>
+        
+       <CollectionView x:Name="SensorList"
+                ItemsSource="{Binding DisplayedData}"
+                HeightRequest="500"
+                RemainingItemsThreshold="2"
+                RemainingItemsThresholdReached="CollectionView_RemainingItemsThresholdReached">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="LightGray" CornerRadius="10" Padding="10" Margin="5">
+                        <StackLayout>
+
+                            <!-- Category -->
+                            <Label Text="{Binding Category, StringFormat='🧪 Category: {0}'}" FontAttributes="Bold" />
+                            <!-- Sensor Info -->
+                            <Label Text="{Binding SensorID}" FontAttributes="Bold" FontSize="16"/>
+                            <Label Text="{Binding Symbol, StringFormat='📡 Sensor: {0}'}" />
+                            <Label Text="{Binding Location, StringFormat='📍 Location: {0}'}" />
+
+                            <!-- Installed Date -->
+                            <Label 
+                                Text="{Binding Installed, StringFormat='📅 Installed: {0:dd MMM yyyy}'}"
+                                IsVisible="{Binding Installed, Converter={StaticResource InstalledDateVisibilityConverter}}" />
+                            <Label 
+                                Text="📅 Installed: Unknown"
+                                IsVisible="{Binding Installed, Converter={StaticResource InvertedInstalledDateVisibilityConverter}}" />
+
+                            <!-- Optional Attributes -->
+                            <Label Text="{Binding Frequency, StringFormat='🔁 Measurement: {0}'}" />
+                            <Label Text="{Binding SafeLevel, StringFormat='📏 Safe Level: {0}'}" />
+                            <Label Text="{Binding Model, StringFormat='🧰 Sensor Model: {0}'}" />
+                            <Label Text="{Binding Status, StringFormat='⚠️ Status: {0}'}" FontAttributes="Italic" />
+
+                            <!-- Maintenance -->
+                            <Label Text="{Binding MaintenanceDate, StringFormat='🛠 Scheduled: {0:dd MMM yyyy}'}"
+                                   IsVisible="{Binding MaintenanceDate.HasValue}" />
+
+                            
+
+                            <!-- Flags -->
+                            <Label Text="⚠ Issue Reported" 
+                                   TextColor="Red" 
+                                   FontAttributes="Bold"
+                                   IsVisible="{Binding IsFlagged}" />
+
+                            <!-- Actions -->
+                            <Button Text="📣 Report Issue"
+                                    Clicked="OnReportIssueClicked"
+                                    CommandParameter="{Binding}" />
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

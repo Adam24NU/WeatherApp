@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ImportGroup Condition=" '$(TargetFramework)' == 'net6.0-android' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+  <ImportGroup Condition=" '$(TargetFramework)' == 'net6.0-android33' AND '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)xamarin.kotlin.stdlib.common/1.6.20.1/buildTransitive/net6.0-android31.0/Xamarin.Kotlin.StdLib.Common.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.kotlin.stdlib.common/1.6.20.1/buildTransitive/net6.0-android31.0/Xamarin.Kotlin.StdLib.Common.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.jetbrains.annotations/23.0.0.3/buildTransitive/net6.0-android31.0/Xamarin.Jetbrains.Annotations.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.jetbrains.annotations/23.0.0.3/buildTransitive/net6.0-android31.0/Xamarin.Jetbrains.Annotations.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.kotlin.stdlib/1.6.20.1/buildTransitive/net6.0-android31.0/Xamarin.Kotlin.StdLib.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.kotlin.stdlib/1.6.20.1/buildTransitive/net6.0-android31.0/Xamarin.Kotlin.StdLib.targets')" />

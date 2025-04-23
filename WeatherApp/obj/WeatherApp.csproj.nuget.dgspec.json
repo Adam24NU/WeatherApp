@@ -18,15 +18,15 @@
           "/Users/adam/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-android"
+          "net6.0-android33"
         ],
         "sources": {
           "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0-android31.0": {
-            "targetAlias": "net6.0-android",
+          "net6.0-android33.0": {
+            "targetAlias": "net6.0-android33",
             "projectReferences": {}
           }
         },
@@ -37,8 +37,8 @@
         }
       },
       "frameworks": {
-        "net6.0-android31.0": {
-          "targetAlias": "net6.0-android",
+        "net6.0-android33.0": {
+          "targetAlias": "net6.0-android33",
           "dependencies": {
             "EPPlus": {
               "target": "Package",
@@ -53,6 +53,10 @@
               "target": "Package",
               "version": "[6.0.553, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [
@@ -68,23 +72,23 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.Android.Ref.31",
+              "name": "Microsoft.Android.Ref.33",
               "version": "[32.0.509, 32.0.509]"
             },
             {
-              "name": "Microsoft.Android.Runtime.31.android-arm",
+              "name": "Microsoft.Android.Runtime.33.android-arm",
               "version": "[32.0.509, 32.0.509]"
             },
             {
-              "name": "Microsoft.Android.Runtime.31.android-arm64",
+              "name": "Microsoft.Android.Runtime.33.android-arm64",
               "version": "[32.0.509, 32.0.509]"
             },
             {
-              "name": "Microsoft.Android.Runtime.31.android-x64",
+              "name": "Microsoft.Android.Runtime.33.android-x64",
               "version": "[32.0.509, 32.0.509]"
             },
             {
-              "name": "Microsoft.Android.Runtime.31.android-x86",
+              "name": "Microsoft.Android.Runtime.33.android-x86",
               "version": "[32.0.509, 32.0.509]"
             },
             {

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Leaflet CSS for map styling -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <style>
+        /* Ensure the map container has a size */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Map</title>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script>// Initialize the map and set the default center and zoom level
+        var map = L.map('map').setView([55.95, -3.19], 13);  // Default position (latitude, longitude)
+
+        // Add OpenStreetMap tile layer to the map
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Hardcoded sensor data
+        var sensors = [
+            { SensorID: "001", Location: "55.95,-3.19", Status: "OK", Type: "Data" },
+            { SensorID: "002", Location: "55.944760, -3.183991", Status: "Alert", Type: "Air Quality" },
+            { SensorID: "003", Location: "55.861111, -3.253889", Status: "OK", Type: "Water Quality" },
+            { SensorID: "004", Location: "55.008785, -3.585632", Status: "Alert", Type: "Weather" }
+        ];
+
+        // Function to add sensor markers to the map
+        function addSensorMarker(lat, lon, sensorId, status, type) {
+            L.marker([lat, lon]).addTo(map)
+                .bindPopup('Sensor ID: ' + sensorId + '<br>Type: ' + type + '<br>Status: ' + status)
+                .openPopup();
+        }
+
+        // Loop through the sensors and add markers
+        sensors.forEach(function (sensor) {
+            var coords = sensor.Location.split(',');
+            var lat = parseFloat(coords[0]);
+            var lon = parseFloat(coords[1]);
+            addSensorMarker(lat, lon, sensor.SensorID, sensor.Status, sensor.Type);
+        });</script>
+</body>
+</html>
