@@ -70,8 +70,8 @@ Team members are expected to:
 
 ## 👥 Team
 - Adam - Developer, UI/UX, GitHub workflow
-- Bart -
-- Jamie -
+- Bart - Developer, UI/UX
+- Jamie - Developer, UI/UX 
 
 ## 🧪 Testing
 
@@ -81,12 +81,11 @@ Team members are expected to:
 
 ## 🧭 Roadmap
 
-- [x] Air Quality Page with Excel integration
+- [x] Data Pages with Excel integration
 - [x] User Registration & Login
-- [ ] Admin Panel for user management
-- [ ] Real-time sensor data
-- [ ] SQLite user storage
-- [ ] Operations Manager dashboard
+- [x] Admin Panel for user management
+- [x] Real-time sensor data
+- [x] Operations Manager dashboard
 
 ## 📄 License
 
