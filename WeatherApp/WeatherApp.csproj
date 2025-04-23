@@ -50,11 +50,16 @@
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+		<!-- Leaflet Map HTML -->
+	
+		<MauiAsset Include="Resources\Raw\leaflet-map.html" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <PackageReference Include="EPPlus" Version="8.0.1" />
-	  <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="9.0.60" />
+	 
+	  
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
 	<ItemGroup>
 	  <None Remove="Authentication\" />

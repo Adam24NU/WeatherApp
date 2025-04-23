@@ -44,10 +44,6 @@
               "target": "Package",
               "version": "[8.0.1, )"
             },
-            "Microsoft.Maui.Controls.Maps": {
-              "target": "Package",
-              "version": "[9.0.60, )"
-            },
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
               "version": "[6.0.553, )",
@@ -57,6 +53,10 @@
               "target": "Package",
               "version": "[6.0.553, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [

@@ -1,13 +1,14 @@
-﻿namespace WeatherApp;
+﻿using Microsoft.Maui.Controls.Hosting;
+
+namespace WeatherApp;
 
 public static class MauiProgram
 {
 	public static MauiApp CreateMauiApp()
 	{
 		var builder = MauiApp.CreateBuilder();
-		builder
+        builder
 			.UseMauiApp<App>()
-            .UseMauiMaps()
             .ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

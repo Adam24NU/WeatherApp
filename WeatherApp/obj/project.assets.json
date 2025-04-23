@@ -308,22 +308,6 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Maps/9.0.60": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Maui.Maps": "9.0.60"
-        },
-        "compile": {
-          "lib/netstandard2.1/Microsoft.Maui.Controls.Maps.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/Microsoft.Maui.Controls.Maps.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Maui.Dependencies/6.0.553": {
         "type": "package",
         "dependencies": {
@@ -363,16 +347,16 @@
           }
         }
       },
-      "Microsoft.Maui.Maps/9.0.60": {
+      "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.1/Microsoft.Maui.Maps.dll": {
-            "related": ".pdb;.xml"
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.1/Microsoft.Maui.Maps.dll": {
-            "related": ".pdb;.xml"
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -2572,22 +2556,6 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Maps/9.0.60": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Maui.Maps": "9.0.60"
-        },
-        "compile": {
-          "lib/netstandard2.1/Microsoft.Maui.Controls.Maps.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/Microsoft.Maui.Controls.Maps.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Maui.Dependencies/6.0.553": {
         "type": "package",
         "dependencies": {
@@ -2627,16 +2595,16 @@
           }
         }
       },
-      "Microsoft.Maui.Maps/9.0.60": {
+      "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.1/Microsoft.Maui.Maps.dll": {
-            "related": ".pdb;.xml"
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.1/Microsoft.Maui.Maps.dll": {
-            "related": ".pdb;.xml"
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -4818,22 +4786,6 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Maps/9.0.60": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Maui.Maps": "9.0.60"
-        },
-        "compile": {
-          "lib/netstandard2.1/Microsoft.Maui.Controls.Maps.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/Microsoft.Maui.Controls.Maps.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Maui.Dependencies/6.0.553": {
         "type": "package",
         "dependencies": {
@@ -4873,16 +4825,16 @@
           }
         }
       },
-      "Microsoft.Maui.Maps/9.0.60": {
+      "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.1/Microsoft.Maui.Maps.dll": {
-            "related": ".pdb;.xml"
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.1/Microsoft.Maui.Maps.dll": {
-            "related": ".pdb;.xml"
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -7064,22 +7016,6 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Maps/9.0.60": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Maui.Maps": "9.0.60"
-        },
-        "compile": {
-          "lib/netstandard2.1/Microsoft.Maui.Controls.Maps.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/Microsoft.Maui.Controls.Maps.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Maui.Dependencies/6.0.553": {
         "type": "package",
         "dependencies": {
@@ -7119,16 +7055,16 @@
           }
         }
       },
-      "Microsoft.Maui.Maps/9.0.60": {
+      "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.1/Microsoft.Maui.Maps.dll": {
-            "related": ".pdb;.xml"
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.1/Microsoft.Maui.Maps.dll": {
-            "related": ".pdb;.xml"
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -9310,22 +9246,6 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Maps/9.0.60": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Maui.Maps": "9.0.60"
-        },
-        "compile": {
-          "lib/netstandard2.1/Microsoft.Maui.Controls.Maps.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/Microsoft.Maui.Controls.Maps.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Maui.Dependencies/6.0.553": {
         "type": "package",
         "dependencies": {
@@ -9365,16 +9285,16 @@
           }
         }
       },
-      "Microsoft.Maui.Maps/9.0.60": {
+      "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.1/Microsoft.Maui.Maps.dll": {
-            "related": ".pdb;.xml"
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.1/Microsoft.Maui.Maps.dll": {
-            "related": ".pdb;.xml"
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -11718,48 +11638,6 @@
         "microsoft.io.recyclablememorystream.nuspec"
       ]
     },
-    "Microsoft.Maui.Controls.Maps/9.0.60": {
-      "sha512": "VP8djILIdTpcrPh1tYpHZkX1ZU5l2mzrVCqU9SoDjP3ZpBaQVbxLhHjBYOj4fxBYPRAj4lloVdlKpRGJMaf7hA==",
-      "type": "package",
-      "path": "microsoft.maui.controls.maps/9.0.60",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "README.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net9.0-android35.0/Microsoft.Maui.Controls.Maps.dll",
-        "lib/net9.0-android35.0/Microsoft.Maui.Controls.Maps.pdb",
-        "lib/net9.0-android35.0/Microsoft.Maui.Controls.Maps.xml",
-        "lib/net9.0-ios18.0/Microsoft.Maui.Controls.Maps.dll",
-        "lib/net9.0-ios18.0/Microsoft.Maui.Controls.Maps.pdb",
-        "lib/net9.0-ios18.0/Microsoft.Maui.Controls.Maps.xml",
-        "lib/net9.0-maccatalyst18.0/Microsoft.Maui.Controls.Maps.dll",
-        "lib/net9.0-maccatalyst18.0/Microsoft.Maui.Controls.Maps.pdb",
-        "lib/net9.0-maccatalyst18.0/Microsoft.Maui.Controls.Maps.xml",
-        "lib/net9.0-tizen7.0/Microsoft.Maui.Controls.Maps.dll",
-        "lib/net9.0-tizen7.0/Microsoft.Maui.Controls.Maps.pdb",
-        "lib/net9.0-tizen7.0/Microsoft.Maui.Controls.Maps.xml",
-        "lib/net9.0-windows10.0.19041/Microsoft.Maui.Controls.Maps.dll",
-        "lib/net9.0-windows10.0.19041/Microsoft.Maui.Controls.Maps.pdb",
-        "lib/net9.0-windows10.0.19041/Microsoft.Maui.Controls.Maps.xml",
-        "lib/net9.0-windows10.0.20348/Microsoft.Maui.Controls.Maps.dll",
-        "lib/net9.0-windows10.0.20348/Microsoft.Maui.Controls.Maps.pdb",
-        "lib/net9.0-windows10.0.20348/Microsoft.Maui.Controls.Maps.xml",
-        "lib/net9.0/Microsoft.Maui.Controls.Maps.dll",
-        "lib/net9.0/Microsoft.Maui.Controls.Maps.pdb",
-        "lib/net9.0/Microsoft.Maui.Controls.Maps.xml",
-        "lib/netstandard2.0/Microsoft.Maui.Controls.Maps.dll",
-        "lib/netstandard2.0/Microsoft.Maui.Controls.Maps.pdb",
-        "lib/netstandard2.0/Microsoft.Maui.Controls.Maps.xml",
-        "lib/netstandard2.1/Microsoft.Maui.Controls.Maps.dll",
-        "lib/netstandard2.1/Microsoft.Maui.Controls.Maps.pdb",
-        "lib/netstandard2.1/Microsoft.Maui.Controls.Maps.xml",
-        "microsoft.maui.controls.maps.9.0.60.nupkg.sha512",
-        "microsoft.maui.controls.maps.nuspec"
-      ]
-    },
     "Microsoft.Maui.Dependencies/6.0.553": {
       "sha512": "mVrCaCO0cQmZpGd3kko0BI7mPvAaDaLc9/9DesggfYCNMiXwGp9aRc6Huy/dwFLLUrCqD/PvDUVOFx79WjGN7Q==",
       "type": "package",
@@ -11815,46 +11693,34 @@
         "microsoft.maui.graphics.nuspec"
       ]
     },
-    "Microsoft.Maui.Maps/9.0.60": {
-      "sha512": "FwoNTMZOxS8njk1p340I6lP8PTYerL9q9xWUDMCuU6bXyxq6N5PfIzAn8rIrIxAsCe+PgtwcqZ/ed8i7FyGUmg==",
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
       "type": "package",
-      "path": "microsoft.maui.maps/9.0.60",
+      "path": "newtonsoft.json/13.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
+        "LICENSE.md",
         "README.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net9.0-android35.0/Microsoft.Maui.Maps.dll",
-        "lib/net9.0-android35.0/Microsoft.Maui.Maps.pdb",
-        "lib/net9.0-android35.0/Microsoft.Maui.Maps.xml",
-        "lib/net9.0-ios18.0/Microsoft.Maui.Maps.dll",
-        "lib/net9.0-ios18.0/Microsoft.Maui.Maps.pdb",
-        "lib/net9.0-ios18.0/Microsoft.Maui.Maps.xml",
-        "lib/net9.0-maccatalyst18.0/Microsoft.Maui.Maps.dll",
-        "lib/net9.0-maccatalyst18.0/Microsoft.Maui.Maps.pdb",
-        "lib/net9.0-maccatalyst18.0/Microsoft.Maui.Maps.xml",
-        "lib/net9.0-tizen7.0/Microsoft.Maui.Maps.dll",
-        "lib/net9.0-tizen7.0/Microsoft.Maui.Maps.pdb",
-        "lib/net9.0-tizen7.0/Microsoft.Maui.Maps.xml",
-        "lib/net9.0-windows10.0.19041/Microsoft.Maui.Maps.dll",
-        "lib/net9.0-windows10.0.19041/Microsoft.Maui.Maps.pdb",
-        "lib/net9.0-windows10.0.19041/Microsoft.Maui.Maps.xml",
-        "lib/net9.0-windows10.0.20348/Microsoft.Maui.Maps.dll",
-        "lib/net9.0-windows10.0.20348/Microsoft.Maui.Maps.pdb",
-        "lib/net9.0-windows10.0.20348/Microsoft.Maui.Maps.xml",
-        "lib/net9.0/Microsoft.Maui.Maps.dll",
-        "lib/net9.0/Microsoft.Maui.Maps.pdb",
-        "lib/net9.0/Microsoft.Maui.Maps.xml",
-        "lib/netstandard2.0/Microsoft.Maui.Maps.dll",
-        "lib/netstandard2.0/Microsoft.Maui.Maps.pdb",
-        "lib/netstandard2.0/Microsoft.Maui.Maps.xml",
-        "lib/netstandard2.1/Microsoft.Maui.Maps.dll",
-        "lib/netstandard2.1/Microsoft.Maui.Maps.pdb",
-        "lib/netstandard2.1/Microsoft.Maui.Maps.xml",
-        "microsoft.maui.maps.9.0.60.nupkg.sha512",
-        "microsoft.maui.maps.nuspec"
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "System.ComponentModel.Annotations/5.0.0": {
@@ -14100,9 +13966,9 @@
   "projectFileDependencyGroups": {
     "net6.0-android33.0": [
       "EPPlus >= 8.0.1",
-      "Microsoft.Maui.Controls.Maps >= 9.0.60",
       "Microsoft.Maui.Dependencies >= 6.0.553",
-      "Microsoft.Maui.Extensions >= 6.0.553"
+      "Microsoft.Maui.Extensions >= 6.0.553",
+      "Newtonsoft.Json >= 13.0.3"
     ]
   },
   "packageFolders": {
@@ -14148,10 +14014,6 @@
             "target": "Package",
             "version": "[8.0.1, )"
           },
-          "Microsoft.Maui.Controls.Maps": {
-            "target": "Package",
-            "version": "[9.0.60, )"
-          },
           "Microsoft.Maui.Dependencies": {
             "target": "Package",
             "version": "[6.0.553, )",
@@ -14161,6 +14023,10 @@
             "target": "Package",
             "version": "[6.0.553, )",
             "autoReferenced": true
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
           }
         },
         "imports": [

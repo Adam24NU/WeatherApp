@@ -1,6 +1,7 @@
-﻿using Microsoft.Maui.Controls.Maps;
+﻿using WeatherApp.Models;
 using Microsoft.Maui.Controls;
-using WeatherApp.Models;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace WeatherApp.Pages
 {
@@ -14,28 +15,19 @@ namespace WeatherApp.Pages
 
         private void LoadSensors()
         {
-            // Example sensor data (use your actual sensor data source)
-            var sensors = new List<SensorMeta>
-            {
-                new SensorMeta { SensorID = "001", Location = "55.95,-3.19", Status = "OK" },
-                new SensorMeta { SensorID = "002", Location = "55.97,-3.20", Status = "Alert" },
-            };
+            //// Example sensor data (use actual data from your database or API)
+            //var sensors = new List<SensorMeta>
+            //{
+            //    new SensorMeta { SensorID = "Air Quality", Location = "55.94476,-3.183991", Status = "OK" },
+            //    new SensorMeta { SensorID = "Water Quality", Location = "55.8611,-3.2540", Status = "Alert" },
+            //    new SensorMeta { SensorID = "Weather", Location = "55.008785,-3.5856323", Status = "OK" }
+            //};
 
-            foreach (var sensor in sensors)
-            {
-                var coords = sensor.Location.Split(',');
-                var position = new Location(double.Parse(coords[0]), double.Parse(coords[1]));
+            
 
-                var pin = new Pin
-                {
-                    Label = $"Sensor {sensor.SensorID}",
-                    Address = sensor.Status,
-                    Location = position,
-                    Type = PinType.Place
-                };
-
-                sensorMap.Pins.Add(pin);
-            }
+            //// Pass the sensor data to the JavaScript function in the WebView
+            //var javascript = $"addMarkersFromData({Newtonsoft.Json.JsonConvert.SerializeObject(sensors)});";
+            //sensorMap.EvaluateJavaScriptAsync(javascript);
         }
     }
 }
