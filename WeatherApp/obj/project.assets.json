@@ -373,6 +373,16 @@
         "build": {
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
+      },
+      "WeatherApp.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/WeatherApp.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WeatherApp.Core.dll": {}
+        }
       }
     }
   },
@@ -1071,12 +1081,18 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "WeatherApp.Core/1.0.0": {
+      "type": "project",
+      "path": "../WeatherApp.Core/WeatherApp.Core.csproj",
+      "msbuildProject": "../WeatherApp.Core/WeatherApp.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-android21.0": [
       "EPPlus >= 8.0.1",
-      "Newtonsoft.Json >= 13.0.3"
+      "Newtonsoft.Json >= 13.0.3",
+      "WeatherApp.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1096,7 +1112,7 @@
         "/Users/adam/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-android33"
+        "net6.0-android"
       ],
       "sources": {
         "/usr/local/share/dotnet/library-packs": {},
@@ -1104,8 +1120,12 @@
       },
       "frameworks": {
         "net6.0-android21.0": {
-          "targetAlias": "net6.0-android33",
-          "projectReferences": {}
+          "targetAlias": "net6.0-android",
+          "projectReferences": {
+            "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Core/WeatherApp.Core.csproj": {
+              "projectPath": "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Core/WeatherApp.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -1121,7 +1141,7 @@
     },
     "frameworks": {
       "net6.0-android21.0": {
-        "targetAlias": "net6.0-android33",
+        "targetAlias": "net6.0-android",
         "dependencies": {
           "EPPlus": {
             "target": "Package",
