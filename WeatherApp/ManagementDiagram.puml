@@ -1,0 +1,14 @@
+@startuml
+package "User Management" {
+  [Login Component] --> [UserStore]
+  [UserStore] --> [User]
+}
+
+package "Data Management" {
+  [Sensor Data Component] --> [SensorMeta]
+  [AirReading Component] --> [AirReading]
+  [WaterReading Component] --> [WaterReading]
+}
+
+[User Management] --> [Data Management]
+@enduml

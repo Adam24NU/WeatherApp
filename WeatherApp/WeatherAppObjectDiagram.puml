@@ -1,0 +1,44 @@
+@startuml
+object User {
+  +Username : String = "alice"
+  +Password : String = "1234"
+  +Role : String = "Admin"
+}
+
+object UserStore {
+  +RegisteredUsers : List<User> = [User]
+}
+
+UserStore -- User
+
+object AirReading {
+  +Timestamp : String = "2025-04-23 14:00"
+  +NO2 : String = "45.5"
+  +PM25 : String = "30.2"
+  +PM10 : String = "12.3"
+  +Su : String = "5.1"
+  +IsThresholdBreached : Boolean = true
+}
+
+object WaterReading {
+  +Date : String = "2025-04-23"
+  +Time : String = "14:00"
+  +Nitrate : String = "10.2"
+  +Nitrite : String = "4.5"
+  +Phosphate : String = "3.6"
+  +EC : String = "1000"
+}
+
+object WeatherReading {
+  +Timestamp : String = "2025-04-23 14:00"
+  +Temperature : String = "22.5"
+  +WindSpeed : String = "15"
+  +RelativeHumidity : String = "60"
+  +WindDirection : String = "Northeast"
+}
+
+UserStore -- AirReading
+UserStore -- WaterReading
+UserStore -- WeatherReading
+
+@enduml

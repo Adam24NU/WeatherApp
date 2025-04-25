@@ -1,0 +1,15 @@
+@startuml
+node "Mobile Device" {
+  component "User Interface"
+  component "Authentication Service"
+}
+
+node "Backend Server" {
+  component "API"
+  component "Database"
+}
+
+"User Interface" --> "Authentication Service"
+"Authentication Service" --> "API"
+"API" --> "Database"
+@enduml

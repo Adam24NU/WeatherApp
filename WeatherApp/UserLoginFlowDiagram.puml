@@ -1,0 +1,17 @@
+@startuml
+start
+:User enters username and password;
+if (Credentials valid?) then (yes)
+  :Redirect to the appropriate page;
+  if (Role is "Scientist") then
+    :Show Scientist Dashboard;
+  elseif (Role is "Admin") then
+    :Show Admin Dashboard;
+  elseif (Role is "Operations Manager") then
+    :Show Ops Manager Dashboard;
+  endif
+else (no)
+  :Display error message;
+endif
+stop
+@enduml

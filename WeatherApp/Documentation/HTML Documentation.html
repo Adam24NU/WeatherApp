@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp Project Documentation</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        h1 { color: #333; }
+        h2 { color: #444; }
+        code { background-color: #f4f4f4; padding: 2px 4px; font-size: 0.9em; }
+        pre { background-color: #f4f4f4; padding: 10px; border-radius: 5px; font-size: 1em; }
+        .section { margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+
+    <h1>WeatherApp Project Documentation</h1>
+    <p>This document provides an overview of the WeatherApp project, its components, and the unit tests used to verify the application functionality.</p>
+
+    <!-- Introduction Section -->
+    <div class="section">
+        <h2>1. Introduction</h2>
+        <p>The WeatherApp is designed to monitor and analyze environmental data from a network of sensors. It covers air quality, water quality, and weather data, allowing users to interact with the data in real-time.</p>
+        <p>The application is built using .NET MAUI and follows a modular architecture to separate concerns and ensure scalability.</p>
+    </div>
+
+    <!-- Project Structure Section -->
+    <div class="section">
+        <h2>2. Project Structure</h2>
+        <p>The WeatherApp solution is organized as follows:</p>
+        <ul>
+            <li><strong>WeatherApp</strong>: Main application code.</li>
+            <li><strong>WeatherApp.Core</strong>: Contains the core business logic, such as models for sensors and readings.</li>
+            <li><strong>WeatherApp.Tests</strong>: Contains unit tests for the application logic.</li>
+        </ul>
+        <p>The code follows a modular design, ensuring that each feature or component is isolated and easy to maintain.</p>
+    </div>
+
+    <!-- Models and Business Logic Section -->
+    <div class="section">
+        <h2>3. Models and Business Logic</h2>
+        <h3>SensorMeta</h3>
+        <p>The SensorMeta class represents a sensor and holds its metadata, such as location, status, and installation date.</p>
+        <pre><code>
+namespace WeatherApp
+{
+    public class SensorMeta
+    {
+        public string SensorID { get; set; }
+        public string Category { get; set; }
+        public string Symbol { get; set; }
+        public string Unit { get; set; }
+        public string UnitDescription { get; set; }
+        public string Frequency { get; set; }
+        public string SafeLevel { get; set; }
+        public string Reference { get; set; }
+        public string Model { get; set; }
+            
+        public string Location { get; set; }
+        public DateTime Installed { get; set; }
+        public string Status { get; set; }
+        public DateTime? MaintenanceDate { get; set; }
+            
+        public bool IsFlagged { get; set; } = false;
+    }
+}
+        </code></pre>
+
+        <h3>AirReading</h3>
+        <p>Represents an air quality reading from a sensor. It contains properties for NO2, PM25, and PM10, and a computed property <code>IsThresholdBreached</code> to detect if the thresholds are exceeded.</p>
+        <pre><code>
+namespace WeatherApp.Models
+{
+    public class AirReading
+    {
+        public string Timestamp { get; set; }
+        public string NO2 { get; set; }
+        public string PM25 { get; set; }
+        public string PM10 { get; set; }
+        public string Su { get; set; }
+            
+        // ⚠️ New computed property
+        public bool IsThresholdBreached
+        {
+        get
+            {
+            double.TryParse(NO2, out var no2Val);
+            double.TryParse(PM25, out var pm25Val);
+            return no2Val > 40 || pm25Val > 25;
+            }
+        }                
+    }
+}
+            
+        </code></pre>
+
+        <h3>WaterReading</h3>
+        <p>Represents a water quality reading. It includes properties for nitrate, nitrite, phosphate, and EC.</p>
+        <pre><code>
+namespace WeatherApp.Models
+{
+    public class WaterReading
+    {
+        public string Date { get; set; }
+        public string Time { get; set; }
+        public string Nitrate { get; set; }
+        public string Nitrite { get; set; }
+        public string Phosphate { get; set; }
+        public string EC { get; set; }
+    }
+}
+        </code></pre>
+
+        <h3>WeatherReading</h3>
+        <p>Represents a weather reading. It includes properties for temperature, wind speed, relative humidity, and wind direction.</p>
+        <pre><code>
+namespace WeatherApp.Models
+{
+    public class WeatherReading
+    {
+        public string Timestamp { get; set; }
+        public string Temperature { get; set; }
+        public string WindSpeed { get; set; }
+        public string RelativeHumidity { get; set; }
+        public string WindDirection { get; set; }
+    }
+}
+        </code></pre>
+    </div>
+
+    <!-- Unit Testing Section -->
+    <div class="section">
+        <h2>4. Unit Testing</h2>
+        <p>Unit tests were implemented for several key classes in the application:</p>
+        <ul>
+            <li><strong>UserStore:</strong> Tests for user registration, login, and removal.</li>
+            <li><strong>SensorMeta:</strong> Tests for sensor initialization and threshold breach detection.</li>
+            <li><strong>AirReading:</strong> Tests for air quality readings and threshold breach logic.</li>
+            <li><strong>WaterReading:</strong> Tests for water quality readings.</li>
+            <li><strong>WeatherReading:</strong> Tests for weather readings.</li>
+        </ul>
+
+        <h3>UserStore Test Example</h3>
+        <pre><code>
+[Fact]
+public void AddUser_AddsNewUser()
+{
+    UserStore.RegisteredUsers.Clear();
+    var user = new User { Username = "alice", Password = "1234", Role = "Admin" };
+    var result = UserStore.AddUser(user);
+
+    Assert.True(result);
+    Assert.Single(UserStore.RegisteredUsers);
+    Assert.Equal("alice", UserStore.RegisteredUsers[0].Username);
+}
+        </code></pre>
+
+        <h3>AirReading Test Example</h3>
+        <pre><code>
+[Fact]
+public void AirReading_ShouldReturnTrue_WhenThresholdBreached()
+{
+    var airReading = new AirReading { NO2 = "45", PM25 = "30" };
+
+    Assert.True(airReading.IsThresholdBreached);
+}
+        </code></pre>
+
+        <h3>WaterReading Test Example</h3>
+        <pre><code>
+[Fact]
+public void WaterReading_ShouldInitializeCorrectly()
+{
+    var waterReading = new WaterReading
+    {
+        Date = "2025-04-23",
+        Time = "14:00",
+        Nitrate = "12.5",
+        Nitrite = "5.3",
+        Phosphate = "3.7",
+        EC = "800"
+    };
+
+    Assert.Equal("2025-04-23", waterReading.Date);
+    Assert.Equal("14:00", waterReading.Time);
+}
+        </code></pre>
+    </div>
+
+    <!-- UML Diagrams Section -->
+    <div class="section">
+        <h2>5. UML Diagrams</h2>
+        <p>Below are the UML diagrams showing the relationships between the main models and their components in the application:</p>
+        <h3>Activity Diagram</h3>
+        <img src="/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/Diagrams/UserLoginFlowDiagram.png" alt="Activity Diagram" />
+        
+        <h3>Class Diagram</h3>
+        <img src="/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/Diagrams/UserDiagram.png" alt="Class Diagram" />
+
+        <h3>Component Diagram</h3>
+        <img src="/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/Diagrams/UserManagementDiagram.png" alt="Component Diagram" />
+
+        <h3>Deployment Diagram</h3>
+        <img src="/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/Diagrams/AppDeploymentDiagram.png" alt="Deployment Diagram" />
+
+        <h3>Object Diagram</h3>
+        <img src="/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/Diagrams/WeatherAppObjectDiagram.png" alt="Object Diagram" />
+
+        <h3>Sequence Diagram</h3>
+        <img src="/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/Diagrams/LoginDiagram.png" alt="Sequence Diagram" />
+
+        <h3>State Diagram</h3>
+        <img src="/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/Diagrams/UserLoginStateDiagram.png" alt="State Diagram" />
+
+        <h3>Use Case Diagram</h3>
+        <img src="/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/Diagrams/AuthenticationDiagram.png" alt="Use Case Diagram" />
+        
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="section">
+        <h2>6. Conclusion</h2>
+        <p>The WeatherApp is a robust solution for monitoring environmental data, with a clean architecture, reliable business logic, and comprehensive unit tests. The project is continuously improved and refactored to ensure scalability and maintainability.</p>
+    </div>
+
+</body>
+</html>

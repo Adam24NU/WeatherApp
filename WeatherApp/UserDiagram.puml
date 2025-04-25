@@ -1,0 +1,15 @@
+@startuml
+class User {
+    +String Username
+    +String Password
+    +String Role
+    +Login()
+    +Logout()
+}
+class UserStore {
+    +List<User> RegisteredUsers
+    +RegisterUser()
+    +RemoveUser()
+}
+UserStore -- User
+@enduml
