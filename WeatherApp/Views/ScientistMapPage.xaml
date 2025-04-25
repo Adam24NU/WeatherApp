@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="WeatherApp.Views.ScientistMapPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Sensor Map">
+
+    <ContentPage.Content>
+        <Grid RowDefinitions="*, Auto">
+            <!--  WebView for Leaflet Map  -->
+            <WebView
+                x:Name="LeafletWebView"
+                Grid.Row="0"
+                Source="file:///android_asset/leafletMap.html" />
+
+            <!--  Buttons for Sensors  -->
+            <StackLayout
+                Grid.Row="1"
+                Padding="10"
+                HorizontalOptions="Center"
+                Orientation="Horizontal"
+                Spacing="10">
+
+                <Button
+                    Command="{Binding ShowSensorCommand}"
+                    CommandParameter="Air"
+                    Text="Air Sensors" />
+                <Button
+                    Command="{Binding ShowSensorCommand}"
+                    CommandParameter="Water"
+                    Text="Water Sensors" />
+                <Button
+                    Command="{Binding ShowSensorCommand}"
+                    CommandParameter="Weather"
+                    Text="Weather Sensors" />
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

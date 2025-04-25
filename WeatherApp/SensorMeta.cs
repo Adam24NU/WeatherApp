@@ -1,5 +1,4 @@
-﻿namespace WeatherApp.Models
-
+﻿namespace WeatherApp
 {
     public class SensorMeta
     {

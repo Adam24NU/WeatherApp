@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="WeatherApp.Views.ScientistPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="020" Spacing="24">
+
+            <!--  Navigation Button to ScientistMap  -->
+            <Label
+                FontAttributes="Bold"
+                FontSize="Large"
+                Text="Sensor Maps:" />
+            <Button Command="{Binding NavigateToMapCommand}" Text="Go to Map" />
+
+            <!--  Air Section Buttons  -->
+            <Label
+                FontAttributes="Bold"
+                FontSize="Large"
+                Text="Air:" />
+            <FlexLayout
+                Padding="0,0,0,0"
+                AlignItems="Center"
+                Direction="Row"
+                JustifyContent="Center"
+                Wrap="Wrap">
+
+                <Button
+                    Command="{Binding LoadMeasurementCommand}"
+                    CommandParameter="NO2"
+                    Text="Nitrogen Dioxide" />
+                <Button
+                    Command="{Binding LoadMeasurementCommand}"
+                    CommandParameter="SO2"
+                    Text="Sulpher Dioxide" />
+                <Button
+                    Command="{Binding LoadMeasurementCommand}"
+                    CommandParameter="PM2.5"
+                    Text="Particulate matter -&gt; PM2.5" />
+                <Button
+                    Command="{Binding LoadMeasurementCommand}"
+                    CommandParameter="PM10"
+                    Text="Particulate matter -&gt; PM10" />
+            </FlexLayout>
+
+            <!--  Air Measurements Table  -->
+            <Label
+                FontAttributes="Bold"
+                FontSize="Medium"
+                IsVisible="{Binding IsAirVisible}"
+                Text="Air Measurements" />
+            <Grid
+                Padding="0,0,0,5"
+                ColumnDefinitions="*,*,*"
+                IsVisible="{Binding IsAirVisible}">
+                <Label FontAttributes="Bold" Text="Date" />
+                <Label
+                    Grid.Column="1"
+                    FontAttributes="Bold"
+                    Text="Time" />
+                <Label
+                    Grid.Column="2"
+                    FontAttributes="Bold"
+                    Text="Value" />
+            </Grid>
+            <CollectionView IsVisible="{Binding IsAirVisible}" ItemsSource="{Binding AirMeasurements}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="0,0,0,5" ColumnDefinitions="*,*,*">
+                            <Label Text="{Binding Date}" />
+                            <Label Grid.Column="1" Text="{Binding Time}" />
+                            <Label Grid.Column="2">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding Value}" />
+                                        <Span Text=" " />
+                                        <Span FontAttributes="Italic" Text="{Binding Unit}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!--  Water Section Buttons  -->
+            <Label
+                FontAttributes="Bold"
+                FontSize="Large"
+                Text="Water:" />
+            <FlexLayout
+                AlignItems="Center"
+                Direction="Row"
+                JustifyContent="Center"
+                Wrap="Wrap">
+
+                <Button
+                    Command="{Binding LoadMeasurementCommand}"
+                    CommandParameter="-NO3"
+                    Text="Nitrite" />
+                <Button
+                    Command="{Binding LoadMeasurementCommand}"
+                    CommandParameter="-NO2"
+                    Text="Nitrate" />
+                <Button
+                    Command="{Binding LoadMeasurementCommand}"
+                    CommandParameter="-PO4"
+                    Text="Phosphate" />
+                <Button
+                    Command="{Binding LoadMeasurementCommand}"
+                    CommandParameter="EC"
+                    Text="Escherichia coli" />
+            </FlexLayout>
+
+            <!--  Water Measurements Table  -->
+            <Label
+                FontAttributes="Bold"
+                FontSize="Medium"
+                IsVisible="{Binding IsWaterVisible}"
+                Text="Water Measurements" />
+            <Grid
+                Padding="0,0,0,5"
+                ColumnDefinitions="*,*,*"
+                IsVisible="{Binding IsWaterVisible}">
+                <Label FontAttributes="Bold" Text="Date" />
+                <Label
+                    Grid.Column="1"
+                    FontAttributes="Bold"
+                    Text="Time" />
+                <Label
+                    Grid.Column="2"
+                    FontAttributes="Bold"
+                    Text="Value" />
+            </Grid>
+            <CollectionView IsVisible="{Binding IsWaterVisible}" ItemsSource="{Binding WaterMeasurements}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="0,0,0,5" ColumnDefinitions="*,*,*">
+                            <Label Text="{Binding Date}" />
+                            <Label Grid.Column="1" Text="{Binding Time}" />
+                            <Label Grid.Column="2">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding Value}" />
+                                        <Span Text=" " />
+                                        <Span FontAttributes="Italic" Text="{Binding Unit}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!--  Weather Section Buttons  -->
+            <Label
+                FontAttributes="Bold"
+                FontSize="Large"
+                Text="Weather:" />
+            <FlexLayout
+                AlignItems="Center"
+                Direction="Row"
+                JustifyContent="Center"
+                Wrap="Wrap">
+
+                <Button
+                    Command="{Binding LoadMeasurementCommand}"
+                    CommandParameter="T"
+                    Text="Air temperature" />
+                <Button
+                    Command="{Binding LoadMeasurementCommand}"
+                    CommandParameter="H"
+                    Text="Humidity" />
+                <Button
+                    Command="{Binding LoadMeasurementCommand}"
+                    CommandParameter="WS"
+                    Text="Wind speed" />
+                <Button
+                    Command="{Binding LoadMeasurementCommand}"
+                    CommandParameter="WD"
+                    Text="Wind direction" />
+            </FlexLayout>
+
+            <!--  Weather Measurements Table  -->
+            <Label
+                FontAttributes="Bold"
+                FontSize="Medium"
+                IsVisible="{Binding IsWeatherVisible}"
+                Text="Weather Measurements" />
+            <Grid
+                Padding="0,0,0,5"
+                ColumnDefinitions="*,*,*"
+                IsVisible="{Binding IsWeatherVisible}">
+                <Label FontAttributes="Bold" Text="Date" />
+                <Label
+                    Grid.Column="1"
+                    FontAttributes="Bold"
+                    Text="Time" />
+                <Label
+                    Grid.Column="2"
+                    FontAttributes="Bold"
+                    Text="Value" />
+            </Grid>
+            <CollectionView IsVisible="{Binding IsWeatherVisible}" ItemsSource="{Binding WeatherMeasurements}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="0,0,0,5" ColumnDefinitions="*,*,*">
+                            <Label Text="{Binding Date}" />
+                            <Label Grid.Column="1" Text="{Binding Time}" />
+                            <Label Grid.Column="2">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding Value}" />
+                                        <Span Text=" " />
+                                        <Span FontAttributes="Italic" Text="{Binding Unit}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

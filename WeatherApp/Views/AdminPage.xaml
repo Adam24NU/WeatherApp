@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="WeatherApp.Views.AdminPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:WeatherApp.ViewModels"
+    Title="Admin Dashboard">
+
+    <ContentPage.BindingContext>
+        <vm:AdminPageViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <!--  Section: Registered Users  -->
+            <Label
+                FontAttributes="Bold"
+                FontSize="20"
+                Text="👤 Registered Users" />
+
+            <CollectionView
+                ItemsSource="{Binding RegisteredUsers}"
+                SelectedItem="{Binding SelectedUser}"
+                SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame
+                            Margin="5"
+                            Padding="10"
+                            BorderColor="LightGray"
+                            CornerRadius="10">
+                            <StackLayout>
+                                <Label FontAttributes="Bold" Text="{Binding Email}" />
+                                <Label Text="{Binding Role, StringFormat='Role: {0}'}" />
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Button
+                BackgroundColor="IndianRed"
+                Command="{Binding DeleteUserCommand}"
+                Text="❌ Delete Selected User"
+                TextColor="White" />
+
+            <BoxView BackgroundColor="Gray" HeightRequest="1" />
+
+            <!--  Section: Add New User  -->
+            <Label
+                FontAttributes="Bold"
+                FontSize="20"
+                Text="➕ Add New User" />
+
+            <Entry Placeholder="First Name" Text="{Binding FirstName}" />
+            <Entry Placeholder="Last Name" Text="{Binding LastName}" />
+            <Entry Placeholder="Username (Email)" Text="{Binding Email}" />
+            <Picker Title="Select Role" SelectedItem="{Binding Role}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Scientist</x:String>
+                        <x:String>Admin</x:String>
+                        <x:String>OpsManager</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Entry
+                IsPassword="True"
+                Placeholder="Password"
+                Text="{Binding Password}" />
+
+            <Button Command="{Binding CreateUserCommand}" Text="✅ Create User" />
+
+            <BoxView BackgroundColor="Gray" HeightRequest="1" />
+
+            <!--  Section: Tools  -->
+            <Label
+                FontAttributes="Bold"
+                FontSize="20"
+                Text="🛠 System Tools" />
+            <Button Command="{Binding SimulateFirmwareUpdateCommand}" Text="🔄 Simulate Firmware Update" />
+            <Label
+                x:Name="LastBackupLabel"
+                FontSize="14"
+                Text="💾 Last Backup: Not Synced" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
