@@ -24,7 +24,7 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0-android31.0": {
+          "net6.0-android21.0": {
             "targetAlias": "net6.0-android",
             "projectReferences": {}
           }
@@ -33,10 +33,15 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
-        "net6.0-android31.0": {
+        "net6.0-android21.0": {
           "targetAlias": "net6.0-android",
           "imports": [
             "net461",
@@ -51,27 +56,20 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.Android.Ref.31",
-              "version": "[32.0.509, 32.0.509]"
-            },
-            {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.31, 6.0.31]"
+              "version": "[6.0.36, 6.0.36]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.31, 6.0.31]"
+              "version": "[6.0.36, 6.0.36]"
             }
           ],
           "frameworkReferences": {
-            "Microsoft.Android": {
-              "privateAssets": "all"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.317/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.405/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -95,7 +93,7 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0-android31.0": {
+          "net6.0-android21.0": {
             "targetAlias": "net6.0-android",
             "projectReferences": {
               "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp.Core/WeatherApp.Core.csproj": {
@@ -108,10 +106,15 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
-        "net6.0-android31.0": {
+        "net6.0-android21.0": {
           "targetAlias": "net6.0-android",
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
@@ -144,27 +147,20 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.Android.Ref.31",
-              "version": "[32.0.509, 32.0.509]"
-            },
-            {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.31, 6.0.31]"
+              "version": "[6.0.36, 6.0.36]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.31, 6.0.31]"
+              "version": "[6.0.36, 6.0.36]"
             }
           ],
           "frameworkReferences": {
-            "Microsoft.Android": {
-              "privateAssets": "all"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.317/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.405/RuntimeIdentifierGraph.json"
         }
       }
     }
