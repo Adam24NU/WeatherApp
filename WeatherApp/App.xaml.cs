@@ -11,16 +11,17 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        // Load configuration from appsettings.json
+        // Define the path where appsettings.json should be located (LocalAppData for mobile platforms)
+        var appDataDirectory = FileSystem.AppDataDirectory;
+
+        // Load configuration from appsettings.json (ensure this file is included in the output directory)
         var configuration = new ConfigurationBuilder()
-            .SetBasePath(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData))
-            .AddJsonFile("appsettings.json")
+            .SetBasePath(appDataDirectory)  // Use AppDataDirectory to ensure correct location on Android
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
             .Build();
 
-
-
-        // Retrieve the connection string
-        string connectionString = configuration.GetConnectionString("WeatherAppDb");
+        // Retrieve the connection string from appsettings.json
+        string connectionString = configuration.GetConnectionString("WeatherApp");
 
         // Create an instance of Database (pass the connection string)
         var database = new Database(connectionString);
@@ -29,4 +30,3 @@ public partial class App : Application
         MainPage = new NavigationPage(new Authentication.RegisterPage(database));
     }
 }
-

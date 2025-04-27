@@ -1,11 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0-android33</TargetFrameworks>
+		<TargetFramework>net8.0-android</TargetFramework>
 		<AndroidManifestPlaceholders>minSdkVersion=21</AndroidManifestPlaceholders>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net6.0-windows10.0.19041.0</TargetFrameworks>
-		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
-		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
+
 		<OutputType>Exe</OutputType>
 		<RootNamespace>WeatherApp</RootNamespace>
 		<UseMaui>true</UseMaui>
@@ -32,11 +30,9 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-ios|AnyCPU'">
-	  <CreatePackage>false</CreatePackage>
+		<CreatePackage>false</CreatePackage>
 	</PropertyGroup>
-	<ItemGroup>
-	  <MauiAsset Remove="Resources\Raw\appsettings.json" />
-	</ItemGroup>
+
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
@@ -54,31 +50,35 @@
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 		<!-- Leaflet Map HTML -->
-	
 		<MauiAsset Include="Resources\Raw\leaflet-map.html" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="EPPlus" Version="8.0.1" />
-	 
-	  
-	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-	  <PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.0" />
-	  <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="6.0.0" />
+		<!-- Adding the Maui controls NuGet package -->
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.100" />
+		<!-- Other packages -->
+		<PackageReference Include="EPPlus" Version="8.0.1" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.2" />
+		<PackageReference Include="Microsoft.Data.SqlClient.SNI.runtime" Version="6.0.2" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
+
 	<ItemGroup>
-	  <None Remove="Authentication\" />
-	  <None Remove="Pages\" />
-	  <None Remove="Resources\Raw\appsettings.json" />
+		<!-- Ensure appsettings.json is included in the build -->
+		<None Update="Resources\Raw\appsettings.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
 	</ItemGroup>
+
 	<ItemGroup>
-	  <Folder Include="Authentication\" />
-	  <Folder Include="Pages\" />
+		<None Remove="Authentication\" />
+		<None Remove="Pages\" />
+		<None Remove="Resources\Raw\appsettings.json" />
 	</ItemGroup>
-	
+
 	<ItemGroup>
-	  <AndroidAsset Include="Resources\Raw\appsettings.json">
-	    <LogicalName>appsettings.json</LogicalName>
-	  </AndroidAsset>
+		<Folder Include="Authentication\" />
+		<Folder Include="Pages\" />
 	</ItemGroup>
+
 </Project>
