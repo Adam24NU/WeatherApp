@@ -1,20 +1,21 @@
-using System;
-using System.Collections.ObjectModel;
-using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using System.Collections.ObjectModel;
 using WeatherApp.Models;
 using WeatherApp.Repositories;
+using WeatherApp.Tools;
 
 namespace WeatherApp.ViewModels;
 
 public partial class AdminPageViewModel : ObservableObject
 {
     private readonly UserRepository _userRepository;
+    private readonly IAlertService _alertService;
 
     [ObservableProperty]
     private ObservableCollection<User> registeredUsers;
 
+    [ObservableProperty] private int userId;
     [ObservableProperty] private string firstName;
     [ObservableProperty] private string lastName;
     [ObservableProperty] private string email;
@@ -24,13 +25,14 @@ public partial class AdminPageViewModel : ObservableObject
     [ObservableProperty]
     private User selectedUser;
 
-    public AdminPageViewModel()
+    public AdminPageViewModel(UserRepository userRepository, IAlertService alertService)
     {
-        _userRepository = new UserRepository(new DatabaseConnection());
-        RegisteredUsers = new ObservableCollection<User>(); 
+        _userRepository = userRepository;
+        _alertService = alertService;
+        RegisteredUsers = new ObservableCollection<User>();
     }
 
-    public async Task InitializeAsync()
+    public virtual async Task InitializeAsync()
     {
         try
         {
@@ -39,11 +41,11 @@ public partial class AdminPageViewModel : ObservableObject
         catch (Exception ex)
         {
             System.Diagnostics.Debug.WriteLine($"InitializeAsync error: {ex}");
-            await Shell.Current.DisplayAlert("Error", $"Failed to load users: {ex.Message}", "OK");
+            await _alertService.DisplayAlert("Error", $"Failed to load users: {ex.Message}", "OK");
         }
     }
 
-    private async Task LoadUsersAsync()
+    public virtual async Task LoadUsersAsync()
     {
         try
         {
@@ -58,20 +60,20 @@ public partial class AdminPageViewModel : ObservableObject
     }
 
     [RelayCommand]
-    private async Task CreateUser()
+    public virtual async Task CreateUser()
     {
         if (string.IsNullOrWhiteSpace(FirstName) || string.IsNullOrWhiteSpace(LastName) ||
             string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Role) ||
             string.IsNullOrWhiteSpace(Password))
         {
-            await Shell.Current.DisplayAlert("Error", "Please fill out all fields.", "OK");
+            await _alertService.DisplayAlert("Error", "Please fill out all fields.", "OK");
             return;
         }
 
         var existingUser = await _userRepository.GetUserByEmailAsync(Email.Trim());
         if (existingUser != null)
         {
-            await Shell.Current.DisplayAlert("Error", "A user with this email already exists.", "OK");
+            await _alertService.DisplayAlert("Error", "A user with this email already exists.", "OK");
             return;
         }
 
@@ -90,27 +92,27 @@ public partial class AdminPageViewModel : ObservableObject
         FirstName = LastName = Email = Password = string.Empty;
         Role = null;
 
-        await Shell.Current.DisplayAlert("Success", "User created successfully!", "OK");
+        await _alertService.DisplayAlert("Success", "User created successfully!", "OK");
     }
 
     [RelayCommand]
-    private async Task DeleteUser()
+    public virtual async Task DeleteUser()
     {
         if (SelectedUser == null)
         {
-            await Shell.Current.DisplayAlert("Error", "Please select a user to delete.", "OK");
+            await _alertService.DisplayAlert("Error", "Please select a user to delete.", "OK");
             return;
         }
 
         await _userRepository.DeleteUserAsync(SelectedUser.UserId);
         await LoadUsersAsync();
 
-        await Shell.Current.DisplayAlert("Deleted", "User has been removed.", "OK");
+        await _alertService.DisplayAlert("Deleted", "User has been removed.", "OK");
     }
 
     [RelayCommand]
     private async Task SimulateFirmwareUpdate()
     {
-        await Shell.Current.DisplayAlert("Firmware Update", "Sensor firmware update pushed successfully!", "OK");
+        await _alertService.DisplayAlert("Firmware Update", "Sensor firmware update pushed successfully!", "OK");
     }
 }

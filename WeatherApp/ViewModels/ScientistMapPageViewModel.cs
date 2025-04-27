@@ -1,7 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.Input;
-using System.Threading.Tasks;
-using WeatherApp.Repositories;
 using System.Diagnostics;
+using WeatherApp.Repositories;
 
 public partial class ScientistMapPageViewModel
 {

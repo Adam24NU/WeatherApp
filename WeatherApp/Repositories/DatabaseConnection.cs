@@ -1,6 +1,4 @@
 using Microsoft.Data.SqlClient;
-using System;
-using System.Threading.Tasks;
 
 namespace WeatherApp.Repositories;
 

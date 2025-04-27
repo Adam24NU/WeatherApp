@@ -1,8 +1,5 @@
 using Microsoft.Data.SqlClient;
 using WeatherApp.Models;
-using BCrypt.Net;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace WeatherApp.Repositories;
 
@@ -18,7 +15,7 @@ public class UserRepository
         _dbConnection = dbConnection;
     }
 
-    public async Task<List<User>> GetUsersAsync()
+    public virtual async Task<List<User>> GetUsersAsync()
     {
         var users = new List<User>();
         using var connection = _dbConnection.GetConnection();
@@ -42,7 +39,7 @@ public class UserRepository
         return users;
     }
 
-    public async Task<User> GetUserByIdAsync(int id)
+    public virtual async Task<User> GetUserByIdAsync(int id)
     {
         using var connection = _dbConnection.GetConnection();
         await connection.OpenAsync();
@@ -66,7 +63,7 @@ public class UserRepository
         return null;
     }
 
-    public async Task<User> GetUserByEmailAsync(string email)
+    public virtual async Task<User> GetUserByEmailAsync(string email)
     {
         using var connection = _dbConnection.GetConnection();
         await connection.OpenAsync();
@@ -90,7 +87,7 @@ public class UserRepository
         return null;
     }
 
-    public async Task<int> InsertUserAsync(User user)
+    public virtual async Task<int> InsertUserAsync(User user)
     {
         using var connection = _dbConnection.GetConnection();
         await connection.OpenAsync();
@@ -113,7 +110,7 @@ public class UserRepository
     }
 
 
-    public async Task UpdateUserAsync(User user)
+    public virtual async Task UpdateUserAsync(User user)
     {
         using var connection = _dbConnection.GetConnection();
         await connection.OpenAsync();
@@ -134,10 +131,16 @@ public class UserRepository
         await command.ExecuteNonQueryAsync();
     }
 
-    public async Task DeleteUserAsync(int id)
+    public virtual async Task DeleteUserAsync(int? id)
     {
         using var connection = _dbConnection.GetConnection();
         await connection.OpenAsync();
+
+        if (id == null)
+        {
+            System.Diagnostics.Debug.WriteLine("DeleteUserAsync: User ID is null. No action taken.");
+            return; // Gracefully exit if the ID is null
+        }
 
         using var command = new SqlCommand("DELETE FROM Users WHERE user_id = @UserId", connection);
         command.Parameters.AddWithValue("@UserId", id);
@@ -145,7 +148,7 @@ public class UserRepository
     }
 
     // Method to verify a user's password
-    public async Task<bool> VerifyUserPasswordAsync(string email, string password)
+    public virtual async Task<bool> VerifyUserPasswordAsync(string email, string password)
     {
         var user = await GetUserByEmailAsync(email);
         if (user == null)

@@ -1,7 +1,5 @@
 ﻿using OfficeOpenXml;
 using System.Collections.ObjectModel;
-using WeatherApp.Models;
-using Microsoft.Maui.Controls;
 
 
 

@@ -1,7 +1,4 @@
 using Microsoft.Data.SqlClient;
-using WeatherApp.Models;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace WeatherApp.Repositories;
 

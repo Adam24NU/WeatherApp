@@ -1,8 +1,6 @@
-﻿using Microsoft.Maui.Controls;
-using WeatherApp.ViewModels;
+﻿using System.Diagnostics;
 using WeatherApp.Repositories;
 using WeatherApp.Tools;
-using System.Diagnostics;
 
 namespace WeatherApp.Views
 {

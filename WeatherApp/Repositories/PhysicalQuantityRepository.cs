@@ -1,8 +1,6 @@
 using Microsoft.Data.SqlClient;
-using WeatherApp.Models;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Diagnostics;
+using WeatherApp.Models;
 
 namespace WeatherApp.Repositories
 {
@@ -21,7 +19,7 @@ namespace WeatherApp.Repositories
         /// <summary>
         /// Get all physical quantities.
         /// </summary>
-        public async Task<List<PhysicalQuantity>> GetPhysicalQuantitiesAsync()
+        public virtual async Task<List<PhysicalQuantity>> GetPhysicalQuantitiesAsync()
         {
             var quantities = new List<PhysicalQuantity>();
             using var connection = _dbConnection.GetConnection();
@@ -52,7 +50,7 @@ namespace WeatherApp.Repositories
         /// <summary>
         /// Get a physical quantity by its ID.
         /// </summary>
-        public async Task<PhysicalQuantity> GetPhysicalQuantityByIdAsync(int id)
+        public virtual async Task<PhysicalQuantity> GetPhysicalQuantityByIdAsync(int id)
         {
             using var connection = _dbConnection.GetConnection();
             await connection.OpenAsync();
@@ -80,7 +78,7 @@ namespace WeatherApp.Repositories
             return null;
         }
 
-        public async Task<int?> GetQuantityIdBySymbolAsync(string symbol)
+        public virtual async Task<int?> GetQuantityIdBySymbolAsync(string symbol)
         {
             using var connection = _dbConnection.GetConnection();
             await connection.OpenAsync();
@@ -93,7 +91,7 @@ namespace WeatherApp.Repositories
             return result != null ? (int?)Convert.ToInt32(result) : null;
         }
 
-        public async Task<string?> GetSymbolByQuantityIdAsync(int quantityId)
+        public virtual async Task<string?> GetSymbolByQuantityIdAsync(int quantityId)
         {
 
             using var connection = _dbConnection.GetConnection();
@@ -116,7 +114,7 @@ namespace WeatherApp.Repositories
             }
         }
 
-        public async Task<string?> GetUnitByQIdAsync(int Id)
+        public virtual async Task<string?> GetUnitByQIdAsync(int Id)
         {
             string query = "SELECT Unit FROM PhysicalQuantities WHERE quantity_id = @QId";
 

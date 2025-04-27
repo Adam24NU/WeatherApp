@@ -1,7 +1,4 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using WeatherApp.ViewModels;
-using WeatherApp.Repositories;
+﻿using WeatherApp.ViewModels;
 
 namespace WeatherApp.Views;
 

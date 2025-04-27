@@ -1,16 +1,16 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using System.Collections.ObjectModel;
 using WeatherApp.Models;
 using WeatherApp.Repositories;
-using System;
-using System.Collections.ObjectModel;
-using System.Threading.Tasks;
+using WeatherApp.Tools;
 
 namespace WeatherApp.ViewModels;
 
 public partial class RegisterPageViewModel : ObservableObject
 {
     private readonly UserRepository _userRepository;
+    private readonly INavigationService _navigationService;
 
     [ObservableProperty]
     private string firstName;
@@ -33,11 +33,12 @@ public partial class RegisterPageViewModel : ObservableObject
     [ObservableProperty]
     private ObservableCollection<string> availableRoles;
 
-    public RegisterPageViewModel(UserRepository userRepository)
+    public RegisterPageViewModel(UserRepository userRepository, INavigationService navigationService)
     {
         try
         {
             _userRepository = userRepository ?? throw new ArgumentNullException(nameof(userRepository));
+            _navigationService = navigationService;
             AvailableRoles = new ObservableCollection<string> { "Admin", "Scientist", "OpsManager" };
             Role = "Admin"; // Default role
         }
@@ -86,7 +87,7 @@ public partial class RegisterPageViewModel : ObservableObject
 
             await _userRepository.InsertUserAsync(newUser);
             StatusMessage = "Registration successful!";
-            await Shell.Current.GoToAsync("LoginPage");
+            await _navigationService.NavigateToAsync("LoginPage");
         }
         catch (Exception ex)
         {

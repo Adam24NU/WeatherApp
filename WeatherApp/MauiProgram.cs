@@ -1,28 +1,28 @@
 ﻿using Microsoft.Extensions.Logging;
-using WeatherApp.ViewModels;
-using WeatherApp.Views;
 using WeatherApp.Repositories;
 using WeatherApp.Tools;
+using WeatherApp.ViewModels;
+using WeatherApp.Views;
 
 namespace WeatherApp;
 
 public static class MauiProgram
 {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-			.UseMauiApp<App>()
+    public static MauiApp CreateMauiApp()
+    {
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
             .UseMauiMaps()
             .ConfigureFonts(fonts =>
-			{
-				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-			});
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+            });
 
-        #if DEBUG
-                builder.Logging.AddDebug();
-        #endif
+#if DEBUG
+        builder.Logging.AddDebug();
+#endif
 
         // Register the SQL Server connection
         builder.Services.AddSingleton<DatabaseConnection>();
@@ -59,8 +59,8 @@ public static class MauiProgram
         builder.Services.AddTransient<ScientistPage>();
         builder.Services.AddTransient<ScientistMapPageViewModel>();
         builder.Services.AddTransient<ScientistMapPage>();
-        builder.Services.AddTransient<ISiteRepository, SiteRepository>(); 
-        builder.Services.AddTransient<IMapInvoker, ScientistMapPage>(); 
+        builder.Services.AddTransient<ISiteRepository, SiteRepository>();
+        builder.Services.AddTransient<IMapInvoker, ScientistMapPage>();
         builder.Services.AddTransient<OpsManagerPage>();
 
         return builder.Build();

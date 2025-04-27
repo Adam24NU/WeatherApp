@@ -6,9 +6,6 @@
     xmlns:vm="clr-namespace:WeatherApp.ViewModels"
     Title="Admin Dashboard">
 
-    <ContentPage.BindingContext>
-        <vm:AdminPageViewModel />
-    </ContentPage.BindingContext>
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">

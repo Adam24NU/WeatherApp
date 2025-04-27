@@ -1,6 +1,5 @@
 using Microsoft.Data.SqlClient;
 using WeatherApp.Models;
-using System.Data;
 
 namespace WeatherApp.Repositories;
 
@@ -16,7 +15,7 @@ public class MeasurementRepository
         _dbConnection = dbConnection;
     }
 
-    public async Task<List<Measurement>> GetMeasurementsAsync()
+    public virtual async Task<List<Measurement>> GetMeasurementsAsync()
     {
         var measurements = new List<Measurement>();
 
@@ -42,7 +41,7 @@ public class MeasurementRepository
         return measurements;
     }
 
-    public async Task<Measurement> GetMeasurementByIdAsync(int id)
+    public virtual async Task<Measurement> GetMeasurementByIdAsync(int id)
     {
         using var conn = _dbConnection.GetConnection();
         await conn.OpenAsync();
@@ -67,7 +66,7 @@ public class MeasurementRepository
         return null!;
     }
 
-    public async Task<List<Measurement>> GetMeasurementsByQIdAsync(int quantityId)
+    public virtual async Task<List<Measurement>> GetMeasurementsByQIdAsync(int quantityId)
     {
         var measurements = new List<Measurement>();
 

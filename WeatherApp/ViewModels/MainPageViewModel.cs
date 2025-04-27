@@ -1,37 +1,46 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System;
-using System.Threading.Tasks;
+using WeatherApp.Tools;
 
 namespace WeatherApp.ViewModels;
 
 public partial class MainPageViewModel : ObservableObject
 {
+
+    private readonly INavigationService _navigationService;
+    private readonly IAlertService _alertService;
+
+    public MainPageViewModel(INavigationService navigationService, IAlertService alertService)
+    {
+        _navigationService = navigationService;
+        _alertService = alertService;
+    }
+
     [RelayCommand]
     public async Task NavigateToLogin()
     {
         try
         {
-            await Shell.Current.GoToAsync("LoginPage");
+            await _navigationService.NavigateToAsync("LoginPage");
         }
         catch (Exception ex)
         {
             System.Diagnostics.Debug.WriteLine($"NavigateToLogin error: {ex}");
-            await Shell.Current.DisplayAlert("Error", $"Navigation failed: {ex.Message}", "OK");
+            await _alertService.DisplayAlert("Error", $"Navigation failed: {ex.Message}", "OK");
         }
     }
 
     [RelayCommand]
-    private async Task NavigateToRegister()
+    public async Task NavigateToRegister()
     {
         try
         {
-            await Shell.Current.GoToAsync("RegisterPage");
+            await _navigationService.NavigateToAsync("RegisterPage");
         }
         catch (Exception ex)
         {
             System.Diagnostics.Debug.WriteLine($"NavigateToRegister error: {ex}");
-            await Shell.Current.DisplayAlert("Error", $"Navigation failed: {ex.Message}", "OK");
+            await _alertService.DisplayAlert("Error", $"Navigation failed: {ex.Message}", "OK");
         }
     }
 }

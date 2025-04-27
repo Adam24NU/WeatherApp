@@ -1,6 +1,4 @@
-﻿using WeatherApp.Views;
-
-namespace WeatherApp;
+﻿namespace WeatherApp;
 
 public partial class App : Application
 {

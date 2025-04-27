@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Windows.Input;
 using WeatherApp.Models;
 using WeatherApp.Repositories;
+using WeatherApp.Tools;
 
 namespace WeatherApp.ViewModels;
 
@@ -30,13 +31,17 @@ public partial class ScientistPageViewModel : ObservableObject
     [ObservableProperty]
     private bool isWeatherVisible;
 
+    private readonly INavigationService _navigationService;
+
     public ICommand LoadMeasurementCommand { get; }
     public ICommand NavigateToMapCommand { get; }
 
-    public ScientistPageViewModel()
+    // Constructor that accepts dependencies (for testing purposes)
+    public ScientistPageViewModel(PhysicalQuantityRepository physicalQuantityRepository, MeasurementRepository measurementRepository, INavigationService navigationService)
     {
-        _physicalQuantityRepository = new PhysicalQuantityRepository(new DatabaseConnection());
-        _measurementRepository = new MeasurementRepository(new DatabaseConnection());
+        _physicalQuantityRepository = physicalQuantityRepository;
+        _measurementRepository = measurementRepository;
+        _navigationService = navigationService;
 
         NavigateToMapCommand = new Command(OnNavigateToMap);
 
@@ -44,12 +49,12 @@ public partial class ScientistPageViewModel : ObservableObject
         WaterMeasurements = new ObservableCollection<MeasurementDisplay>();
         WeatherMeasurements = new ObservableCollection<MeasurementDisplay>();
 
-        LoadMeasurementCommand = new Command<string>(async (param) => await OutputMeasurementsAsync(param));  
+        LoadMeasurementCommand = new Command<string>(async (param) => await OutputMeasurementsAsync(param));
     }
 
     private async void OnNavigateToMap()
     {
-        await Shell.Current.GoToAsync("ScientistMapPage");
+        await _navigationService.NavigateToAsync("ScientistMapPage");
     }
 
     private async Task<List<Measurement>> LoadMeasurementsBySymbolAsync(string symbol)
@@ -127,29 +132,40 @@ public partial class ScientistPageViewModel : ObservableObject
 
         var validDisplayList = measurementDisplayList.Where(m => m != null).ToList();
 
-        // Reset all visibility flags
+        // Reset all visibility flags and collections
         IsAirVisible = false;
         IsWaterVisible = false;
         IsWeatherVisible = false;
+        AirMeasurements = new ObservableCollection<MeasurementDisplay>();
+        WaterMeasurements = new ObservableCollection<MeasurementDisplay>();
+        WeatherMeasurements = new ObservableCollection<MeasurementDisplay>();
 
-        if (symbol is "NO2" or "SO2" or "PM2.5" or "PM10")
+        // Only set measurements and visibility if there are valid measurements
+        if (validDisplayList.Any())
         {
-            AirMeasurements = new ObservableCollection<MeasurementDisplay>(validDisplayList);
-            IsAirVisible = true;
-        }
-        else if (symbol is "-NO3" or "-NO2" or "-PO4" or "EC")
-        {
-            WaterMeasurements = new ObservableCollection<MeasurementDisplay>(validDisplayList);
-            IsWaterVisible = true;
-        }
-        else if (symbol is "T" or "H" or "WS" or "WD")
-        {
-            WeatherMeasurements = new ObservableCollection<MeasurementDisplay>(validDisplayList);
-            IsWeatherVisible = true;
+            if (symbol is "NO2" or "SO2" or "PM2.5" or "PM10")
+            {
+                AirMeasurements = new ObservableCollection<MeasurementDisplay>(validDisplayList);
+                IsAirVisible = true;
+            }
+            else if (symbol is "-NO3" or "-NO2" or "-PO4" or "EC")
+            {
+                WaterMeasurements = new ObservableCollection<MeasurementDisplay>(validDisplayList);
+                IsWaterVisible = true;
+            }
+            else if (symbol is "T" or "H" or "WS" or "WD")
+            {
+                WeatherMeasurements = new ObservableCollection<MeasurementDisplay>(validDisplayList);
+                IsWeatherVisible = true;
+            }
+            else
+            {
+                Debug.WriteLine($"[WARN] Symbol '{symbol}' did not match any category.");
+            }
         }
         else
         {
-            Debug.WriteLine($"[WARN] Symbol '{symbol}' did not match any category.");
+            Debug.WriteLine($"[DEBUG] No valid measurements to display for symbol '{symbol}'.");
         }
     }
 }

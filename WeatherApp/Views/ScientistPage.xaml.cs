@@ -1,4 +1,6 @@
-﻿using WeatherApp.ViewModels;
+﻿using WeatherApp.Repositories;
+using WeatherApp.Tools;
+using WeatherApp.ViewModels;
 
 namespace WeatherApp.Views;
 
@@ -6,17 +8,21 @@ public partial class ScientistPage : ContentPage
 {
     private ScientistPageViewModel _viewModel;
 
-    public ScientistPage()
+    // Constructor
+    public ScientistPage(
+        PhysicalQuantityRepository physicalQuantityRepository,
+        MeasurementRepository measurementRepository,
+        INavigationService navigationService
+        )
     {
         InitializeComponent();
 
-        // Initialize the ViewModel
-        _viewModel = new ScientistPageViewModel();
+        // Initialize the ViewModel with required parameters
+        _viewModel = new ScientistPageViewModel(physicalQuantityRepository, measurementRepository, navigationService);
 
         // Set the BindingContext
         BindingContext = _viewModel;
     }
-
 
     protected override void OnAppearing()
     {
@@ -32,5 +38,4 @@ public partial class ScientistPage : ContentPage
     public Command LoadAirCommand { get; set; }
     public Command LoadWaterCommand { get; set; }
     public Command LoadWeatherCommand { get; set; }
-
 }

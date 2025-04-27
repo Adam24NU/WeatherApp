@@ -1,13 +1,14 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using WeatherApp.Repositories;
-using System.Threading.Tasks;
+using WeatherApp.Tools;
 
 namespace WeatherApp.ViewModels;
 
 public partial class LoginPageViewModel : ObservableObject
 {
     private readonly UserRepository _userRepository;
+    private readonly INavigationService _navigationService;
 
     [ObservableProperty]
     private string email;
@@ -18,9 +19,10 @@ public partial class LoginPageViewModel : ObservableObject
     [ObservableProperty]
     private string statusMessage;
 
-    public LoginPageViewModel(UserRepository userRepository)
+    public LoginPageViewModel(UserRepository userRepository, INavigationService navigationService)
     {
         _userRepository = userRepository;
+        _navigationService = navigationService;
     }
 
     [RelayCommand]
@@ -39,13 +41,13 @@ public partial class LoginPageViewModel : ObservableObject
             switch (user.Role)
             {
                 case "Admin":
-                    await Shell.Current.GoToAsync("AdminPage");
+                    await _navigationService.NavigateToAsync("AdminPage");
                     break;
                 case "Scientist":
-                    await Shell.Current.GoToAsync("ScientistPage");
+                    await _navigationService.NavigateToAsync("ScientistPage");
                     break;
                 case "OpsManager":
-                    await Shell.Current.GoToAsync("OpsManagerPage");
+                    await _navigationService.NavigateToAsync("OpsManagerPage");
                     break;
                 default:
                     StatusMessage = "Unknown role.";
