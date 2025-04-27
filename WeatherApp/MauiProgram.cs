@@ -1,28 +1,38 @@
-﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Hosting;
-using System.IO;
+﻿using Microsoft.Extensions.Logging;
+using WeatherApp.Pages;
+using WeatherApp.Authentication;
+using WeatherApp.Models;
+
 
 namespace WeatherApp
 {
+
     public static class MauiProgram
     {
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
-
-            // Load the configuration file from the Resources/raw folder for Android
-            builder.Configuration
-                .SetBasePath(FileSystem.AppDataDirectory) // This is for ensuring that the base path is set correctly for app data
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true); // Load the appsettings.json from raw folder
-
             builder
                 .UseMauiApp<App>()
+                .UseMauiMaps()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
+
+#if DEBUG
+            builder.Logging.AddDebug();
+#endif
+
+            // Register the SQL Server connection (Connection string from config)
+            builder.Services.AddSingleton<appsettings>(); // Register as singleton
+
+
+            // Register ViewModels and Views
+            builder.Services.AddTransient<MainPage>();
+            builder.Services.AddTransient<LoginPage>();
+            builder.Services.AddTransient<RegisterPage>();
 
             return builder.Build();
         }
