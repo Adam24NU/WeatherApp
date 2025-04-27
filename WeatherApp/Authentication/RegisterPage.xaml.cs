@@ -1,16 +1,19 @@
-﻿using WeatherApp.Models;
+﻿using WeatherApp.Resources;  // Import the Database class
 
 namespace WeatherApp.Authentication
 {
     public partial class RegisterPage : ContentPage
     {
-        // Mock in-memory user list (you can move this to a shared service later)
-        public static List<User> RegisteredUsers = new();
+        private readonly Database _database;
 
-        public RegisterPage()
+        // Constructor to accept the Database dependency
+        public RegisterPage(Database database)
         {
             InitializeComponent();
+            _database = database;
         }
+
+        // OnRegisterClicked will now use the _database field
         [Obsolete]
         private async void OnRegisterClicked(object sender, EventArgs e)
         {
@@ -18,33 +21,23 @@ namespace WeatherApp.Authentication
             var password = PasswordEntry.Text;
             var role = RolePicker.SelectedItem?.ToString();
 
-            if (string.IsNullOrWhiteSpace(username) ||
-                string.IsNullOrWhiteSpace(password) ||
-                string.IsNullOrWhiteSpace(role))
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(role))
             {
                 StatusLabel.Text = "Please fill all fields.";
                 return;
             }
 
             // Check for duplicates
-            if (RegisteredUsers.Any(u => u.Username == username))
+            if (_database.RegisterUser(username, password, role))
+            {
+                StatusLabel.TextColor = Colors.Green;
+                StatusLabel.Text = "Registration successful!";
+                await Navigation.PushAsync(new LoginPage(_database));  // Navigate to LoginPage with Database
+            }
+            else
             {
                 StatusLabel.Text = "Username already exists.";
-                return;
             }
-
-            UserStore.RegisteredUsers.Add(new User
-            {
-                Username = username,
-                Password = password,
-                Role = role
-            });
-
-            StatusLabel.TextColor = Colors.Green;
-            StatusLabel.Text = "Registration successful!";
-
-            // Optional: Navigate to login page automatically
-            await Navigation.PushAsync(new LoginPage());
         }
     }
 }

@@ -1,13 +1,19 @@
-﻿using WeatherApp.Pages;
-
+﻿using WeatherApp.Resources;  // Add reference to Database
+using WeatherApp.Models;  // Add reference to User model
+using WeatherApp.Pages;  // Add reference to the pages
+using WeatherApp;
 
 namespace WeatherApp.Authentication
 {
     public partial class LoginPage : ContentPage
     {
-        public LoginPage()
+        private readonly Database _database;  // Adam's task: Database instance
+
+        // Adam's task: Constructor to inject Database
+        public LoginPage(Database database)
         {
             InitializeComponent();
+            _database = database;
         }
 
         [Obsolete]
@@ -16,26 +22,26 @@ namespace WeatherApp.Authentication
             var username = UsernameEntry.Text?.Trim();
             var password = PasswordEntry.Text;
 
-            var user = UserStore.RegisteredUsers.FirstOrDefault(u =>u.Username == username && u.Password == password);
-
+            // Adam's task: Authenticate user against the database
+            var user = _database.AuthenticateUser(username, password);
 
             if (user == null)
             {
-                StatusLabel.Text = "Invalid username or password.";
+                StatusLabel.Text = "Invalid username or password.";  // Display error
                 return;
             }
 
-            // ✅ Navigate based on role
+            // ✅ Navigate based on role (Adam's task: role-based navigation)
             switch (user.Role)
             {
                 case "Scientist":
-                    await Navigation.PushAsync(new MainPage()); // Air Quality or Scientist dashboard
+                    await Navigation.PushAsync(new MainPage());
                     break;
                 case "Administrator":
-                    await Navigation.PushAsync(new AdminPage()); // Placeholder for now
+                    await Navigation.PushAsync(new AdminPage(_database)); // Pass the database
                     break;
                 case "Operations Manager":
-                    await Navigation.PushAsync(new OpsManagerPage()); // Placeholder for now
+                    await Navigation.PushAsync(new OpsManagerPage(_database)); // Pass the database
                     break;
             }
         }

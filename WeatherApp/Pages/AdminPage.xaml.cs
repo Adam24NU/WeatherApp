@@ -1,18 +1,30 @@
-﻿using System;
-using Microsoft.Maui.Controls;
+﻿using WeatherApp.Models;
+using WeatherApp.Resources;  // Add reference to Database
 
 namespace WeatherApp.Pages
 {
     public partial class AdminPage : ContentPage
     {
-        public AdminPage()
+        private readonly Database _database;  // Database instance to interact with DB
+
+        // Constructor to inject Database
+        public AdminPage(Database database)
         {
             InitializeComponent();
-            UserListView.ItemsSource = UserStore.RegisteredUsers;
+            _database = database;
+            LoadUsers();  // Load users from the database
             LastBackupLabel.Text = $"💾 Last Backup: {DateTime.Now:f}";
         }
 
-        private void OnCreateUserClicked(object sender, EventArgs e)
+        // Method to load users from the database and bind them to the UserListView
+        private void LoadUsers()
+        {
+            var users = _database.GetUsers(); // Method to get users from the database
+            UserListView.ItemsSource = users;
+        }
+
+        // Create user button click handler
+        private async void OnCreateUserClicked(object sender, EventArgs e)
         {
             string username = NewUsernameEntry.Text?.Trim();
             string password = NewPasswordEntry.Text;
@@ -20,54 +32,59 @@ namespace WeatherApp.Pages
 
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(role))
             {
-                DisplayAlert("Error", "Please fill out all fields.", "OK");
+                await DisplayAlert("Error", "Please fill out all fields.", "OK");
                 return;
             }
 
-            // Check if username already exists
-            if (UserStore.RegisteredUsers.Any(u => u.Username.Equals(username, StringComparison.OrdinalIgnoreCase)))
+            // Register the user in the database
+            bool isUserCreated = _database.RegisterUser(username, password, role);
+
+            if (!isUserCreated)
             {
-                DisplayAlert("Error", "Username already exists.", "OK");
+                await DisplayAlert("Error", "Username already exists.", "OK");
                 return;
             }
 
-            UserStore.RegisteredUsers.Add(new User
-            {
-                Username = username,
-                Password = password,
-                Role = role
-            });
-
+            // Clear inputs
             NewUsernameEntry.Text = "";
             NewPasswordEntry.Text = "";
             RolePicker.SelectedIndex = -1;
 
-            UserListView.ItemsSource = null;
-            UserListView.ItemsSource = UserStore.RegisteredUsers;
+            // Reload user list
+            LoadUsers();
 
-            DisplayAlert("Success", "User created successfully!", "OK");
+            await DisplayAlert("Success", "User created successfully!", "OK");
         }
 
-        private void OnDeleteUserClicked(object sender, EventArgs e)
+        // Delete user button click handler
+        private async void OnDeleteUserClicked(object sender, EventArgs e)
         {
             var selectedUser = UserListView.SelectedItem as User;
             if (selectedUser == null)
             {
-                DisplayAlert("Error", "Please select a user to delete.", "OK");
+                await DisplayAlert("Error", "Please select a user to delete.", "OK");
                 return;
             }
 
-            UserStore.RegisteredUsers.Remove(selectedUser);
+            // Delete user from the database
+            bool isDeleted = _database.DeleteUser(selectedUser.UserId);
 
-            UserListView.ItemsSource = null;
-            UserListView.ItemsSource = UserStore.RegisteredUsers;
-
-            DisplayAlert("Deleted", "User has been removed.", "OK");
+            if (isDeleted)
+            {
+                // Reload user list after deletion
+                LoadUsers();
+                await DisplayAlert("Deleted", "User has been removed.", "OK");
+            }
+            else
+            {
+                await DisplayAlert("Error", "Unable to delete user.", "OK");
+            }
         }
 
-        private void OnFirmwareUpdateClicked(object sender, EventArgs e)
+        // Simulate firmware update action (still optional in this case)
+        private async void OnFirmwareUpdateClicked(object sender, EventArgs e)
         {
-            DisplayAlert("Firmware Update", "Sensor firmware update pushed successfully!", "OK");
+            await DisplayAlert("Firmware Update", "Sensor firmware update pushed successfully!", "OK");
         }
     }
 }

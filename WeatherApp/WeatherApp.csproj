@@ -35,6 +35,9 @@
 	  <CreatePackage>false</CreatePackage>
 	</PropertyGroup>
 	<ItemGroup>
+	  <MauiAsset Remove="Resources\Raw\appsettings.json" />
+	</ItemGroup>
+	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
@@ -60,13 +63,22 @@
 	 
 	  
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	  <PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.0" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="6.0.0" />
 	</ItemGroup>
 	<ItemGroup>
 	  <None Remove="Authentication\" />
 	  <None Remove="Pages\" />
+	  <None Remove="Resources\Raw\appsettings.json" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Authentication\" />
 	  <Folder Include="Pages\" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <AndroidAsset Include="Resources\Raw\appsettings.json">
+	    <LogicalName>appsettings.json</LogicalName>
+	  </AndroidAsset>
 	</ItemGroup>
 </Project>
