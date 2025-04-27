@@ -27,6 +27,9 @@ public static class MauiProgram
         // Register the SQL Server connection
         builder.Services.AddSingleton<DatabaseConnection>();
 
+        builder.Services.AddSingleton<INavigationService, NavigationService>();
+        builder.Services.AddSingleton<IAlertService, AlertService>();
+
         // Register repositories
         builder.Services.AddSingleton<UserRepository>();
         builder.Services.AddSingleton<SiteRepository>();
