@@ -1,7 +1,0 @@
-@startuml
-actor User
-User -> (Login)
-User -> (Register)
-
-(Login) --> (Display Dashboard)
-@enduml

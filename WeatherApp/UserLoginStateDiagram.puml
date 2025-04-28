@@ -1,7 +1,0 @@
-@startuml
-[*] --> LoggedOut
-LoggedOut --> LoggingIn : Enter Credentials
-LoggingIn --> LoggedIn : Valid Credentials
-LoggingIn --> LoggedOut : Invalid Credentials
-LoggedIn --> LoggedOut : Logout
-@enduml

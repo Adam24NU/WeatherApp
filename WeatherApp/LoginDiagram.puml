@@ -1,7 +1,0 @@
-@startuml
-participant LoginPage
-participant UserStore
-
-LoginPage -> UserStore : Login("user", "password")
-UserStore --> LoginPage : return User
-@enduml
