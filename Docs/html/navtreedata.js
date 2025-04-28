@@ -33,8 +33,18 @@ var NAVTREE =
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ]
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ],
+        [ "Properties", "functions_prop.html", null ],
+        [ "Events", "functions_evnt.html", null ]
+      ] ]
+    ] ],
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Typedefs", "globals_type.html", null ]
       ] ]
     ] ]
   ] ]
@@ -42,7 +52,10 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"_admin_page_8xaml.html",
+"class_weather_app_1_1_repositories_1_1_config_setting_repository.html",
+"class_weather_app_1_1_view_models_1_1_login_page_view_model.html#af9dc8997467adfabf85f593ab7e4355a",
+"class_weather_app_tests_1_1_view_models_1_1_register_page_view_model_tests.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

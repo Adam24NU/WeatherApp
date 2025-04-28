@@ -1,13 +1,18 @@
 var searchData=
 [
-  ['ialertservice_0',['IAlertService',['../interface_weather_app_1_1_tools_1_1_i_alert_service.html',1,'WeatherApp::Tools']]],
-  ['imapinvoker_1',['IMapInvoker',['../interface_weather_app_1_1_tools_1_1_i_map_invoker.html',1,'WeatherApp::Tools']]],
-  ['inavigationservice_2',['INavigationService',['../interface_weather_app_1_1_tools_1_1_i_navigation_service.html',1,'WeatherApp::Tools']]],
-  ['incident_3',['Incident',['../class_weather_app_1_1_models_1_1_incident.html',1,'WeatherApp::Models']]],
-  ['incidentmeasurement_4',['IncidentMeasurement',['../class_weather_app_1_1_models_1_1_incident_measurement.html',1,'WeatherApp::Models']]],
-  ['incidentmeasurementrepository_5',['IncidentMeasurementRepository',['../class_weather_app_1_1_repositories_1_1_incident_measurement_repository.html',1,'WeatherApp::Repositories']]],
-  ['incidentrepository_6',['IncidentRepository',['../class_weather_app_1_1_repositories_1_1_incident_repository.html',1,'WeatherApp::Repositories']]],
-  ['initializecomponent_7',['InitializeComponent',['../class_weather_app_1_1_win_u_i_1_1_app.html#aeafbcf38ba7ab6c0f7b04127a9c324a2',1,'WeatherApp::WinUI::App']]],
-  ['isiterepository_8',['ISiteRepository',['../interface_weather_app_1_1_repositories_1_1_i_site_repository.html',1,'WeatherApp::Repositories']]],
-  ['isnotnullconverter_9',['IsNotNullConverter',['../class_weather_app_1_1_tools_1_1_is_not_null_converter.html',1,'WeatherApp::Tools']]]
+  ['databaseconnection_0',['DatabaseConnection',['../class_weather_app_1_1_repositories_1_1_database_connection.html',1,'WeatherApp.Repositories.DatabaseConnection'],['../class_weather_app_1_1_repositories_1_1_database_connection.html#a9aff231dbe1cd4d922202d0190d29171',1,'WeatherApp.Repositories.DatabaseConnection.DatabaseConnection()'],['../class_weather_app_1_1_repositories_1_1_database_connection.html#a2be092b59c1777a12f0453e9f6871f21',1,'WeatherApp.Repositories.DatabaseConnection.DatabaseConnection(string connectionString)']]],
+  ['databaseconnection_2ecs_1',['DatabaseConnection.cs',['../_database_connection_8cs.html',1,'']]],
+  ['date_2',['Date',['../class_weather_app_1_1_models_1_1_measurement.html#a920346d0f1688df5dbb3984a2e2c972a',1,'WeatherApp.Models.Measurement.Date'],['../class_weather_app_1_1_view_models_1_1_measurement_display.html#a066aafd98b7bbfd2e330b48e3a43c7e0',1,'WeatherApp.ViewModels.MeasurementDisplay.Date']]],
+  ['deleteconfigsettingasync_3',['DeleteConfigSettingAsync',['../class_weather_app_1_1_repositories_1_1_config_setting_repository.html#a84e894a193f21d133cfaf96b02200cbd',1,'WeatherApp::Repositories::ConfigSettingRepository']]],
+  ['deleteincidentasync_4',['DeleteIncidentAsync',['../class_weather_app_1_1_repositories_1_1_incident_repository.html#a663f211b7786c88b193e0e5d7276558d',1,'WeatherApp::Repositories::IncidentRepository']]],
+  ['deleteincidentmeasurementasync_5',['DeleteIncidentMeasurementAsync',['../class_weather_app_1_1_repositories_1_1_incident_measurement_repository.html#aa95789130a098a26412fcece59562ff0',1,'WeatherApp::Repositories::IncidentMeasurementRepository']]],
+  ['deletemaintenanceasync_6',['DeleteMaintenanceAsync',['../class_weather_app_1_1_repositories_1_1_maintenance_repository.html#a1297486d22477d5f28e4dee6a6c53096',1,'WeatherApp::Repositories::MaintenanceRepository']]],
+  ['deletesensorasync_7',['DeleteSensorAsync',['../class_weather_app_1_1_repositories_1_1_sensor_repository.html#a550ca5beaaea9d02a2f2184c09a70cd6',1,'WeatherApp::Repositories::SensorRepository']]],
+  ['deleteuser_8',['DeleteUser',['../class_weather_app_1_1_view_models_1_1_admin_page_view_model.html#a6b210c1b0645a209e4a759d33ce3694e',1,'WeatherApp::ViewModels::AdminPageViewModel']]],
+  ['deleteuser_5fshouldnotremoveuser_5fwhennouserisselected_9',['DeleteUser_ShouldNotRemoveUser_WhenNoUserIsSelected',['../class_weather_app_tests_1_1_view_models_1_1_admin_page_view_model_tests.html#a33b30e5c36ce1b6fb9fac39e09951113',1,'WeatherAppTests::ViewModels::AdminPageViewModelTests']]],
+  ['deleteuser_5fshouldremoveuser_5fwhenuserisselected_10',['DeleteUser_ShouldRemoveUser_WhenUserIsSelected',['../class_weather_app_tests_1_1_view_models_1_1_admin_page_view_model_tests.html#a2357c1c3e253f8202341faca068c1ad4',1,'WeatherAppTests::ViewModels::AdminPageViewModelTests']]],
+  ['deleteuserasync_11',['DeleteUserAsync',['../class_weather_app_1_1_repositories_1_1_user_repository.html#a4b2cce87d0b1293ad37bc9ae221db0a3',1,'WeatherApp::Repositories::UserRepository']]],
+  ['displayalert_12',['DisplayAlert',['../interface_weather_app_1_1_tools_1_1_i_alert_service.html#ae9090cadeadca3b76fa15da7eac22da6',1,'WeatherApp.Tools.IAlertService.DisplayAlert()'],['../class_weather_app_1_1_tools_1_1_alert_service.html#a03a52622688b1b99d9122a77f824f71c',1,'WeatherApp.Tools.AlertService.DisplayAlert()']]],
+  ['displayeddata_13',['DisplayedData',['../class_weather_app_1_1_views_1_1_ops_manager_page.html#a45b0f8924fc434e587d99e93afd809d6',1,'WeatherApp::Views::OpsManagerPage']]],
+  ['dispose_14',['Dispose',['../class_weather_app_1_1_repositories_1_1_database_connection.html#aeab260f3ddf1734419a4f68fd1ee4634',1,'WeatherApp.Repositories.DatabaseConnection.Dispose()'],['../class_weather_app_1_1_repositories_1_1_database_connection.html#a5dfe7f210f04044119dc815e5c246c6e',1,'WeatherApp.Repositories.DatabaseConnection.Dispose(bool disposing)']]]
 ];

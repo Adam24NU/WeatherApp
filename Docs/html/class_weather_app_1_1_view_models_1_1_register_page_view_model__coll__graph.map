@@ -1,5 +1,13 @@
 <map id="WeatherApp.ViewModels.RegisterPageViewModel" name="WeatherApp.ViewModels.RegisterPageViewModel">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,226,123"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="53,5,178,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,48,118,80,113,80,113,48"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="817,56,1037,99"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="493,5,619,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="635,28,793,53,816,57,816,62,792,59,634,33"/>
+<area shape="rect" id="Node000003" href="$class_weather_app_1_1_repositories_1_1_user_repository.html" title=" " alt="" coords="469,56,643,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="658,75,816,75,816,80,658,80"/>
+<area shape="rect" id="Node000004" href="$class_weather_app_1_1_repositories_1_1_database_connection.html" title=" " alt="" coords="145,56,318,99"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="334,75,469,75,469,80,334,80"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,64,96,91"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="111,75,145,75,145,80,111,80"/>
+<area shape="rect" id="Node000006" href="$interface_weather_app_1_1_tools_1_1_i_navigation_service.html" title=" " alt="" coords="457,123,655,165"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="669,121,816,94,817,100,670,126"/>
 </map>

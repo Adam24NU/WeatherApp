@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['currentvalue_0',['CurrentValue',['../class_config_setting.html#abff24551fa3095c13ff7f3bfe980fc90',1,'ConfigSetting']]]
+  ['_5fappprovider_0',['_AppProvider',['../class_weather_app_1_1_win_u_i_1_1_app.html#a3eb05ae525400543892b7727e96c76cc',1,'WeatherApp::WinUI::App']]]
 ];

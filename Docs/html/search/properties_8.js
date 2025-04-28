@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['password_0',['Password',['../class_weather_app_1_1_models_1_1_user.html#aef8801a18a7616adbcd0696ab5046c07',1,'WeatherApp::Models::User']]],
-  ['priority_1',['Priority',['../class_weather_app_1_1_models_1_1_incident.html#aee93200229fc368f3330cf9b1574f310',1,'WeatherApp::Models::Incident']]]
+  ['name_0',['Name',['../class_weather_app_1_1_models_1_1_sensor.html#a07ab156341869cf49cf1ae643aef024d',1,'WeatherApp::Models::Sensor']]],
+  ['navigatetomapcommand_1',['NavigateToMapCommand',['../class_weather_app_1_1_view_models_1_1_scientist_page_view_model.html#ad14baa77756067cd3ec5a362bfe601c6',1,'WeatherApp::ViewModels::ScientistPageViewModel']]]
 ];

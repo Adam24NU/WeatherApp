@@ -5,5 +5,6 @@ var class_weather_app_1_1_repositories_1_1_incident_repository =
     [ "GetIncidentByIdAsync", "class_weather_app_1_1_repositories_1_1_incident_repository.html#ae15bc530660096f39b4ace183f2de147", null ],
     [ "GetIncidentsAsync", "class_weather_app_1_1_repositories_1_1_incident_repository.html#a8bcaf0f54f3096accc40ee42cecf2616", null ],
     [ "InsertIncidentAsync", "class_weather_app_1_1_repositories_1_1_incident_repository.html#a17ce4d9ea08d9228204f771dcf448157", null ],
-    [ "UpdateIncidentAsync", "class_weather_app_1_1_repositories_1_1_incident_repository.html#a0d9443a8f35dbb7a81aa468c6432cab1", null ]
+    [ "UpdateIncidentAsync", "class_weather_app_1_1_repositories_1_1_incident_repository.html#a0d9443a8f35dbb7a81aa468c6432cab1", null ],
+    [ "_dbConnection", "class_weather_app_1_1_repositories_1_1_incident_repository.html#a41e315a04e5ebf9fe1e87cee80a1bce8", null ]
 ];

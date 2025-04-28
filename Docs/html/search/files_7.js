@@ -1,27 +1,7 @@
 var searchData=
 [
-  ['fileprovider_2ejava_0',['fileProvider.java',['../file_provider_8java.html',1,'']]],
-  ['fitwindowsviewgroup_5fonfitsystemwindowslistenerimplementor_2ejava_1',['FitWindowsViewGroup_OnFitSystemWindowsListenerImplementor.java',['../_fit_windows_view_group___on_fit_system_windows_listener_implementor_8java.html',1,'']]],
-  ['floatarrayevaluator_2ejava_2',['FloatArrayEvaluator.java',['../_float_array_evaluator_8java.html',1,'']]],
-  ['flyoutpagecontainer_2ejava_3',['FlyoutPageContainer.java',['../_flyout_page_container_8java.html',1,'']]],
-  ['flyoutpagerenderer_2ejava_4',['FlyoutPageRenderer.java',['../_flyout_page_renderer_8java.html',1,'']]],
-  ['formsanimationdrawable_2ejava_5',['FormsAnimationDrawable.java',['../_forms_animation_drawable_8java.html',1,'']]],
-  ['formsappcompatactivity_2ejava_6',['FormsAppCompatActivity.java',['../_forms_app_compat_activity_8java.html',1,'']]],
-  ['formsedittext_2ejava_7',['FormsEditText.java',['../_forms_edit_text_8java.html',1,'']]],
-  ['formsedittextbase_2ejava_8',['FormsEditTextBase.java',['../_forms_edit_text_base_8java.html',1,'']]],
-  ['formsfragmentpageradapter_5f1_2ejava_9',['FormsFragmentPagerAdapter_1.java',['../_forms_fragment_pager_adapter__1_8java.html',1,'']]],
-  ['formsimageview_2ejava_10',['FormsImageView.java',['../_forms_image_view_8java.html',1,'']]],
-  ['formsseekbar_2ejava_11',['FormsSeekBar.java',['../_forms_seek_bar_8java.html',1,'']]],
-  ['formstextview_2ejava_12',['FormsTextView.java',['../_forms_text_view_8java.html',1,'']]],
-  ['formsvideoview_2ejava_13',['FormsVideoView.java',['../_forms_video_view_8java.html',1,'']]],
-  ['formsviewpager_2ejava_14',['FormsViewPager.java',['../_forms_view_pager_8java.html',1,'']]],
-  ['formswebchromeclient_2ejava_15',['FormsWebChromeClient.java',['../_forms_web_chrome_client_8java.html',1,'']]],
-  ['formswebviewclient_2ejava_16',['FormsWebViewClient.java',['../_forms_web_view_client_8java.html',1,'']]],
-  ['fragmentcontainer_2ejava_17',['FragmentContainer.java',['../crc64338477404e88479c_2_fragment_container_8java.html',1,'(Global Namespace)'],['../crc648afdc667cfb0dccb_2_fragment_container_8java.html',1,'(Global Namespace)']]],
-  ['fragmentmanager_5fonbackstackchangedlistenerimplementor_2ejava_18',['FragmentManager_OnBackStackChangedListenerImplementor.java',['../_fragment_manager___on_back_stack_changed_listener_implementor_8java.html',1,'']]],
-  ['fragmentmanagerextensions_5fcallbacks_2ejava_19',['FragmentManagerExtensions_CallBacks.java',['../_fragment_manager_extensions___call_backs_8java.html',1,'']]],
-  ['fragmentonattachlistenerimplementor_2ejava_20',['FragmentOnAttachListenerImplementor.java',['../_fragment_on_attach_listener_implementor_8java.html',1,'']]],
-  ['fragmentresultlistenerimplementor_2ejava_21',['FragmentResultListenerImplementor.java',['../_fragment_result_listener_implementor_8java.html',1,'']]],
-  ['fragmentstrictmode_5fonviolationlistenerimplementor_2ejava_22',['FragmentStrictMode_OnViolationListenerImplementor.java',['../_fragment_strict_mode___on_violation_listener_implementor_8java.html',1,'']]],
-  ['framerenderer_2ejava_23',['FrameRenderer.java',['../crc64124e178812aeed4c_2_frame_renderer_8java.html',1,'(Global Namespace)'],['../crc648afdc667cfb0dccb_2_frame_renderer_8java.html',1,'(Global Namespace)'],['../crc64e1fb321c08285b90_2_frame_renderer_8java.html',1,'(Global Namespace)']]]
+  ['loginpage_2examl_0',['LoginPage.xaml',['../_login_page_8xaml.html',1,'']]],
+  ['loginpage_2examl_2ecs_1',['LoginPage.xaml.cs',['../_login_page_8xaml_8cs.html',1,'']]],
+  ['loginpageviewmodel_2ecs_2',['LoginPageViewModel.cs',['../_login_page_view_model_8cs.html',1,'']]],
+  ['loginpageviewmodeltests_2ecs_3',['LoginPageViewModelTests.cs',['../_login_page_view_model_tests_8cs.html',1,'']]]
 ];

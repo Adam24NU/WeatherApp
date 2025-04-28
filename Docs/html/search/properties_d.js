@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['unit_0',['Unit',['../class_weather_app_1_1_models_1_1_physical_quantity.html#a9f1d0638faea1c33e52183abf8967ba5',1,'WeatherApp.Models.PhysicalQuantity.Unit'],['../class_weather_app_1_1_view_models_1_1_measurement_display.html#ae9a3ec5b7282c6740ea29a52c02a5394',1,'WeatherApp.ViewModels.MeasurementDisplay.Unit']]],
-  ['unitdescription_1',['UnitDescription',['../class_weather_app_1_1_models_1_1_physical_quantity.html#a752af4e3b34d97419470698c923e7dc7',1,'WeatherApp::Models::PhysicalQuantity']]],
-  ['userid_2',['UserId',['../class_weather_app_1_1_models_1_1_user.html#a5caf801f2734a41c5e2ec68ae10ba119',1,'WeatherApp::Models::User']]]
+  ['time_0',['Time',['../class_weather_app_1_1_models_1_1_measurement.html#aefa46d680620f9ed307850cb5804eebd',1,'WeatherApp.Models.Measurement.Time'],['../class_weather_app_1_1_view_models_1_1_measurement_display.html#a7ed17042f4bc782e1ce453ad0c02e041',1,'WeatherApp.ViewModels.MeasurementDisplay.Time']]],
+  ['type_1',['Type',['../class_weather_app_1_1_models_1_1_site.html#a06f62b2b27e8e2a29cd3570bcd35c69c',1,'WeatherApp.Models.Site.Type'],['../class_weather_app_1_1_sensor_meta.html#ac5b1ba37b4f413e6ed58e67a51109348',1,'WeatherApp.SensorMeta.Type']]]
 ];

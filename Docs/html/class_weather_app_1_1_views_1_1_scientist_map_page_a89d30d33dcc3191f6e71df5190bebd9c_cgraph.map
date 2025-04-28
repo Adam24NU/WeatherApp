@@ -1,0 +1,5 @@
+<map id="WeatherApp.Views.ScientistMapPage.ScientistMapPage" name="WeatherApp.Views.ScientistMapPage.ScientistMapPage">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,193,48"/>
+<area shape="rect" id="Node000002" href="$class_weather_app_1_1_views_1_1_scientist_map_page.html#af0734c2f4d0914b87489d50502836c22" title=" " alt="" coords="241,5,474,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,24,225,24,225,29,193,29"/>
+</map>

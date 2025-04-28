@@ -1,13 +1,16 @@
 var searchData=
 [
-  ['scientistmappage_0',['ScientistMapPage',['../class_weather_app_1_1_views_1_1_scientist_map_page.html',1,'WeatherApp::Views']]],
-  ['scientistmappageviewmodel_1',['ScientistMapPageViewModel',['../class_scientist_map_page_view_model.html',1,'']]],
-  ['scientistpage_2',['ScientistPage',['../class_weather_app_1_1_views_1_1_scientist_page.html',1,'WeatherApp::Views']]],
-  ['scientistpageviewmodel_3',['ScientistPageViewModel',['../class_weather_app_1_1_view_models_1_1_scientist_page_view_model.html',1,'WeatherApp::ViewModels']]],
-  ['scientistpageviewmodeltests_4',['ScientistPageViewModelTests',['../class_weather_app_tests_1_1_view_models_1_1_scientist_page_view_model_tests.html',1,'WeatherAppTests::ViewModels']]],
-  ['sensor_5',['Sensor',['../class_weather_app_1_1_models_1_1_sensor.html',1,'WeatherApp::Models']]],
-  ['sensormeta_6',['SensorMeta',['../class_weather_app_1_1_sensor_meta.html',1,'WeatherApp']]],
-  ['sensorrepository_7',['SensorRepository',['../class_weather_app_1_1_repositories_1_1_sensor_repository.html',1,'WeatherApp::Repositories']]],
-  ['site_8',['Site',['../class_weather_app_1_1_models_1_1_site.html',1,'WeatherApp::Models']]],
-  ['siterepository_9',['SiteRepository',['../class_weather_app_1_1_repositories_1_1_site_repository.html',1,'WeatherApp::Repositories']]]
+  ['name_0',['Name',['../class_weather_app_1_1_models_1_1_sensor.html#a07ab156341869cf49cf1ae643aef024d',1,'WeatherApp::Models::Sensor']]],
+  ['navigateback_1',['NavigateBack',['../class_weather_app_1_1_view_models_1_1_register_page_view_model.html#a4a52c7bce0de49f51d015f12cc6153d2',1,'WeatherApp::ViewModels::RegisterPageViewModel']]],
+  ['navigatetoasync_2',['NavigateToAsync',['../interface_weather_app_1_1_tools_1_1_i_navigation_service.html#aaaa0ae02e54ef5af34fea6cea195db5b',1,'WeatherApp.Tools.INavigationService.NavigateToAsync()'],['../class_weather_app_1_1_tools_1_1_navigation_service.html#a5f5a9da0e49da9418ca13c8afde254c6',1,'WeatherApp.Tools.NavigationService.NavigateToAsync()']]],
+  ['navigatetologin_3',['NavigateToLogin',['../class_weather_app_1_1_view_models_1_1_main_page_view_model.html#ac7d274fbec9ed4b562c00e660680ad3c',1,'WeatherApp::ViewModels::MainPageViewModel']]],
+  ['navigatetologin_5fexceptionhandling_4',['NavigateToLogin_ExceptionHandling',['../class_weather_app_tests_1_1_view_models_1_1_main_page_view_model_tests.html#a22eb2dae9adb51383298c9548638826c',1,'WeatherAppTests::ViewModels::MainPageViewModelTests']]],
+  ['navigatetologin_5fsuccess_5',['NavigateToLogin_Success',['../class_weather_app_tests_1_1_view_models_1_1_main_page_view_model_tests.html#a93a9ee0186c9e98680c71df48e85a227',1,'WeatherAppTests::ViewModels::MainPageViewModelTests']]],
+  ['navigatetomapcommand_6',['NavigateToMapCommand',['../class_weather_app_1_1_view_models_1_1_scientist_page_view_model.html#ad14baa77756067cd3ec5a362bfe601c6',1,'WeatherApp::ViewModels::ScientistPageViewModel']]],
+  ['navigatetomapcommand_5fcallsnavigationservice_7',['NavigateToMapCommand_CallsNavigationService',['../class_weather_app_tests_1_1_view_models_1_1_scientist_page_view_model_tests.html#a16b84379c418d69094fec21982c2b979',1,'WeatherAppTests::ViewModels::ScientistPageViewModelTests']]],
+  ['navigatetoregister_8',['NavigateToRegister',['../class_weather_app_1_1_view_models_1_1_main_page_view_model.html#ad585b3d2d501ce403bbe7f3f544d5bb0',1,'WeatherApp::ViewModels::MainPageViewModel']]],
+  ['navigatetoregister_5fexceptionhandling_9',['NavigateToRegister_ExceptionHandling',['../class_weather_app_tests_1_1_view_models_1_1_main_page_view_model_tests.html#ab8738d5746511661fc2c9ccba63da46f',1,'WeatherAppTests::ViewModels::MainPageViewModelTests']]],
+  ['navigatetoregister_5fsuccess_10',['NavigateToRegister_success',['../class_weather_app_tests_1_1_view_models_1_1_main_page_view_model_tests.html#a6696a7ec2793b05a7b0e9dfeb6673c75',1,'WeatherAppTests::ViewModels::MainPageViewModelTests']]],
+  ['navigationservice_11',['NavigationService',['../class_weather_app_1_1_tools_1_1_navigation_service.html',1,'WeatherApp.Tools.NavigationService'],['../class_weather_app_1_1_tools_1_1_navigation_service.html#aab781fd61181bc0fa0ed893f1864a717',1,'WeatherApp.Tools.NavigationService.NavigationService()']]],
+  ['navigationservice_2ecs_12',['NavigationService.cs',['../_navigation_service_8cs.html',1,'']]]
 ];

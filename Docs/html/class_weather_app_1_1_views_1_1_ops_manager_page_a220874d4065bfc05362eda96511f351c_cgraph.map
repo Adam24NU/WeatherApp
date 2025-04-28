@@ -1,0 +1,7 @@
+<map id="WeatherApp.Views.OpsManagerPage.LoadInitialData" name="WeatherApp.Views.OpsManagerPage.LoadInitialData">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,216,81"/>
+<area shape="rect" id="Node000002" href="$class_weather_app_1_1_views_1_1_ops_manager_page.html#a92329886784da46f2aa2ce5eb8cb476b" title=" " alt="" coords="264,5,474,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,44,248,40,248,45,217,49"/>
+<area shape="rect" id="Node000003" href="$class_weather_app_1_1_views_1_1_ops_manager_page.html#a1c6bb60393c6a754a19f1f5007afdd02" title=" " alt="" coords="264,72,474,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="217,71,248,75,248,80,216,76"/>
+</map>

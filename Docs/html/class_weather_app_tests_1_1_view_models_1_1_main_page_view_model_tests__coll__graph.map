@@ -1,0 +1,11 @@
+<map id="WeatherAppTests.ViewModels.MainPageViewModelTests" name="WeatherAppTests.ViewModels.MainPageViewModelTests">
+<area shape="rect" id="Node000001" title=" " alt="" coords="694,56,897,99"/>
+<area shape="rect" id="Node000002" href="$class_weather_app_1_1_view_models_1_1_main_page_view_model.html" title=" " alt="" coords="374,56,573,99"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="589,75,694,75,694,80,589,80"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="46,5,171,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="187,28,350,53,374,57,373,63,349,59,186,33"/>
+<area shape="rect" id="Node000004" href="$interface_weather_app_1_1_tools_1_1_i_navigation_service.html" title=" " alt="" coords="10,56,207,99"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="223,75,373,75,373,80,223,80"/>
+<area shape="rect" id="Node000005" href="$interface_weather_app_1_1_tools_1_1_i_alert_service.html" title=" " alt="" coords="5,123,212,149"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="217,117,349,96,373,92,374,97,350,101,218,122"/>
+</map>

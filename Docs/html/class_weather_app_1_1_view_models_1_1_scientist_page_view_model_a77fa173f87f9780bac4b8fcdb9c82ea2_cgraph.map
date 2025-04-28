@@ -1,0 +1,9 @@
+<map id="WeatherApp.ViewModels.ScientistPageViewModel.ScientistPageViewModel" name="WeatherApp.ViewModels.ScientistPageViewModel.ScientistPageViewModel">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,270,81"/>
+<area shape="rect" id="Node000002" href="$class_weather_app_1_1_view_models_1_1_scientist_page_view_model.html#af69d26b93524a318e69dd0cef591608c" title=" " alt="" coords="345,5,572,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="270,44,329,37,330,43,270,49"/>
+<area shape="rect" id="Node000003" href="$class_weather_app_1_1_view_models_1_1_scientist_page_view_model.html#a472e2b1b3259a79e8a1eb502413d16dc" title=" " alt="" coords="318,72,599,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="270,71,302,74,302,80,270,76"/>
+<area shape="rect" id="Node000004" href="$class_weather_app_1_1_view_models_1_1_scientist_page_view_model.html#a26534efb4ea4f04a66c6adb45497008b" title=" " alt="" coords="647,72,977,115"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="599,91,631,91,631,96,599,96"/>
+</map>

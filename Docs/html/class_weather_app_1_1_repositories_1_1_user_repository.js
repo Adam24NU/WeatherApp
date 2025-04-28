@@ -7,5 +7,6 @@ var class_weather_app_1_1_repositories_1_1_user_repository =
     [ "GetUsersAsync", "class_weather_app_1_1_repositories_1_1_user_repository.html#a72821f8a88d85c7d257084693daf94b8", null ],
     [ "InsertUserAsync", "class_weather_app_1_1_repositories_1_1_user_repository.html#a23999eb8b3ba9821d0501f06e784d593", null ],
     [ "UpdateUserAsync", "class_weather_app_1_1_repositories_1_1_user_repository.html#af917477ce74fec08d7eb4bef9c2905c5", null ],
-    [ "VerifyUserPasswordAsync", "class_weather_app_1_1_repositories_1_1_user_repository.html#a6eed81145c7f5fc3f0ee3e9bc16f6cba", null ]
+    [ "VerifyUserPasswordAsync", "class_weather_app_1_1_repositories_1_1_user_repository.html#a6eed81145c7f5fc3f0ee3e9bc16f6cba", null ],
+    [ "_dbConnection", "class_weather_app_1_1_repositories_1_1_user_repository.html#a61e74c60a74fd44859cbfe76f134de39", null ]
 ];

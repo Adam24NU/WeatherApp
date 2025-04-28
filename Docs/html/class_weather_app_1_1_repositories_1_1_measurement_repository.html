@@ -104,6 +104,7 @@ $(function(){initNavTree('class_weather_app_1_1_repositories_1_1_measurement_rep
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_weather_app_1_1_repositories_1_1_measurement_repository-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">WeatherApp.Repositories.MeasurementRepository Class Reference</div></div>
 </div><!--header-->
@@ -111,26 +112,164 @@ $(function(){initNavTree('class_weather_app_1_1_repositories_1_1_measurement_rep
 
 <p>Repository class for CRUD functionality for measurement data.  
  <a href="#details">More...</a></p>
+<div class="dynheader">
+Collaboration diagram for WeatherApp.Repositories.MeasurementRepository:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_weather_app_1_1_repositories_1_1_measurement_repository__coll__graph.png" border="0" usemap="#a_weather_app_8_repositories_8_measurement_repository_coll__map" alt="Collaboration graph"/></div>
+<map name="a_weather_app_8_repositories_8_measurement_repository_coll__map" id="a_weather_app_8_repositories_8_measurement_repository_coll__map">
+<area shape="rect" title="Repository class for CRUD functionality for measurement data." alt="" coords="5,188,179,231"/>
+<area shape="rect" href="class_weather_app_1_1_repositories_1_1_database_connection.html" title=" " alt="" coords="5,81,179,124"/>
+<area shape="poly" title=" " alt="" coords="95,140,95,187,89,187,89,140"/>
+<area shape="rect" title=" " alt="" coords="47,5,137,32"/>
+<area shape="poly" title=" " alt="" coords="95,48,95,81,89,81,89,48"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af7b682747089406273c7daccb548ae29" id="r_af7b682747089406273c7daccb548ae29"><td class="memItemLeft" align="right" valign="top"><a id="af7b682747089406273c7daccb548ae29" name="af7b682747089406273c7daccb548ae29"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>MeasurementRepository</b> (<a class="el" href="class_weather_app_1_1_repositories_1_1_database_connection.html">DatabaseConnection</a> dbConnection)</td></tr>
+<tr class="memitem:af7b682747089406273c7daccb548ae29" id="r_af7b682747089406273c7daccb548ae29"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7b682747089406273c7daccb548ae29">MeasurementRepository</a> (<a class="el" href="class_weather_app_1_1_repositories_1_1_database_connection.html">DatabaseConnection</a> dbConnection)</td></tr>
 <tr class="separator:af7b682747089406273c7daccb548ae29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02657a569fafe3294c72af9effa8446a" id="r_a02657a569fafe3294c72af9effa8446a"><td class="memItemLeft" align="right" valign="top"><a id="a02657a569fafe3294c72af9effa8446a" name="a02657a569fafe3294c72af9effa8446a"></a>
-virtual async Task&lt; List&lt; <a class="el" href="class_weather_app_1_1_models_1_1_measurement.html">Measurement</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetMeasurementsAsync</b> ()</td></tr>
+<tr class="memitem:a02657a569fafe3294c72af9effa8446a" id="r_a02657a569fafe3294c72af9effa8446a"><td class="memItemLeft" align="right" valign="top">virtual async Task&lt; List&lt; <a class="el" href="class_weather_app_1_1_models_1_1_measurement.html">Measurement</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02657a569fafe3294c72af9effa8446a">GetMeasurementsAsync</a> ()</td></tr>
 <tr class="separator:a02657a569fafe3294c72af9effa8446a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a478d3f08ff0e4aaf5dc063c1c68d92ac" id="r_a478d3f08ff0e4aaf5dc063c1c68d92ac"><td class="memItemLeft" align="right" valign="top"><a id="a478d3f08ff0e4aaf5dc063c1c68d92ac" name="a478d3f08ff0e4aaf5dc063c1c68d92ac"></a>
-virtual async Task&lt; <a class="el" href="class_weather_app_1_1_models_1_1_measurement.html">Measurement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetMeasurementByIdAsync</b> (int id)</td></tr>
+<tr class="memitem:a478d3f08ff0e4aaf5dc063c1c68d92ac" id="r_a478d3f08ff0e4aaf5dc063c1c68d92ac"><td class="memItemLeft" align="right" valign="top">virtual async Task&lt; <a class="el" href="class_weather_app_1_1_models_1_1_measurement.html">Measurement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a478d3f08ff0e4aaf5dc063c1c68d92ac">GetMeasurementByIdAsync</a> (int id)</td></tr>
 <tr class="separator:a478d3f08ff0e4aaf5dc063c1c68d92ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeea9a5a8eb2385eaa1d1043c04c3e3bb" id="r_aeea9a5a8eb2385eaa1d1043c04c3e3bb"><td class="memItemLeft" align="right" valign="top"><a id="aeea9a5a8eb2385eaa1d1043c04c3e3bb" name="aeea9a5a8eb2385eaa1d1043c04c3e3bb"></a>
-virtual async Task&lt; List&lt; <a class="el" href="class_weather_app_1_1_models_1_1_measurement.html">Measurement</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetMeasurementsByQIdAsync</b> (int quantityId)</td></tr>
+<tr class="memitem:aeea9a5a8eb2385eaa1d1043c04c3e3bb" id="r_aeea9a5a8eb2385eaa1d1043c04c3e3bb"><td class="memItemLeft" align="right" valign="top">virtual async Task&lt; List&lt; <a class="el" href="class_weather_app_1_1_models_1_1_measurement.html">Measurement</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeea9a5a8eb2385eaa1d1043c04c3e3bb">GetMeasurementsByQIdAsync</a> (int quantityId)</td></tr>
 <tr class="separator:aeea9a5a8eb2385eaa1d1043c04c3e3bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a5bda825807ba4de3f152d6221e43aaa0" id="r_a5bda825807ba4de3f152d6221e43aaa0"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="class_weather_app_1_1_repositories_1_1_database_connection.html">DatabaseConnection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bda825807ba4de3f152d6221e43aaa0">_dbConnection</a></td></tr>
+<tr class="separator:a5bda825807ba4de3f152d6221e43aaa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Repository class for CRUD functionality for measurement data. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>WeatherApp/Repositories/<b>MeasurementRepository.cs</b></li>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af7b682747089406273c7daccb548ae29" name="af7b682747089406273c7daccb548ae29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7b682747089406273c7daccb548ae29">&#9670;&#160;</a></span>MeasurementRepository()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WeatherApp.Repositories.MeasurementRepository.MeasurementRepository </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_weather_app_1_1_repositories_1_1_database_connection.html">DatabaseConnection</a></td>          <td class="paramname"><span class="paramname"><em>dbConnection</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a478d3f08ff0e4aaf5dc063c1c68d92ac" name="a478d3f08ff0e4aaf5dc063c1c68d92ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a478d3f08ff0e4aaf5dc063c1c68d92ac">&#9670;&#160;</a></span>GetMeasurementByIdAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual async Task&lt; <a class="el" href="class_weather_app_1_1_models_1_1_measurement.html">Measurement</a> &gt; WeatherApp.Repositories.MeasurementRepository.GetMeasurementByIdAsync </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02657a569fafe3294c72af9effa8446a" name="a02657a569fafe3294c72af9effa8446a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02657a569fafe3294c72af9effa8446a">&#9670;&#160;</a></span>GetMeasurementsAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual async Task&lt; List&lt; <a class="el" href="class_weather_app_1_1_models_1_1_measurement.html">Measurement</a> &gt; &gt; WeatherApp.Repositories.MeasurementRepository.GetMeasurementsAsync </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeea9a5a8eb2385eaa1d1043c04c3e3bb" name="aeea9a5a8eb2385eaa1d1043c04c3e3bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeea9a5a8eb2385eaa1d1043c04c3e3bb">&#9670;&#160;</a></span>GetMeasurementsByQIdAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual async Task&lt; List&lt; <a class="el" href="class_weather_app_1_1_models_1_1_measurement.html">Measurement</a> &gt; &gt; WeatherApp.Repositories.MeasurementRepository.GetMeasurementsByQIdAsync </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>quantityId</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a5bda825807ba4de3f152d6221e43aaa0" name="a5bda825807ba4de3f152d6221e43aaa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bda825807ba4de3f152d6221e43aaa0">&#9670;&#160;</a></span>_dbConnection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="class_weather_app_1_1_repositories_1_1_database_connection.html">DatabaseConnection</a> WeatherApp.Repositories.MeasurementRepository._dbConnection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>WeatherApp/Repositories/<a class="el" href="_measurement_repository_8cs.html">MeasurementRepository.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

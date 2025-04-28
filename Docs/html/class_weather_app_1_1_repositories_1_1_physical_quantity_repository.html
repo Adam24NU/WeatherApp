@@ -104,6 +104,7 @@ $(function(){initNavTree('class_weather_app_1_1_repositories_1_1_physical_quanti
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_weather_app_1_1_repositories_1_1_physical_quantity_repository-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">WeatherApp.Repositories.PhysicalQuantityRepository Class Reference</div></div>
 </div><!--header-->
@@ -111,34 +112,224 @@ $(function(){initNavTree('class_weather_app_1_1_repositories_1_1_physical_quanti
 
 <p>Repository class for CRUD functionality for physical quantity data.  
  <a href="#details">More...</a></p>
+<div class="dynheader">
+Collaboration diagram for WeatherApp.Repositories.PhysicalQuantityRepository:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_weather_app_1_1_repositories_1_1_physical_quantity_repository__coll__graph.png" border="0" usemap="#a_weather_app_8_repositories_8_physical_quantity_repository_coll__map" alt="Collaboration graph"/></div>
+<map name="a_weather_app_8_repositories_8_physical_quantity_repository_coll__map" id="a_weather_app_8_repositories_8_physical_quantity_repository_coll__map">
+<area shape="rect" title="Repository class for CRUD functionality for physical quantity data." alt="" coords="5,188,189,231"/>
+<area shape="rect" href="class_weather_app_1_1_repositories_1_1_database_connection.html" title=" " alt="" coords="10,81,184,124"/>
+<area shape="poly" title=" " alt="" coords="100,140,100,187,94,187,94,140"/>
+<area shape="rect" title=" " alt="" coords="52,5,142,32"/>
+<area shape="poly" title=" " alt="" coords="100,48,100,81,94,81,94,48"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a49e153912e41719641cf9553b0fcdb7d" id="r_a49e153912e41719641cf9553b0fcdb7d"><td class="memItemLeft" align="right" valign="top"><a id="a49e153912e41719641cf9553b0fcdb7d" name="a49e153912e41719641cf9553b0fcdb7d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>PhysicalQuantityRepository</b> (<a class="el" href="class_weather_app_1_1_repositories_1_1_database_connection.html">DatabaseConnection</a> dbConnection)</td></tr>
+<tr class="memitem:a49e153912e41719641cf9553b0fcdb7d" id="r_a49e153912e41719641cf9553b0fcdb7d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49e153912e41719641cf9553b0fcdb7d">PhysicalQuantityRepository</a> (<a class="el" href="class_weather_app_1_1_repositories_1_1_database_connection.html">DatabaseConnection</a> dbConnection)</td></tr>
 <tr class="separator:a49e153912e41719641cf9553b0fcdb7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05c6d6e541d835dddc40be9424b4ea48" id="r_a05c6d6e541d835dddc40be9424b4ea48"><td class="memItemLeft" align="right" valign="top"><a id="a05c6d6e541d835dddc40be9424b4ea48" name="a05c6d6e541d835dddc40be9424b4ea48"></a>
-virtual async Task&lt; List&lt; <a class="el" href="class_weather_app_1_1_models_1_1_physical_quantity.html">PhysicalQuantity</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetPhysicalQuantitiesAsync</b> ()</td></tr>
-<tr class="memdesc:a05c6d6e541d835dddc40be9424b4ea48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all physical quantities. <br /></td></tr>
+<tr class="memitem:a05c6d6e541d835dddc40be9424b4ea48" id="r_a05c6d6e541d835dddc40be9424b4ea48"><td class="memItemLeft" align="right" valign="top">virtual async Task&lt; List&lt; <a class="el" href="class_weather_app_1_1_models_1_1_physical_quantity.html">PhysicalQuantity</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05c6d6e541d835dddc40be9424b4ea48">GetPhysicalQuantitiesAsync</a> ()</td></tr>
+<tr class="memdesc:a05c6d6e541d835dddc40be9424b4ea48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all physical quantities.  <br /></td></tr>
 <tr class="separator:a05c6d6e541d835dddc40be9424b4ea48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3dcbabce7dd270e7724de3827be46042" id="r_a3dcbabce7dd270e7724de3827be46042"><td class="memItemLeft" align="right" valign="top"><a id="a3dcbabce7dd270e7724de3827be46042" name="a3dcbabce7dd270e7724de3827be46042"></a>
-virtual async Task&lt; <a class="el" href="class_weather_app_1_1_models_1_1_physical_quantity.html">PhysicalQuantity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetPhysicalQuantityByIdAsync</b> (int id)</td></tr>
-<tr class="memdesc:a3dcbabce7dd270e7724de3827be46042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a physical quantity by its ID. <br /></td></tr>
+<tr class="memitem:a3dcbabce7dd270e7724de3827be46042" id="r_a3dcbabce7dd270e7724de3827be46042"><td class="memItemLeft" align="right" valign="top">virtual async Task&lt; <a class="el" href="class_weather_app_1_1_models_1_1_physical_quantity.html">PhysicalQuantity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3dcbabce7dd270e7724de3827be46042">GetPhysicalQuantityByIdAsync</a> (int id)</td></tr>
+<tr class="memdesc:a3dcbabce7dd270e7724de3827be46042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a physical quantity by its ID.  <br /></td></tr>
 <tr class="separator:a3dcbabce7dd270e7724de3827be46042"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad13ae757fe4db8a3e80f5ece746cd3d8" id="r_ad13ae757fe4db8a3e80f5ece746cd3d8"><td class="memItemLeft" align="right" valign="top"><a id="ad13ae757fe4db8a3e80f5ece746cd3d8" name="ad13ae757fe4db8a3e80f5ece746cd3d8"></a>
-virtual async Task&lt; int?&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetQuantityIdBySymbolAsync</b> (string symbol)</td></tr>
+<tr class="memitem:ad13ae757fe4db8a3e80f5ece746cd3d8" id="r_ad13ae757fe4db8a3e80f5ece746cd3d8"><td class="memItemLeft" align="right" valign="top">virtual async Task&lt; int?&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad13ae757fe4db8a3e80f5ece746cd3d8">GetQuantityIdBySymbolAsync</a> (string symbol)</td></tr>
 <tr class="separator:ad13ae757fe4db8a3e80f5ece746cd3d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f95f1b910fdf233a009ef161991c7f0" id="r_a5f95f1b910fdf233a009ef161991c7f0"><td class="memItemLeft" align="right" valign="top"><a id="a5f95f1b910fdf233a009ef161991c7f0" name="a5f95f1b910fdf233a009ef161991c7f0"></a>
-virtual async Task&lt; string?&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetSymbolByQuantityIdAsync</b> (int quantityId)</td></tr>
+<tr class="memitem:a5f95f1b910fdf233a009ef161991c7f0" id="r_a5f95f1b910fdf233a009ef161991c7f0"><td class="memItemLeft" align="right" valign="top">virtual async Task&lt; string?&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f95f1b910fdf233a009ef161991c7f0">GetSymbolByQuantityIdAsync</a> (int quantityId)</td></tr>
 <tr class="separator:a5f95f1b910fdf233a009ef161991c7f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09288c7dd832482149dc94872e7f08ec" id="r_a09288c7dd832482149dc94872e7f08ec"><td class="memItemLeft" align="right" valign="top"><a id="a09288c7dd832482149dc94872e7f08ec" name="a09288c7dd832482149dc94872e7f08ec"></a>
-virtual async Task&lt; string?&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetUnitByQIdAsync</b> (int Id)</td></tr>
+<tr class="memitem:a09288c7dd832482149dc94872e7f08ec" id="r_a09288c7dd832482149dc94872e7f08ec"><td class="memItemLeft" align="right" valign="top">virtual async Task&lt; string?&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09288c7dd832482149dc94872e7f08ec">GetUnitByQIdAsync</a> (int Id)</td></tr>
 <tr class="separator:a09288c7dd832482149dc94872e7f08ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a002e02f0c290464294dcc16dfc151a68" id="r_a002e02f0c290464294dcc16dfc151a68"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="class_weather_app_1_1_repositories_1_1_database_connection.html">DatabaseConnection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a002e02f0c290464294dcc16dfc151a68">_dbConnection</a></td></tr>
+<tr class="separator:a002e02f0c290464294dcc16dfc151a68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Repository class for CRUD functionality for physical quantity data. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>WeatherApp/Repositories/<b>PhysicalQuantityRepository.cs</b></li>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a49e153912e41719641cf9553b0fcdb7d" name="a49e153912e41719641cf9553b0fcdb7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49e153912e41719641cf9553b0fcdb7d">&#9670;&#160;</a></span>PhysicalQuantityRepository()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WeatherApp.Repositories.PhysicalQuantityRepository.PhysicalQuantityRepository </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_weather_app_1_1_repositories_1_1_database_connection.html">DatabaseConnection</a></td>          <td class="paramname"><span class="paramname"><em>dbConnection</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a05c6d6e541d835dddc40be9424b4ea48" name="a05c6d6e541d835dddc40be9424b4ea48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05c6d6e541d835dddc40be9424b4ea48">&#9670;&#160;</a></span>GetPhysicalQuantitiesAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual async Task&lt; List&lt; <a class="el" href="class_weather_app_1_1_models_1_1_physical_quantity.html">PhysicalQuantity</a> &gt; &gt; WeatherApp.Repositories.PhysicalQuantityRepository.GetPhysicalQuantitiesAsync </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get all physical quantities. </p>
+
+</div>
+</div>
+<a id="a3dcbabce7dd270e7724de3827be46042" name="a3dcbabce7dd270e7724de3827be46042"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dcbabce7dd270e7724de3827be46042">&#9670;&#160;</a></span>GetPhysicalQuantityByIdAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual async Task&lt; <a class="el" href="class_weather_app_1_1_models_1_1_physical_quantity.html">PhysicalQuantity</a> &gt; WeatherApp.Repositories.PhysicalQuantityRepository.GetPhysicalQuantityByIdAsync </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a physical quantity by its ID. </p>
+
+</div>
+</div>
+<a id="ad13ae757fe4db8a3e80f5ece746cd3d8" name="ad13ae757fe4db8a3e80f5ece746cd3d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad13ae757fe4db8a3e80f5ece746cd3d8">&#9670;&#160;</a></span>GetQuantityIdBySymbolAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual async Task&lt; int?&gt; WeatherApp.Repositories.PhysicalQuantityRepository.GetQuantityIdBySymbolAsync </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>symbol</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f95f1b910fdf233a009ef161991c7f0" name="a5f95f1b910fdf233a009ef161991c7f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f95f1b910fdf233a009ef161991c7f0">&#9670;&#160;</a></span>GetSymbolByQuantityIdAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual async Task&lt; string?&gt; WeatherApp.Repositories.PhysicalQuantityRepository.GetSymbolByQuantityIdAsync </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>quantityId</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09288c7dd832482149dc94872e7f08ec" name="a09288c7dd832482149dc94872e7f08ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09288c7dd832482149dc94872e7f08ec">&#9670;&#160;</a></span>GetUnitByQIdAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual async Task&lt; string?&gt; WeatherApp.Repositories.PhysicalQuantityRepository.GetUnitByQIdAsync </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>Id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a002e02f0c290464294dcc16dfc151a68" name="a002e02f0c290464294dcc16dfc151a68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a002e02f0c290464294dcc16dfc151a68">&#9670;&#160;</a></span>_dbConnection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="class_weather_app_1_1_repositories_1_1_database_connection.html">DatabaseConnection</a> WeatherApp.Repositories.PhysicalQuantityRepository._dbConnection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>WeatherApp/Repositories/<a class="el" href="_physical_quantity_repository_8cs.html">PhysicalQuantityRepository.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

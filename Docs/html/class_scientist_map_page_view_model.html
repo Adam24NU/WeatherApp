@@ -106,31 +106,173 @@ $(function(){initNavTree('class_scientist_map_page_view_model.html',''); initRes
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="#events">Events</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_scientist_map_page_view_model-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">ScientistMapPageViewModel Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Collaboration diagram for ScientistMapPageViewModel:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scientist_map_page_view_model__coll__graph.png" border="0" usemap="#a_scientist_map_page_view_model_coll__map" alt="Collaboration graph"/></div>
+<map name="a_scientist_map_page_view_model_coll__map" id="a_scientist_map_page_view_model_coll__map">
+<area shape="rect" title=" " alt="" coords="5,112,197,139"/>
+<area shape="rect" href="interface_weather_app_1_1_repositories_1_1_i_site_repository.html" title=" " alt="" coords="14,5,188,48"/>
+<area shape="poly" title=" " alt="" coords="104,64,104,112,98,112,98,64"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a18daf3c06fe6292067d04b9a689fa1de" id="r_a18daf3c06fe6292067d04b9a689fa1de"><td class="memItemLeft" align="right" valign="top"><a id="a18daf3c06fe6292067d04b9a689fa1de" name="a18daf3c06fe6292067d04b9a689fa1de"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ScientistMapPageViewModel</b> (<a class="el" href="interface_weather_app_1_1_repositories_1_1_i_site_repository.html">ISiteRepository</a> siteRepository)</td></tr>
+<tr class="memitem:a18daf3c06fe6292067d04b9a689fa1de" id="r_a18daf3c06fe6292067d04b9a689fa1de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18daf3c06fe6292067d04b9a689fa1de">ScientistMapPageViewModel</a> (<a class="el" href="interface_weather_app_1_1_repositories_1_1_i_site_repository.html">ISiteRepository</a> siteRepository)</td></tr>
 <tr class="separator:a18daf3c06fe6292067d04b9a689fa1de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a4020b1806cecc9dcd8b7ab6ecb6d7172" id="r_a4020b1806cecc9dcd8b7ab6ecb6d7172"><td class="memItemLeft" align="right" valign="top"><a id="a4020b1806cecc9dcd8b7ab6ecb6d7172" name="a4020b1806cecc9dcd8b7ab6ecb6d7172"></a>
-IAsyncRelayCommand&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ShowSensorCommand</b><code> [get]</code></td></tr>
+<tr class="memitem:a4020b1806cecc9dcd8b7ab6ecb6d7172" id="r_a4020b1806cecc9dcd8b7ab6ecb6d7172"><td class="memItemLeft" align="right" valign="top">IAsyncRelayCommand&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4020b1806cecc9dcd8b7ab6ecb6d7172">ShowSensorCommand</a><code> [get]</code></td></tr>
 <tr class="separator:a4020b1806cecc9dcd8b7ab6ecb6d7172"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
 Events</h2></td></tr>
-<tr class="memitem:ae98f5c480e72b441ec568e1a8cbc94c3" id="r_ae98f5c480e72b441ec568e1a8cbc94c3"><td class="memItemLeft" align="right" valign="top"><a id="ae98f5c480e72b441ec568e1a8cbc94c3" name="ae98f5c480e72b441ec568e1a8cbc94c3"></a>
-Action&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnMapLocationUpdated</b></td></tr>
+<tr class="memitem:ae98f5c480e72b441ec568e1a8cbc94c3" id="r_ae98f5c480e72b441ec568e1a8cbc94c3"><td class="memItemLeft" align="right" valign="top">Action&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae98f5c480e72b441ec568e1a8cbc94c3">OnMapLocationUpdated</a></td></tr>
 <tr class="separator:ae98f5c480e72b441ec568e1a8cbc94c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a0179616dbf2dfa43cf8aac126a84ab4f" id="r_a0179616dbf2dfa43cf8aac126a84ab4f"><td class="memItemLeft" align="right" valign="top">async Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0179616dbf2dfa43cf8aac126a84ab4f">ShowSensorByTypeAsync</a> (string type)</td></tr>
+<tr class="separator:a0179616dbf2dfa43cf8aac126a84ab4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a2aba3e8f82dc5de451ccaa64fd71c0ba" id="r_a2aba3e8f82dc5de451ccaa64fd71c0ba"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="interface_weather_app_1_1_repositories_1_1_i_site_repository.html">ISiteRepository</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2aba3e8f82dc5de451ccaa64fd71c0ba">_siteRepository</a></td></tr>
+<tr class="separator:a2aba3e8f82dc5de451ccaa64fd71c0ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a18daf3c06fe6292067d04b9a689fa1de" name="a18daf3c06fe6292067d04b9a689fa1de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18daf3c06fe6292067d04b9a689fa1de">&#9670;&#160;</a></span>ScientistMapPageViewModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ScientistMapPageViewModel.ScientistMapPageViewModel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_weather_app_1_1_repositories_1_1_i_site_repository.html">ISiteRepository</a></td>          <td class="paramname"><span class="paramname"><em>siteRepository</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scientist_map_page_view_model_a18daf3c06fe6292067d04b9a689fa1de_cgraph.png" border="0" usemap="#aclass_scientist_map_page_view_model_a18daf3c06fe6292067d04b9a689fa1de_cgraph" alt=""/></div>
+<map name="aclass_scientist_map_page_view_model_a18daf3c06fe6292067d04b9a689fa1de_cgraph" id="aclass_scientist_map_page_view_model_a18daf3c06fe6292067d04b9a689fa1de_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,201,48"/>
+<area shape="rect" href="class_scientist_map_page_view_model.html#a0179616dbf2dfa43cf8aac126a84ab4f" title=" " alt="" coords="249,5,444,48"/>
+<area shape="poly" title=" " alt="" coords="201,24,233,24,233,29,201,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0179616dbf2dfa43cf8aac126a84ab4f" name="a0179616dbf2dfa43cf8aac126a84ab4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0179616dbf2dfa43cf8aac126a84ab4f">&#9670;&#160;</a></span>ShowSensorByTypeAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task ScientistMapPageViewModel.ShowSensorByTypeAsync </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a2aba3e8f82dc5de451ccaa64fd71c0ba" name="a2aba3e8f82dc5de451ccaa64fd71c0ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aba3e8f82dc5de451ccaa64fd71c0ba">&#9670;&#160;</a></span>_siteRepository</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="interface_weather_app_1_1_repositories_1_1_i_site_repository.html">ISiteRepository</a> ScientistMapPageViewModel._siteRepository</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a4020b1806cecc9dcd8b7ab6ecb6d7172" name="a4020b1806cecc9dcd8b7ab6ecb6d7172"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4020b1806cecc9dcd8b7ab6ecb6d7172">&#9670;&#160;</a></span>ShowSensorCommand</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IAsyncRelayCommand&lt;string&gt; ScientistMapPageViewModel.ShowSensorCommand</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Event Documentation</h2>
+<a id="ae98f5c480e72b441ec568e1a8cbc94c3" name="ae98f5c480e72b441ec568e1a8cbc94c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae98f5c480e72b441ec568e1a8cbc94c3">&#9670;&#160;</a></span>OnMapLocationUpdated</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action&lt;double, double&gt; ScientistMapPageViewModel.OnMapLocationUpdated</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>WeatherApp/ViewModels/<b>ScientistMapPageViewModel.cs</b></li>
+<li>WeatherApp/ViewModels/<a class="el" href="_scientist_map_page_view_model_8cs.html">ScientistMapPageViewModel.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

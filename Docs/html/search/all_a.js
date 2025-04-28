@@ -1,6 +1,29 @@
 var searchData=
 [
-  ['physicalquantity_0',['PhysicalQuantity',['../class_weather_app_1_1_models_1_1_physical_quantity.html',1,'WeatherApp::Models']]],
-  ['physicalquantityrepository_1',['PhysicalQuantityRepository',['../class_weather_app_1_1_repositories_1_1_physical_quantity_repository.html',1,'WeatherApp::Repositories']]],
-  ['program_2',['Program',['../class_weather_app_1_1_program.html',1,'WeatherApp']]]
+  ['lastname_0',['LastName',['../class_weather_app_1_1_models_1_1_user.html#a4715bb8020341f9ceff7632b322601e4',1,'WeatherApp::Models::User']]],
+  ['lastname_1',['lastName',['../class_weather_app_1_1_view_models_1_1_admin_page_view_model.html#af71a3188de0030dc0abab734ce40162d',1,'WeatherApp.ViewModels.AdminPageViewModel.lastName'],['../class_weather_app_1_1_view_models_1_1_register_page_view_model.html#a5a4c81211e9bc34bbe9325c7edb6d327',1,'WeatherApp.ViewModels.RegisterPageViewModel.lastName']]],
+  ['latitude_2',['Latitude',['../class_weather_app_1_1_models_1_1_site.html#a424f8e4329bacf370934271d77998a5f',1,'WeatherApp::Models::Site']]],
+  ['loadaircommand_3',['LoadAirCommand',['../class_weather_app_1_1_views_1_1_scientist_page.html#a4614df87930c51537f8d2b8ce80344ed',1,'WeatherApp::Views::ScientistPage']]],
+  ['loadinitialdata_4',['LoadInitialData',['../class_weather_app_1_1_views_1_1_ops_manager_page.html#a220874d4065bfc05362eda96511f351c',1,'WeatherApp::Views::OpsManagerPage']]],
+  ['loadmeasurementcommand_5',['LoadMeasurementCommand',['../class_weather_app_1_1_view_models_1_1_scientist_page_view_model.html#a76444c75eeb0a9e7039576026b677603',1,'WeatherApp::ViewModels::ScientistPageViewModel']]],
+  ['loadmeasurementsbysymbolasync_6',['LoadMeasurementsBySymbolAsync',['../class_weather_app_1_1_view_models_1_1_scientist_page_view_model.html#a26534efb4ea4f04a66c6adb45497008b',1,'WeatherApp::ViewModels::ScientistPageViewModel']]],
+  ['loadmetadatafromexcel_7',['LoadMetaDataFromExcel',['../class_weather_app_1_1_views_1_1_ops_manager_page.html#a92329886784da46f2aa2ce5eb8cb476b',1,'WeatherApp::Views::OpsManagerPage']]],
+  ['loadnextitems_8',['LoadNextItems',['../class_weather_app_1_1_views_1_1_ops_manager_page.html#a1c6bb60393c6a754a19f1f5007afdd02',1,'WeatherApp::Views::OpsManagerPage']]],
+  ['loadusersasync_9',['LoadUsersAsync',['../class_weather_app_1_1_view_models_1_1_admin_page_view_model.html#a9ddac4f5f46170a8c1f4f8a34c7ba9ed',1,'WeatherApp::ViewModels::AdminPageViewModel']]],
+  ['loadwatercommand_10',['LoadWaterCommand',['../class_weather_app_1_1_views_1_1_scientist_page.html#a3e703dee970cd90c7b7d15ace369ff94',1,'WeatherApp::Views::ScientistPage']]],
+  ['loadweathercommand_11',['LoadWeatherCommand',['../class_weather_app_1_1_views_1_1_scientist_page.html#a41df6ae567e55cbe33c977778be71f07',1,'WeatherApp::Views::ScientistPage']]],
+  ['location_12',['Location',['../class_weather_app_1_1_sensor_meta.html#a1c231898ffb14a06acc069193b6ae394',1,'WeatherApp::SensorMeta']]],
+  ['login_13',['Login',['../class_weather_app_1_1_view_models_1_1_login_page_view_model.html#af26c84b32a77a5ad154e9fd8289ef68c',1,'WeatherApp::ViewModels::LoginPageViewModel']]],
+  ['login_5fshouldsetstatusmessage_5fwhenemailorpasswordisempty_14',['Login_ShouldSetStatusMessage_WhenEmailOrPasswordIsEmpty',['../class_weather_app_tests_1_1_view_models_1_1_login_page_view_model_tests.html#a37a7009d9f181b09a1556130372347a1',1,'WeatherAppTests::ViewModels::LoginPageViewModelTests']]],
+  ['login_5fshouldsetstatusmessage_5fwhenloginfails_15',['Login_ShouldSetStatusMessage_WhenLoginFails',['../class_weather_app_tests_1_1_view_models_1_1_login_page_view_model_tests.html#a108fccb196ed299b92432cf574f52db6',1,'WeatherAppTests::ViewModels::LoginPageViewModelTests']]],
+  ['login_5fshouldsetstatusmessage_5fwhenloginissuccessful_16',['Login_ShouldSetStatusMessage_WhenLoginIsSuccessful',['../class_weather_app_tests_1_1_view_models_1_1_login_page_view_model_tests.html#a5e08a5dde846f8325d8255b207d53efc',1,'WeatherAppTests::ViewModels::LoginPageViewModelTests']]],
+  ['login_5fshouldsetstatusmessage_5fwhenroleisunknown_17',['Login_ShouldSetStatusMessage_WhenRoleIsUnknown',['../class_weather_app_tests_1_1_view_models_1_1_login_page_view_model_tests.html#a7a7f27fba9ebab3a974fa295fd3e6c80',1,'WeatherAppTests::ViewModels::LoginPageViewModelTests']]],
+  ['loginpage_18',['LoginPage',['../class_weather_app_1_1_views_1_1_login_page.html',1,'WeatherApp.Views.LoginPage'],['../class_weather_app_1_1_views_1_1_login_page.html#a064d3edc3b5d88b67014e0db5b2ab569',1,'WeatherApp.Views.LoginPage.LoginPage()']]],
+  ['loginpage_2examl_19',['LoginPage.xaml',['../_login_page_8xaml.html',1,'']]],
+  ['loginpage_2examl_2ecs_20',['LoginPage.xaml.cs',['../_login_page_8xaml_8cs.html',1,'']]],
+  ['loginpageviewmodel_21',['LoginPageViewModel',['../class_weather_app_1_1_view_models_1_1_login_page_view_model.html',1,'WeatherApp.ViewModels.LoginPageViewModel'],['../class_weather_app_1_1_view_models_1_1_login_page_view_model.html#a95a783f33e35aed811f3f0607dc2ed74',1,'WeatherApp.ViewModels.LoginPageViewModel.LoginPageViewModel()']]],
+  ['loginpageviewmodel_2ecs_22',['LoginPageViewModel.cs',['../_login_page_view_model_8cs.html',1,'']]],
+  ['loginpageviewmodeltests_23',['LoginPageViewModelTests',['../class_weather_app_tests_1_1_view_models_1_1_login_page_view_model_tests.html',1,'WeatherAppTests.ViewModels.LoginPageViewModelTests'],['../class_weather_app_tests_1_1_view_models_1_1_login_page_view_model_tests.html#a96fc65b034f6e35f607edf2cc3b7b2b8',1,'WeatherAppTests.ViewModels.LoginPageViewModelTests.LoginPageViewModelTests()']]],
+  ['loginpageviewmodeltests_2ecs_24',['LoginPageViewModelTests.cs',['../_login_page_view_model_tests_8cs.html',1,'']]],
+  ['longitude_25',['Longitude',['../class_weather_app_1_1_models_1_1_site.html#ae4f118be079fa93c7c132c8d18bbec20',1,'WeatherApp::Models::Site']]]
 ];

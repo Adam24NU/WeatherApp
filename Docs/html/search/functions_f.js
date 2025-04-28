@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['query_0',['query',['../classmono_1_1_mono_runtime_provider.html#a5f038667e16324d54f940968f4abd86f',1,'mono::MonoRuntimeProvider']]]
+  ['_7edatabaseconnection_0',['~DatabaseConnection',['../class_weather_app_1_1_repositories_1_1_database_connection.html#a188362be58f4b99ce5ff76599142399c',1,'WeatherApp::Repositories::DatabaseConnection']]]
 ];

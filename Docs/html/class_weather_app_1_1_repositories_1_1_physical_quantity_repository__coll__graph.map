@@ -1,0 +1,7 @@
+<map id="WeatherApp.Repositories.PhysicalQuantityRepository" name="WeatherApp.Repositories.PhysicalQuantityRepository">
+<area shape="rect" id="Node000001" title="Repository class for CRUD functionality for physical quantity data." alt="" coords="5,188,189,231"/>
+<area shape="rect" id="Node000002" href="$class_weather_app_1_1_repositories_1_1_database_connection.html" title=" " alt="" coords="10,81,184,124"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,140,100,187,94,187,94,140"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="52,5,142,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="100,48,100,81,94,81,94,48"/>
+</map>

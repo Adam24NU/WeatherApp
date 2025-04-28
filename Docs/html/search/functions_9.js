@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['keepaliveservice_0',['KeepAliveService',['../classcrc64396a3fe5f8138e3f_1_1_keep_alive_service.html#a882d3f3e0d7b4a2798e4d9c1c4a01b95',1,'crc64396a3fe5f8138e3f::KeepAliveService']]]
+  ['physicalquantityrepository_0',['PhysicalQuantityRepository',['../class_weather_app_1_1_repositories_1_1_physical_quantity_repository.html#a49e153912e41719641cf9553b0fcdb7d',1,'WeatherApp::Repositories::PhysicalQuantityRepository']]]
 ];

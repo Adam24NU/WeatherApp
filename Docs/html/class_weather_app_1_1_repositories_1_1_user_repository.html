@@ -104,40 +104,289 @@ $(function(){initNavTree('class_weather_app_1_1_repositories_1_1_user_repository
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_weather_app_1_1_repositories_1_1_user_repository-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">WeatherApp.Repositories.UserRepository Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Collaboration diagram for WeatherApp.Repositories.UserRepository:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_weather_app_1_1_repositories_1_1_user_repository__coll__graph.png" border="0" usemap="#a_weather_app_8_repositories_8_user_repository_coll__map" alt="Collaboration graph"/></div>
+<map name="a_weather_app_8_repositories_8_user_repository_coll__map" id="a_weather_app_8_repositories_8_user_repository_coll__map">
+<area shape="rect" title=" " alt="" coords="5,188,179,231"/>
+<area shape="rect" href="class_weather_app_1_1_repositories_1_1_database_connection.html" title=" " alt="" coords="5,81,179,124"/>
+<area shape="poly" title=" " alt="" coords="95,140,95,187,89,187,89,140"/>
+<area shape="rect" title=" " alt="" coords="47,5,137,32"/>
+<area shape="poly" title=" " alt="" coords="95,48,95,81,89,81,89,48"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a89970ff88b6d79741150d51910e51db5" id="r_a89970ff88b6d79741150d51910e51db5"><td class="memItemLeft" align="right" valign="top"><a id="a89970ff88b6d79741150d51910e51db5" name="a89970ff88b6d79741150d51910e51db5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>UserRepository</b> (<a class="el" href="class_weather_app_1_1_repositories_1_1_database_connection.html">DatabaseConnection</a> dbConnection)</td></tr>
+<tr class="memitem:a89970ff88b6d79741150d51910e51db5" id="r_a89970ff88b6d79741150d51910e51db5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89970ff88b6d79741150d51910e51db5">UserRepository</a> (<a class="el" href="class_weather_app_1_1_repositories_1_1_database_connection.html">DatabaseConnection</a> dbConnection)</td></tr>
 <tr class="separator:a89970ff88b6d79741150d51910e51db5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72821f8a88d85c7d257084693daf94b8" id="r_a72821f8a88d85c7d257084693daf94b8"><td class="memItemLeft" align="right" valign="top"><a id="a72821f8a88d85c7d257084693daf94b8" name="a72821f8a88d85c7d257084693daf94b8"></a>
-virtual async Task&lt; List&lt; <a class="el" href="class_weather_app_1_1_models_1_1_user.html">User</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetUsersAsync</b> ()</td></tr>
+<tr class="memitem:a72821f8a88d85c7d257084693daf94b8" id="r_a72821f8a88d85c7d257084693daf94b8"><td class="memItemLeft" align="right" valign="top">virtual async Task&lt; List&lt; <a class="el" href="class_weather_app_1_1_models_1_1_user.html">User</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72821f8a88d85c7d257084693daf94b8">GetUsersAsync</a> ()</td></tr>
 <tr class="separator:a72821f8a88d85c7d257084693daf94b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee7fa2e7244e14ae895f9bd6e885fac1" id="r_aee7fa2e7244e14ae895f9bd6e885fac1"><td class="memItemLeft" align="right" valign="top"><a id="aee7fa2e7244e14ae895f9bd6e885fac1" name="aee7fa2e7244e14ae895f9bd6e885fac1"></a>
-virtual async Task&lt; <a class="el" href="class_weather_app_1_1_models_1_1_user.html">User</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetUserByIdAsync</b> (int id)</td></tr>
+<tr class="memitem:aee7fa2e7244e14ae895f9bd6e885fac1" id="r_aee7fa2e7244e14ae895f9bd6e885fac1"><td class="memItemLeft" align="right" valign="top">virtual async Task&lt; <a class="el" href="class_weather_app_1_1_models_1_1_user.html">User</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee7fa2e7244e14ae895f9bd6e885fac1">GetUserByIdAsync</a> (int id)</td></tr>
 <tr class="separator:aee7fa2e7244e14ae895f9bd6e885fac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad527a49535db053e53402fa71a67d1b0" id="r_ad527a49535db053e53402fa71a67d1b0"><td class="memItemLeft" align="right" valign="top"><a id="ad527a49535db053e53402fa71a67d1b0" name="ad527a49535db053e53402fa71a67d1b0"></a>
-virtual async Task&lt; <a class="el" href="class_weather_app_1_1_models_1_1_user.html">User</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetUserByEmailAsync</b> (string email)</td></tr>
+<tr class="memitem:ad527a49535db053e53402fa71a67d1b0" id="r_ad527a49535db053e53402fa71a67d1b0"><td class="memItemLeft" align="right" valign="top">virtual async Task&lt; <a class="el" href="class_weather_app_1_1_models_1_1_user.html">User</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad527a49535db053e53402fa71a67d1b0">GetUserByEmailAsync</a> (string email)</td></tr>
 <tr class="separator:ad527a49535db053e53402fa71a67d1b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23999eb8b3ba9821d0501f06e784d593" id="r_a23999eb8b3ba9821d0501f06e784d593"><td class="memItemLeft" align="right" valign="top"><a id="a23999eb8b3ba9821d0501f06e784d593" name="a23999eb8b3ba9821d0501f06e784d593"></a>
-virtual async Task&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>InsertUserAsync</b> (<a class="el" href="class_weather_app_1_1_models_1_1_user.html">User</a> user)</td></tr>
+<tr class="memitem:a23999eb8b3ba9821d0501f06e784d593" id="r_a23999eb8b3ba9821d0501f06e784d593"><td class="memItemLeft" align="right" valign="top">virtual async Task&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23999eb8b3ba9821d0501f06e784d593">InsertUserAsync</a> (<a class="el" href="class_weather_app_1_1_models_1_1_user.html">User</a> user)</td></tr>
 <tr class="separator:a23999eb8b3ba9821d0501f06e784d593"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af917477ce74fec08d7eb4bef9c2905c5" id="r_af917477ce74fec08d7eb4bef9c2905c5"><td class="memItemLeft" align="right" valign="top"><a id="af917477ce74fec08d7eb4bef9c2905c5" name="af917477ce74fec08d7eb4bef9c2905c5"></a>
-virtual async Task&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateUserAsync</b> (<a class="el" href="class_weather_app_1_1_models_1_1_user.html">User</a> user)</td></tr>
+<tr class="memitem:af917477ce74fec08d7eb4bef9c2905c5" id="r_af917477ce74fec08d7eb4bef9c2905c5"><td class="memItemLeft" align="right" valign="top">virtual async Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af917477ce74fec08d7eb4bef9c2905c5">UpdateUserAsync</a> (<a class="el" href="class_weather_app_1_1_models_1_1_user.html">User</a> user)</td></tr>
 <tr class="separator:af917477ce74fec08d7eb4bef9c2905c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b2cce87d0b1293ad37bc9ae221db0a3" id="r_a4b2cce87d0b1293ad37bc9ae221db0a3"><td class="memItemLeft" align="right" valign="top"><a id="a4b2cce87d0b1293ad37bc9ae221db0a3" name="a4b2cce87d0b1293ad37bc9ae221db0a3"></a>
-virtual async Task&#160;</td><td class="memItemRight" valign="bottom"><b>DeleteUserAsync</b> (int? id)</td></tr>
+<tr class="memitem:a4b2cce87d0b1293ad37bc9ae221db0a3" id="r_a4b2cce87d0b1293ad37bc9ae221db0a3"><td class="memItemLeft" align="right" valign="top">virtual async Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b2cce87d0b1293ad37bc9ae221db0a3">DeleteUserAsync</a> (int? id)</td></tr>
 <tr class="separator:a4b2cce87d0b1293ad37bc9ae221db0a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6eed81145c7f5fc3f0ee3e9bc16f6cba" id="r_a6eed81145c7f5fc3f0ee3e9bc16f6cba"><td class="memItemLeft" align="right" valign="top"><a id="a6eed81145c7f5fc3f0ee3e9bc16f6cba" name="a6eed81145c7f5fc3f0ee3e9bc16f6cba"></a>
-virtual async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>VerifyUserPasswordAsync</b> (string email, string password)</td></tr>
+<tr class="memitem:a6eed81145c7f5fc3f0ee3e9bc16f6cba" id="r_a6eed81145c7f5fc3f0ee3e9bc16f6cba"><td class="memItemLeft" align="right" valign="top">virtual async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6eed81145c7f5fc3f0ee3e9bc16f6cba">VerifyUserPasswordAsync</a> (string email, string password)</td></tr>
 <tr class="separator:a6eed81145c7f5fc3f0ee3e9bc16f6cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a61e74c60a74fd44859cbfe76f134de39" id="r_a61e74c60a74fd44859cbfe76f134de39"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="class_weather_app_1_1_repositories_1_1_database_connection.html">DatabaseConnection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61e74c60a74fd44859cbfe76f134de39">_dbConnection</a></td></tr>
+<tr class="separator:a61e74c60a74fd44859cbfe76f134de39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a89970ff88b6d79741150d51910e51db5" name="a89970ff88b6d79741150d51910e51db5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89970ff88b6d79741150d51910e51db5">&#9670;&#160;</a></span>UserRepository()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WeatherApp.Repositories.UserRepository.UserRepository </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_weather_app_1_1_repositories_1_1_database_connection.html">DatabaseConnection</a></td>          <td class="paramname"><span class="paramname"><em>dbConnection</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4b2cce87d0b1293ad37bc9ae221db0a3" name="a4b2cce87d0b1293ad37bc9ae221db0a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b2cce87d0b1293ad37bc9ae221db0a3">&#9670;&#160;</a></span>DeleteUserAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual async Task WeatherApp.Repositories.UserRepository.DeleteUserAsync </td>
+          <td>(</td>
+          <td class="paramtype">int?</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad527a49535db053e53402fa71a67d1b0" name="ad527a49535db053e53402fa71a67d1b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad527a49535db053e53402fa71a67d1b0">&#9670;&#160;</a></span>GetUserByEmailAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual async Task&lt; <a class="el" href="class_weather_app_1_1_models_1_1_user.html">User</a> &gt; WeatherApp.Repositories.UserRepository.GetUserByEmailAsync </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>email</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee7fa2e7244e14ae895f9bd6e885fac1" name="aee7fa2e7244e14ae895f9bd6e885fac1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee7fa2e7244e14ae895f9bd6e885fac1">&#9670;&#160;</a></span>GetUserByIdAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual async Task&lt; <a class="el" href="class_weather_app_1_1_models_1_1_user.html">User</a> &gt; WeatherApp.Repositories.UserRepository.GetUserByIdAsync </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72821f8a88d85c7d257084693daf94b8" name="a72821f8a88d85c7d257084693daf94b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72821f8a88d85c7d257084693daf94b8">&#9670;&#160;</a></span>GetUsersAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual async Task&lt; List&lt; <a class="el" href="class_weather_app_1_1_models_1_1_user.html">User</a> &gt; &gt; WeatherApp.Repositories.UserRepository.GetUsersAsync </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23999eb8b3ba9821d0501f06e784d593" name="a23999eb8b3ba9821d0501f06e784d593"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23999eb8b3ba9821d0501f06e784d593">&#9670;&#160;</a></span>InsertUserAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual async Task&lt; int &gt; WeatherApp.Repositories.UserRepository.InsertUserAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_weather_app_1_1_models_1_1_user.html">User</a></td>          <td class="paramname"><span class="paramname"><em>user</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af917477ce74fec08d7eb4bef9c2905c5" name="af917477ce74fec08d7eb4bef9c2905c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af917477ce74fec08d7eb4bef9c2905c5">&#9670;&#160;</a></span>UpdateUserAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual async Task WeatherApp.Repositories.UserRepository.UpdateUserAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_weather_app_1_1_models_1_1_user.html">User</a></td>          <td class="paramname"><span class="paramname"><em>user</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6eed81145c7f5fc3f0ee3e9bc16f6cba" name="a6eed81145c7f5fc3f0ee3e9bc16f6cba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eed81145c7f5fc3f0ee3e9bc16f6cba">&#9670;&#160;</a></span>VerifyUserPasswordAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual async Task&lt; bool &gt; WeatherApp.Repositories.UserRepository.VerifyUserPasswordAsync </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>email</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>password</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_weather_app_1_1_repositories_1_1_user_repository_a6eed81145c7f5fc3f0ee3e9bc16f6cba_cgraph.png" border="0" usemap="#aclass_weather_app_1_1_repositories_1_1_user_repository_a6eed81145c7f5fc3f0ee3e9bc16f6cba_cgraph" alt=""/></div>
+<map name="aclass_weather_app_1_1_repositories_1_1_user_repository_a6eed81145c7f5fc3f0ee3e9bc16f6cba_cgraph" id="aclass_weather_app_1_1_repositories_1_1_user_repository_a6eed81145c7f5fc3f0ee3e9bc16f6cba_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,277,48"/>
+<area shape="rect" href="class_weather_app_1_1_repositories_1_1_user_repository.html#ad527a49535db053e53402fa71a67d1b0" title=" " alt="" coords="325,5,575,48"/>
+<area shape="poly" title=" " alt="" coords="277,24,309,24,309,29,277,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a61e74c60a74fd44859cbfe76f134de39" name="a61e74c60a74fd44859cbfe76f134de39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61e74c60a74fd44859cbfe76f134de39">&#9670;&#160;</a></span>_dbConnection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="class_weather_app_1_1_repositories_1_1_database_connection.html">DatabaseConnection</a> WeatherApp.Repositories.UserRepository._dbConnection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>WeatherApp/Repositories/<b>UserRepository.cs</b></li>
+<li>WeatherApp/Repositories/<a class="el" href="_user_repository_8cs.html">UserRepository.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

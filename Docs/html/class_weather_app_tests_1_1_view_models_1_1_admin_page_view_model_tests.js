@@ -6,5 +6,8 @@ var class_weather_app_tests_1_1_view_models_1_1_admin_page_view_model_tests =
     [ "DeleteUser_ShouldNotRemoveUser_WhenNoUserIsSelected", "class_weather_app_tests_1_1_view_models_1_1_admin_page_view_model_tests.html#a33b30e5c36ce1b6fb9fac39e09951113", null ],
     [ "DeleteUser_ShouldRemoveUser_WhenUserIsSelected", "class_weather_app_tests_1_1_view_models_1_1_admin_page_view_model_tests.html#a2357c1c3e253f8202341faca068c1ad4", null ],
     [ "InitializeAsync_ShouldLoadUsers", "class_weather_app_tests_1_1_view_models_1_1_admin_page_view_model_tests.html#a0548b807084e4eb203fe77516f92d66e", null ],
-    [ "SimulateFirmwareUpdate_ShouldDisplayAlert", "class_weather_app_tests_1_1_view_models_1_1_admin_page_view_model_tests.html#afa58d1f94b5e92406311168f265ae5b1", null ]
+    [ "SimulateFirmwareUpdate_ShouldDisplayAlert", "class_weather_app_tests_1_1_view_models_1_1_admin_page_view_model_tests.html#afa58d1f94b5e92406311168f265ae5b1", null ],
+    [ "_mockAlertService", "class_weather_app_tests_1_1_view_models_1_1_admin_page_view_model_tests.html#a3ade44514efea4cba177a39fdd10b350", null ],
+    [ "_mockUserRepository", "class_weather_app_tests_1_1_view_models_1_1_admin_page_view_model_tests.html#a67d48873b79054f0ae16164601867e3a", null ],
+    [ "_viewModel", "class_weather_app_tests_1_1_view_models_1_1_admin_page_view_model_tests.html#aa0878ddfbc03d0b25a5c9a56b52a6783", null ]
 ];

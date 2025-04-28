@@ -53,6 +53,7 @@ var hierarchy =
       [ "WeatherApp.MainApplication", "class_weather_app_1_1_main_application.html", null ],
       [ "WeatherApp.Program", "class_weather_app_1_1_program.html", null ]
     ] ],
+    [ "WeatherApp.MauiProgram", "class_weather_app_1_1_maui_program.html", null ],
     [ "MauiUIApplicationDelegate", null, [
       [ "WeatherApp.AppDelegate", "class_weather_app_1_1_app_delegate.html", null ],
       [ "WeatherApp.AppDelegate", "class_weather_app_1_1_app_delegate.html", null ]
@@ -76,6 +77,7 @@ var hierarchy =
     ] ],
     [ "WeatherApp.Models.PhysicalQuantity", "class_weather_app_1_1_models_1_1_physical_quantity.html", null ],
     [ "WeatherApp.Repositories.PhysicalQuantityRepository", "class_weather_app_1_1_repositories_1_1_physical_quantity_repository.html", null ],
+    [ "WeatherApp.WinUI.Program", "class_weather_app_1_1_win_u_i_1_1_program.html", null ],
     [ "WeatherAppTests.ViewModels.RegisterPageViewModelTests", "class_weather_app_tests_1_1_view_models_1_1_register_page_view_model_tests.html", null ],
     [ "_Microsoft.Android.Resource.Designer.Resource", null, [
       [ "WeatherAppTests.Resource", "class_weather_app_tests_1_1_resource.html", null ],

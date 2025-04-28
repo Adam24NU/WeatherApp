@@ -1,5 +1,9 @@
 <map id="WeatherApp.Repositories.SiteRepository" name="WeatherApp.Repositories.SiteRepository">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,96,179,139"/>
-<area shape="rect" id="Node000002" href="$interface_weather_app_1_1_repositories_1_1_i_site_repository.html" title=" " alt="" coords="5,5,179,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,64,95,96,89,96,89,64"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="457,39,631,81"/>
+<area shape="rect" id="Node000002" href="$interface_weather_app_1_1_repositories_1_1_i_site_repository.html" title=" " alt="" coords="145,5,318,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="334,35,457,48,457,53,334,40"/>
+<area shape="rect" id="Node000003" href="$class_weather_app_1_1_repositories_1_1_database_connection.html" title=" " alt="" coords="145,72,318,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="334,80,457,67,457,72,334,85"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,80,96,107"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="111,91,145,91,145,96,111,96"/>
 </map>

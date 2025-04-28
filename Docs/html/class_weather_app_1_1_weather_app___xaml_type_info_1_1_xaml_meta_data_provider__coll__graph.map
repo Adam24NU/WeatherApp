@@ -1,5 +1,7 @@
 <map id="WeatherApp.WeatherApp_XamlTypeInfo.XamlMetaDataProvider" name="WeatherApp.WeatherApp_XamlTypeInfo.XamlMetaDataProvider">
-<area shape="rect" id="Node000001" title="Main class for providing metadata for the app or library." alt="" coords="5,112,253,155"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="26,5,232,64"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,79,132,112,126,112,126,79"/>
+<area shape="rect" id="Node000001" title="Main class for providing metadata for the app or library." alt="" coords="351,51,598,93"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="22,5,229,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="244,45,350,56,350,61,244,50"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,88,246,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="261,92,350,83,350,88,261,98"/>
 </map>
