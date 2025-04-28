@@ -1,0 +1,15 @@
+@startuml
+actor "Operations Manager" as Manager
+
+rectangle "WeatherApp System" {
+    usecase "Monitor Sensor Status" as UC1
+    usecase "Schedule Maintenance Task" as UC2
+    usecase "Flag Malfunctioning Sensor" as UC3
+    usecase "Verify Data Integrity" as UC4
+}
+
+Manager --> UC1
+Manager --> UC2
+Manager --> UC3
+Manager --> UC4
+@enduml

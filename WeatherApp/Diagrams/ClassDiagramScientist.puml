@@ -1,0 +1,25 @@
+@startuml
+class AirReading {
+    +string Timestamp
+    +string NO2
+    +string PM25
+    +string PM10
+}
+
+class WeatherReading {
+    +string Timestamp
+    +string Temperature
+    +string WindSpeed
+    +string RelativeHumidity
+    +string WindDirection
+}
+
+class WaterReading {
+    +string Date
+    +string Time
+    +string Nitrate
+    +string Nitrite
+    +string Phosphate
+    +string EC
+}
+@enduml

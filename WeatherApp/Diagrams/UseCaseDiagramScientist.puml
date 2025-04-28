@@ -1,0 +1,17 @@
+@startuml
+actor "Environmental Scientist" as Scientist
+
+rectangle "WeatherApp System" {
+    usecase "Load Environmental Data" as UC1
+    usecase "View Historical Data" as UC2
+    usecase "Analyse Data for Threshold Breaches" as UC3
+    usecase "Export Environmental Report (CSV)" as UC4
+}
+
+Scientist --> UC1
+Scientist --> UC2
+Scientist --> UC3
+Scientist --> UC4
+@enduml
+
+https://github.com/Adam24NU/WeatherApp/tree/develop/WeatherApp/Documentation/html

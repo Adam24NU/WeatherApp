@@ -1,0 +1,27 @@
+@startuml
+class User {
+    +int UserId
+    +string Email
+    +string Password
+    +string Role
+}
+
+class SensorMeta {
+    +int SensorId
+    +string SensorType
+    +string MeasurementFrequency
+    +string SafeLevel
+    +string Status
+    +bool IsFlagged
+}
+
+class Database {
+    +Connect()
+    +RegisterUser()
+    +AuthenticateUser()
+    +UpdateSensorConfiguration()
+}
+
+User "1" --> "0..*" Database : authentication
+SensorMeta "1" --> "0..*" Database : configuration
+@enduml

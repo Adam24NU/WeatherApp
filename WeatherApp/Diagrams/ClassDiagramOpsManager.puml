@@ -1,0 +1,22 @@
+@startuml
+class SensorMeta {
+    +int SensorId
+    +string SensorType
+    +string MeasurementFrequency
+    +string SafeLevel
+    +string Status
+    +bool IsFlagged
+}
+
+class MaintenanceTask {
+    +int SensorId
+    +string SensorType
+    +string MaintainerEmail
+    +string Status
+    +string MaintenanceDate
+    +string MaintainerComments
+    +string Timestamp
+}
+
+SensorMeta "1" --> "0..*" MaintenanceTask : schedules
+@enduml
