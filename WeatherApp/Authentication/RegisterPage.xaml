@@ -9,9 +9,13 @@
 
             <Label Text="Register New Account" FontSize="24" HorizontalOptions="Center"/>
 
-            <Entry x:Name="UsernameEntry" Placeholder="Username" />
+            <!-- Email entry field -->
+            <Entry x:Name="EmailEntry" Placeholder="Email" />
+
+            <!-- Password entry field -->
             <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" />
 
+            <!-- Role picker field -->
             <Picker x:Name="RolePicker" Title="Select Role">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
@@ -22,8 +26,13 @@
                 </Picker.ItemsSource>
             </Picker>
 
+            <!-- Register button -->
             <Button Text="Register" Clicked="OnRegisterClicked" />
 
+            <!-- Login button -->
+            <Button Text="Already have an account? Login" Clicked="OnLoginClicked" />
+
+            <!-- Status label -->
             <Label x:Name="StatusLabel" TextColor="Red" FontSize="12"/>
 
         </VerticalStackLayout>

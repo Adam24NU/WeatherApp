@@ -55,7 +55,10 @@
 
 	<ItemGroup>
 		<!-- Adding the Maui controls NuGet package -->
+		<PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.0-preview.3.25171.5" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.0-preview.3.25171.5" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.100" />
+		
 		<!-- Other packages -->
 		<PackageReference Include="EPPlus" Version="8.0.1" />
 		<PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.2" />

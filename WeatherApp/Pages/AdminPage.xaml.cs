@@ -1,5 +1,5 @@
 ﻿using WeatherApp.Models;
-using WeatherApp.Resources;  // Add reference to Database
+using WeatherApp;  // Add reference to Database
 
 namespace WeatherApp.Pages
 {
@@ -26,18 +26,18 @@ namespace WeatherApp.Pages
         // Create user button click handler
         private async void OnCreateUserClicked(object sender, EventArgs e)
         {
-            string username = NewUsernameEntry.Text?.Trim();
+            string email = NewUsernameEntry.Text?.Trim();  // Treating email as the username
             string password = NewPasswordEntry.Text;
             string role = RolePicker.SelectedItem?.ToString();
 
-            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(role))
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(role))
             {
                 await DisplayAlert("Error", "Please fill out all fields.", "OK");
                 return;
             }
 
-            // Register the user in the database
-            bool isUserCreated = _database.RegisterUser(username, password, role);
+            // Register the user in the database with email as username
+            bool isUserCreated = _database.RegisterUser(email, password, role);
 
             if (!isUserCreated)
             {
@@ -85,6 +85,15 @@ namespace WeatherApp.Pages
         private async void OnFirmwareUpdateClicked(object sender, EventArgs e)
         {
             await DisplayAlert("Firmware Update", "Sensor firmware update pushed successfully!", "OK");
+        }
+        // Backup Data button handler (simulating backup)
+        private async void OnBackupDataClicked(object sender, EventArgs e)
+        {
+            // Logic to simulate backup data
+            await DisplayAlert("Backup", "Data backup completed successfully!", "OK");
+
+            // For now, simulate updating backup timestamp
+            LastBackupLabel.Text = $"💾 Last Backup: {DateTime.Now:f}";
         }
     }
 }

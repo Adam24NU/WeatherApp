@@ -1,4 +1,5 @@
-﻿using WeatherApp.Resources;  // Import the Database class
+﻿using WeatherApp;
+using WeatherApp.Models;
 
 namespace WeatherApp.Authentication
 {
@@ -10,34 +11,38 @@ namespace WeatherApp.Authentication
         public RegisterPage(Database database)
         {
             InitializeComponent();
-            _database = database;
+            _database = database; // Using the passed-in Database object instead of creating a new one
         }
 
         // OnRegisterClicked will now use the _database field
-        [Obsolete]
         private async void OnRegisterClicked(object sender, EventArgs e)
         {
-            var username = UsernameEntry.Text?.Trim();
+            var email = EmailEntry.Text?.Trim();
             var password = PasswordEntry.Text;
             var role = RolePicker.SelectedItem?.ToString();
 
-            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(role))
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(role))
             {
                 StatusLabel.Text = "Please fill all fields.";
                 return;
             }
 
-            // Check for duplicates
-            if (_database.RegisterUser(username, password, role))
+            // Register user in the database
+            if (_database.RegisterUser(email, password, role))
             {
                 StatusLabel.TextColor = Colors.Green;
                 StatusLabel.Text = "Registration successful!";
-                await Navigation.PushAsync(new LoginPage(_database));  // Navigate to LoginPage with Database
+                await Navigation.PushAsync(new LoginPage(_database));  // Navigate to LoginPage and pass the Database object
             }
             else
             {
-                StatusLabel.Text = "Username already exists.";
+                StatusLabel.Text = "Email already exists.";
             }
+        }
+        // Navigate to LoginPage
+        private async void OnLoginClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LoginPage(_database));  // Navigate to the LoginPage
         }
     }
 }

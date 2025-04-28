@@ -1,75 +1,84 @@
 ﻿using System.Collections.ObjectModel;
-using WeatherApp.Models;
-using WeatherApp.Resources;
-using WeatherApp; 
+using System.Linq;
+using Microsoft.Data.SqlClient;  // Needed for SQL operations
+using System;
 
 namespace WeatherApp.Pages
 {
-    public partial class OpsManagerPage : ContentPage
+    public partial class OpsManagerPage : TabbedPage
     {
-        private readonly Database _database;  // Add database as a dependency (Adam's task)
-        private List<SensorMeta> allData = new();
-        private int itemsPerPage = 10;
-        private int currentPage = 0;
+        private readonly Database _database;
 
-        public ObservableCollection<SensorMeta> DisplayedData { get; set; } = new();
+        public ObservableCollection<SensorMeta> DisplayedData { get; set; } = new ObservableCollection<SensorMeta>();
+        public ObservableCollection<MaintenanceTask> MaintenanceTasks { get; set; } = new ObservableCollection<MaintenanceTask>();
 
-        public OpsManagerPage(Database database)  // Adam's task to inject Database
+        public OpsManagerPage(Database database)  // Constructor to inject Database
         {
             InitializeComponent();
             BindingContext = this;
-            _database = database;  // Assign injected Database instance
-
-            LoadInitialData();  // Load initial data from the database
+            _database = database;
+            
+            LoadInitialData();  // Load initial data for the Sensors tab
+            LoadMaintenanceData(); // Load initial data for the Maintenance tab
         }
 
-        // Adam's task to load data from SQL Server instead of Excel
+        // Load initial sensor data from the database
         private void LoadInitialData()
         {
-            allData = _database.GetSensorsData();  // Fetch data from database
-            LoadNextItems();
+            
+            var allData = _database.GetSensorsData();  // Fetch data from the database
+            Console.WriteLine($"Fetched {allData.Count} sensor records.");
+
+            foreach (var sensor in allData)
+            {
+                DisplayedData.Add(sensor);
+                Console.WriteLine($"Added sensor: {sensor.SensorId} - {sensor.SensorType}");
+            }
         }
 
-        private void LoadNextItems()
+        // Load maintenance data from the database
+        private void LoadMaintenanceData()
         {
-            var nextBatch = allData
-                .Skip(currentPage * itemsPerPage)
-                .Take(itemsPerPage)
-                .ToList();
-
-            foreach (var item in nextBatch)
-                DisplayedData.Add(item);
-
-            currentPage++;
+            var maintenanceData = _database.GetMaintenanceData();  // Fetch maintenance records
+            foreach (var task in maintenanceData)
+            {
+                MaintenanceTasks.Add(task);
+            }
         }
-
-        // When user clicks on "Report Issue" (Bart's task to update the database)
+        // When user clicks on "Report Issue" button
         private async void OnReportIssueClicked(object sender, EventArgs e)
         {
             var button = sender as Button;
             if (button?.CommandParameter is SensorMeta sensor)
             {
+                // Show confirmation dialog to the user
                 bool confirm = await DisplayAlert(
                     "Report Malfunction",
-                    $"Do you want to flag sensor {sensor.SensorID} as malfunctioning?",
+                    $"Do you want to flag sensor {sensor.SensorId} as malfunctioning?",
                     "Yes", "Cancel");
 
                 if (confirm)
                 {
-                    // Update the status in the database (Bart's task to update status)
-                    _database.FlagSensorAsMalfunctioning(sensor.SensorID);
+                    // Assume currentUserId is the ID of the logged-in user
+                    var currentUserId = 1; // Replace this with the actual logged-in user's ID
 
-                    // Force refresh (basic workaround)
+                    // Flag the sensor as malfunctioning in the database
+                    _database.FlagSensorAsMalfunctioning(sensor.SensorId);
+
+                    // Insert a new maintenance record for the sensor in the database
+                    _database.InsertMaintenanceRecord(sensor.SensorId, currentUserId, DateTime.Now,
+                        "Sensor malfunction reported");
+
+                    // Force refresh the UI (this is a basic workaround)
                     var index = DisplayedData.IndexOf(sensor);
-                    DisplayedData.RemoveAt(index);
-                    DisplayedData.Insert(index, sensor);
+                    if (index >= 0)
+                    {
+                        // Update the sensor status or other relevant fields in the UI
+                        DisplayedData.RemoveAt(index);
+                        DisplayedData.Insert(index, sensor);
+                    }
                 }
             }
-        }
-
-        private void CollectionView_RemainingItemsThresholdReached(object sender, EventArgs e)
-        {
-            LoadNextItems();
         }
     }
 }

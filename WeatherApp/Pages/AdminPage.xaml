@@ -16,7 +16,7 @@
                     <DataTemplate>
                         <Frame BorderColor="LightGray" CornerRadius="10" Padding="10" Margin="5">
                             <StackLayout>
-                                <Label Text="{Binding Username}" FontAttributes="Bold" />
+                                <Label Text="{Binding Email}" FontAttributes="Bold" />
                                 <Label Text="{Binding Role, StringFormat='Role: {0}'}" />
                             </StackLayout>
                         </Frame>
@@ -31,7 +31,7 @@
             <!-- Section: Add New User -->
             <Label Text="➕ Add New User" FontSize="20" FontAttributes="Bold" />
 
-            <Entry x:Name="NewUsernameEntry" Placeholder="Username" />
+            <Entry x:Name="NewUsernameEntry" Placeholder="Email" />
             <Picker x:Name="RolePicker" Title="Select Role">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
@@ -51,6 +51,13 @@
             <Label Text="🛠 System Tools" FontSize="20" FontAttributes="Bold" />
             <Button Text="🔄 Simulate Firmware Update" Clicked="OnFirmwareUpdateClicked" />
             <Label x:Name="LastBackupLabel" Text="💾 Last Backup: Not Synced" FontSize="14" />
+            
+            <!-- Section: Data Storage and Backup -->
+            <BoxView HeightRequest="1" BackgroundColor="Gray" />
+            <Label Text="💾 Data Storage Overview" FontSize="20" FontAttributes="Bold" />
+            <Label Text="Storage Usage: 1.2 GB" FontSize="16" TextColor="Gray"/>
+            <Button Text="🔄 Backup Data" Clicked="OnBackupDataClicked" BackgroundColor="RoyalBlue" TextColor="White" />
+
 
         </VerticalStackLayout>
     </ScrollView>

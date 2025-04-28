@@ -1,40 +1,34 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using WeatherApp.Authentication;  // Assuming this is where your pages are
+using Microsoft.Extensions.Logging;  // Ensure this is included at the top
 using WeatherApp.Pages;
-using WeatherApp.Authentication;
-using WeatherApp.Models;
 
+namespace WeatherApp;
 
-namespace WeatherApp
+public static class MauiProgram
 {
-
-    public static class MauiProgram
+    public static MauiApp CreateMauiApp()
     {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .UseMauiMaps()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+            });
 
 #if DEBUG
-            builder.Logging.AddDebug();
+        builder.Logging.AddDebug();
 #endif
 
-            // Register the SQL Server connection (Connection string from config)
-            builder.Services.AddSingleton<appsettings>(); // Register as singleton
+        // Register the SQL Server connection
+        builder.Services.AddSingleton<Database>();  // Register Database
 
+        // Register your pages (adjust to match your project structure)
+        builder.Services.AddTransient<RegisterPage>();  // Ensure your RegisterPage is here
+        builder.Services.AddTransient<LoginPage>();     // Likewise, ensure other pages are included if needed
+        builder.Services.AddTransient<AdminPage>();     // Example for AdminPage if required
 
-            // Register ViewModels and Views
-            builder.Services.AddTransient<MainPage>();
-            builder.Services.AddTransient<LoginPage>();
-            builder.Services.AddTransient<RegisterPage>();
-
-            return builder.Build();
-        }
+        return builder.Build();
     }
 }
