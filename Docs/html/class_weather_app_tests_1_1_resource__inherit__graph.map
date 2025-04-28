@@ -1,0 +1,6 @@
+<map id="WeatherAppTests.Resource" name="WeatherAppTests.Resource">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,112,190,139"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="25,5,170,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,79,94,111,88,112,86,80"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="109,80,107,112,101,111,104,79"/>
+</map>

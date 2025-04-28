@@ -1,0 +1,12 @@
+<map id="crc640ec207abc449b2ca.ShellItemRenderer" name="crc640ec207abc449b2ca.ShellItemRenderer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="553,64,751,107"/>
+<area shape="rect" id="Node000002" href="$classcrc640ec207abc449b2ca_1_1_shell_item_renderer_base.html" title=" " alt="" coords="285,5,483,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="498,49,553,61,552,66,497,54"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,13,215,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="230,24,284,24,284,29,230,29"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="19,68,201,95"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="217,79,552,82,552,87,217,85"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="195,62,284,44,285,49,196,67"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="263,123,505,197"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="519,120,572,105,573,110,521,125"/>
+</map>

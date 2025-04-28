@@ -1,0 +1,42 @@
+<map id="WeatherApp/obj/Debug/net8.0&#45;android34.0/android/src/androidx" name="WeatherApp/obj/Debug/net8.0&#45;android34.0/android/src/androidx">
+<area shape="rect" id="node2" href="dir_7824a9b8aa028f72983aab283622ee5b.html" title="activity" alt="" coords="131,64,194,91"/>
+<area shape="rect" id="node3" href="dir_806ee5b5c9cb56625770949bbfdd697c.html" title="annotation" alt="" coords="218,64,299,91"/>
+<area shape="rect" id="node4" href="dir_77d1a428c4d48f318322b559e5eee159.html" title="appcompat" alt="" coords="324,64,409,91"/>
+<area shape="rect" id="node5" href="dir_30e516a087d9846ac3a6a0684f3b7d8a.html" title="arch" alt="" coords="433,64,479,91"/>
+<area shape="rect" id="node6" href="dir_b24436bdea14c9bb104721dbb485a934.html" title="browser" alt="" coords="504,64,571,91"/>
+<area shape="rect" id="node7" href="dir_3333d254f1301afe893a3b6fb0bd78ff.html" title="cardview" alt="" coords="595,64,669,91"/>
+<area shape="rect" id="node8" href="dir_7d2d043040e338cd88c65bc3da5d170c.html" title="constraintlayout" alt="" coords="693,64,806,91"/>
+<area shape="rect" id="node9" href="dir_10beae1d7113a70f2ee0a6b102216644.html" title="coordinatorlayout" alt="" coords="830,64,951,91"/>
+<area shape="rect" id="node10" href="dir_3338cd1d5ab5a91b00256db02e83da97.html" title="core" alt="" coords="976,64,1022,91"/>
+<area shape="rect" id="node11" href="dir_e4f967f34c66a96c07884cf04a059e90.html" title="cursoradapter" alt="" coords="1046,64,1146,91"/>
+<area shape="rect" id="node12" href="dir_9a1eb0312d157168157e75e618e7b6e2.html" title="customview" alt="" coords="1170,64,1262,91"/>
+<area shape="rect" id="node13" href="dir_8e956388de393072e581392cd6dbc7ed.html" title="documentfile" alt="" coords="1286,64,1381,91"/>
+<area shape="rect" id="node14" href="dir_e6204e3b84fba5c68877d78859d9bd66.html" title="drawerlayout" alt="" coords="1406,64,1501,91"/>
+<area shape="rect" id="node15" href="dir_e41d46f5f33592743d0fe548ee00ce18.html" title="dynamicanimation" alt="" coords="1525,64,1651,91"/>
+<area shape="rect" id="node16" href="dir_22c3ceaa2494b699c7cbecf0648d4224.html" title="emoji2" alt="" coords="1676,64,1735,91"/>
+<area shape="rect" id="node17" href="dir_855b1b1a0a2efe05e9f54ef4d24c3d5e.html" title="exifinterface" alt="" coords="1759,64,1852,91"/>
+<area shape="rect" id="node18" href="dir_b0b80d83266babe24225d6514fe1c9f8.html" title="fragment" alt="" coords="1876,64,1948,91"/>
+<area shape="rect" id="node19" href="dir_1c9bf8c54a8ed01ed4806c2d4f6ffaf2.html" title="interpolator" alt="" coords="1972,64,2057,91"/>
+<area shape="rect" id="node20" href="dir_13aa979f692818f9c94d1bcdca48261c.html" title="legacy" alt="" coords="2081,64,2140,91"/>
+<area shape="rect" id="node21" href="dir_61146748936db95a308a615765babd35.html" title="lifecycle" alt="" coords="2164,64,2233,91"/>
+<area shape="rect" id="node22" href="dir_4c28e918cae0270748a997f60fda8c33.html" title="loader" alt="" coords="2257,64,2314,91"/>
+<area shape="rect" id="node23" href="dir_0b7c699eb0682f4430c12456f6e8096b.html" title="localbroadcastmanager" alt="" coords="2337,64,2492,91"/>
+<area shape="rect" id="node24" href="dir_fe133603b311af4fc20fd52fc28a8727.html" title="navigation" alt="" coords="2516,64,2596,91"/>
+<area shape="rect" id="node25" href="dir_a9300212789f0f976d875b67198a7231.html" title="print" alt="" coords="2621,64,2667,91"/>
+<area shape="rect" id="node26" href="dir_6e9dc3a05d4131cb38803bdb3fa76288.html" title="profileinstaller" alt="" coords="2691,64,2792,91"/>
+<area shape="rect" id="node27" href="dir_9df783f43c5b173b2395ae1a61edc712.html" title="recyclerview" alt="" coords="2816,64,2910,91"/>
+<area shape="rect" id="node28" href="dir_5010e254907d930b5f162341fb4d5805.html" title="savedstate" alt="" coords="2933,64,3019,91"/>
+<area shape="rect" id="node29" href="dir_50f44b9428a009f047d3eb59ff4047e6.html" title="security" alt="" coords="3042,64,3110,91"/>
+<area shape="rect" id="node30" href="dir_d8e936b18b8728625ca8f5b2d0503bfb.html" title="slidingpanelayout" alt="" coords="3134,64,3255,91"/>
+<area shape="rect" id="node31" href="dir_a82ed5bcc52a655b4873264f6e3eb799.html" title="startup" alt="" coords="3280,64,3341,91"/>
+<area shape="rect" id="node32" href="dir_716f66f19d643db8352e733abd363d2a.html" title="swiperefreshlayout" alt="" coords="3366,64,3496,91"/>
+<area shape="rect" id="node33" href="dir_14f21cf2c6515de64603a48afe571638.html" title="tracing" alt="" coords="3520,64,3581,91"/>
+<area shape="rect" id="node34" href="dir_085a21e2610565c0bb8a1b137eb76184.html" title="transition" alt="" coords="3606,64,3680,91"/>
+<area shape="rect" id="node35" href="dir_024ffc73354942c946b9ee86e4a5f18c.html" title="vectordrawable" alt="" coords="3704,64,3813,91"/>
+<area shape="rect" id="node36" href="dir_be1a375346e6c76d19599663f980d773.html" title="versionedparcelable" alt="" coords="3837,64,3974,91"/>
+<area shape="rect" id="node37" href="dir_c84478053b517db14275cb23b3139517.html" title="viewpager" alt="" coords="3997,64,4078,91"/>
+<area shape="rect" id="node38" href="dir_479adec7a799aa9ec3f02d03946a3f91.html" title="viewpager2" alt="" coords="4102,64,4189,91"/>
+<area shape="rect" id="node39" href="dir_04a758a77f7b7297759ea59bf3e51f04.html" title="window" alt="" coords="4213,64,4278,91"/>
+<area shape="rect" id="clust2" href="dir_34d98fc27cedf701fe098f89d5ef9764.html" alt="" coords="27,53,4289,101"/>
+<area shape="rect" id="clust1" href="dir_b44e599662d99a88f87abdb11558da43.html" title="src" alt="" coords="16,16,4300,112"/>
+</map>

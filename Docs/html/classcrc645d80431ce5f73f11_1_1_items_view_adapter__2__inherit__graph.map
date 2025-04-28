@@ -1,0 +1,17 @@
+<map id="crc645d80431ce5f73f11.ItemsViewAdapter_2" name="crc645d80431ce5f73f11.ItemsViewAdapter_2">
+<area shape="rect" id="Node000001" title=" " alt="" coords="246,39,441,81"/>
+<area shape="rect" id="Node000004" href="$classcrc645d80431ce5f73f11_1_1_carousel_view_adapter__2.html" title=" " alt="" coords="493,5,707,48"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="456,43,492,38,493,43,457,48"/>
+<area shape="rect" id="Node000005" href="$classcrc645d80431ce5f73f11_1_1_structured_items_view_adapter__2.html" title=" " alt="" coords="489,72,711,115"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="457,72,489,76,488,82,456,77"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,9,198,52"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,42,245,45,245,51,213,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="10,76,193,103"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="208,74,245,69,245,75,208,79"/>
+<area shape="rect" id="Node000006" href="$classcrc645d80431ce5f73f11_1_1_selectable_items_view_adapter__2.html" title=" " alt="" coords="759,72,983,115"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="727,91,759,91,759,96,727,96"/>
+<area shape="rect" id="Node000007" href="$classcrc645d80431ce5f73f11_1_1_groupable_items_view_adapter__2.html" title=" " alt="" coords="1031,72,1252,115"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="998,91,1030,91,1030,96,998,96"/>
+<area shape="rect" id="Node000008" href="$classcrc645d80431ce5f73f11_1_1_reorderable_items_view_adapter__2.html" title=" " alt="" coords="1300,72,1532,115"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="1268,91,1300,91,1300,96,1268,96"/>
+</map>
