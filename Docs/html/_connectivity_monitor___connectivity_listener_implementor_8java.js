@@ -1,0 +1,4 @@
+var _connectivity_monitor___connectivity_listener_implementor_8java =
+[
+    [ "mono.com.bumptech.glide.manager.ConnectivityMonitor_ConnectivityListenerImplementor", "classmono_1_1com_1_1bumptech_1_1glide_1_1manager_1_1_connectivity_monitor___connectivity_listener_implementor.html", "classmono_1_1com_1_1bumptech_1_1glide_1_1manager_1_1_connectivity_monitor___connectivity_listener_implementor" ]
+];

@@ -1,0 +1,4 @@
+var _provider_installer___provider_install_listener_implementor_8java =
+[
+    [ "mono.com.google.android.gms.security.ProviderInstaller_ProviderInstallListenerImplementor", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1security_1_1_provider_installer___provider_install_listener_implementor.html", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1security_1_1_provider_installer___provider_install_listener_implementor" ]
+];

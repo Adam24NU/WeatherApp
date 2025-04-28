@@ -1,0 +1,7 @@
+var classmono_1_1com_1_1google_1_1android_1_1gms_1_1common_1_1api_1_1internal_1_1_background_detecto64da446698e97cb6a400d9d5c4677c5c =
+[
+    [ "BackgroundDetector_BackgroundStateChangeListenerImplementor", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1common_1_1api_1_1internal_1_1_background_detecto64da446698e97cb6a400d9d5c4677c5c.html#a1db075ebbf842075e07c13d587ea5053", null ],
+    [ "monodroidAddReference", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1common_1_1api_1_1internal_1_1_background_detecto64da446698e97cb6a400d9d5c4677c5c.html#a153c5057936f7e260e6170b33e2911d9", null ],
+    [ "monodroidClearReferences", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1common_1_1api_1_1internal_1_1_background_detecto64da446698e97cb6a400d9d5c4677c5c.html#a386d7be0267da426b3dc80a6639eab62", null ],
+    [ "onBackgroundStateChanged", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1common_1_1api_1_1internal_1_1_background_detecto64da446698e97cb6a400d9d5c4677c5c.html#a3f5a966e326bc04c19814c9841c69827", null ]
+];

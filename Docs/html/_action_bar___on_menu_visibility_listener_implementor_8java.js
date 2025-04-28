@@ -1,0 +1,4 @@
+var _action_bar___on_menu_visibility_listener_implementor_8java =
+[
+    [ "mono.androidx.appcompat.app.ActionBar_OnMenuVisibilityListenerImplementor", "classmono_1_1androidx_1_1appcompat_1_1app_1_1_action_bar___on_menu_visibility_listener_implementor.html", "classmono_1_1androidx_1_1appcompat_1_1app_1_1_action_bar___on_menu_visibility_listener_implementor" ]
+];

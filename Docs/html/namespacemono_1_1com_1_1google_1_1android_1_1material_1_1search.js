@@ -1,0 +1,4 @@
+var namespacemono_1_1com_1_1google_1_1android_1_1material_1_1search =
+[
+    [ "SearchView_TransitionListenerImplementor", "classmono_1_1com_1_1google_1_1android_1_1material_1_1search_1_1_search_view___transition_listener_implementor.html", "classmono_1_1com_1_1google_1_1android_1_1material_1_1search_1_1_search_view___transition_listener_implementor" ]
+];

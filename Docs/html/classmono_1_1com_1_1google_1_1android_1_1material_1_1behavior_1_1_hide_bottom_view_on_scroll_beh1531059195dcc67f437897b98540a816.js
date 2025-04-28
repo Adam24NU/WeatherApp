@@ -1,0 +1,7 @@
+var classmono_1_1com_1_1google_1_1android_1_1material_1_1behavior_1_1_hide_bottom_view_on_scroll_beh1531059195dcc67f437897b98540a816 =
+[
+    [ "HideBottomViewOnScrollBehavior_OnScrollStateChangedListenerImplementor", "classmono_1_1com_1_1google_1_1android_1_1material_1_1behavior_1_1_hide_bottom_view_on_scroll_beh1531059195dcc67f437897b98540a816.html#ad1df7a7fffefbf358d8208db3bc8cbe4", null ],
+    [ "monodroidAddReference", "classmono_1_1com_1_1google_1_1android_1_1material_1_1behavior_1_1_hide_bottom_view_on_scroll_beh1531059195dcc67f437897b98540a816.html#a2e4f2fcba0a61c9dc6764a05cec3249e", null ],
+    [ "monodroidClearReferences", "classmono_1_1com_1_1google_1_1android_1_1material_1_1behavior_1_1_hide_bottom_view_on_scroll_beh1531059195dcc67f437897b98540a816.html#a447601b4abee66fdd2064bba30492e88", null ],
+    [ "onStateChanged", "classmono_1_1com_1_1google_1_1android_1_1material_1_1behavior_1_1_hide_bottom_view_on_scroll_beh1531059195dcc67f437897b98540a816.html#a43fecd281c7da840cd603992e1257389", null ]
+];

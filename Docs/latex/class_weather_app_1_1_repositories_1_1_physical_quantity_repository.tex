@@ -1,0 +1,36 @@
+\doxysection{Weather\+App.\+Repositories.\+Physical\+Quantity\+Repository Class Reference}
+\hypertarget{class_weather_app_1_1_repositories_1_1_physical_quantity_repository}{}\label{class_weather_app_1_1_repositories_1_1_physical_quantity_repository}\index{WeatherApp.Repositories.PhysicalQuantityRepository@{WeatherApp.Repositories.PhysicalQuantityRepository}}
+
+
+Repository class for CRUD functionality for physical quantity data.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_weather_app_1_1_repositories_1_1_physical_quantity_repository_a49e153912e41719641cf9553b0fcdb7d}\label{class_weather_app_1_1_repositories_1_1_physical_quantity_repository_a49e153912e41719641cf9553b0fcdb7d} 
+{\bfseries Physical\+Quantity\+Repository} (\mbox{\hyperlink{class_weather_app_1_1_repositories_1_1_database_connection}{Database\+Connection}} db\+Connection)
+\item 
+\Hypertarget{class_weather_app_1_1_repositories_1_1_physical_quantity_repository_a05c6d6e541d835dddc40be9424b4ea48}\label{class_weather_app_1_1_repositories_1_1_physical_quantity_repository_a05c6d6e541d835dddc40be9424b4ea48} 
+virtual async Task$<$ List$<$ \mbox{\hyperlink{class_weather_app_1_1_models_1_1_physical_quantity}{Physical\+Quantity}} $>$ $>$ {\bfseries Get\+Physical\+Quantities\+Async} ()
+\begin{DoxyCompactList}\small\item\em Get all physical quantities. \end{DoxyCompactList}\item 
+\Hypertarget{class_weather_app_1_1_repositories_1_1_physical_quantity_repository_a3dcbabce7dd270e7724de3827be46042}\label{class_weather_app_1_1_repositories_1_1_physical_quantity_repository_a3dcbabce7dd270e7724de3827be46042} 
+virtual async Task$<$ \mbox{\hyperlink{class_weather_app_1_1_models_1_1_physical_quantity}{Physical\+Quantity}} $>$ {\bfseries Get\+Physical\+Quantity\+By\+Id\+Async} (int id)
+\begin{DoxyCompactList}\small\item\em Get a physical quantity by its ID. \end{DoxyCompactList}\item 
+\Hypertarget{class_weather_app_1_1_repositories_1_1_physical_quantity_repository_ad13ae757fe4db8a3e80f5ece746cd3d8}\label{class_weather_app_1_1_repositories_1_1_physical_quantity_repository_ad13ae757fe4db8a3e80f5ece746cd3d8} 
+virtual async Task$<$ int?$>$ {\bfseries Get\+Quantity\+Id\+By\+Symbol\+Async} (string symbol)
+\item 
+\Hypertarget{class_weather_app_1_1_repositories_1_1_physical_quantity_repository_a5f95f1b910fdf233a009ef161991c7f0}\label{class_weather_app_1_1_repositories_1_1_physical_quantity_repository_a5f95f1b910fdf233a009ef161991c7f0} 
+virtual async Task$<$ string?$>$ {\bfseries Get\+Symbol\+By\+Quantity\+Id\+Async} (int quantity\+Id)
+\item 
+\Hypertarget{class_weather_app_1_1_repositories_1_1_physical_quantity_repository_a09288c7dd832482149dc94872e7f08ec}\label{class_weather_app_1_1_repositories_1_1_physical_quantity_repository_a09288c7dd832482149dc94872e7f08ec} 
+virtual async Task$<$ string?$>$ {\bfseries Get\+Unit\+By\+QId\+Async} (int Id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Repository class for CRUD functionality for physical quantity data. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Weather\+App/\+Repositories/Physical\+Quantity\+Repository.\+cs\end{DoxyCompactItemize}

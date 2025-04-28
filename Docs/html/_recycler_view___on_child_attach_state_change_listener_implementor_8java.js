@@ -1,0 +1,4 @@
+var _recycler_view___on_child_attach_state_change_listener_implementor_8java =
+[
+    [ "mono.androidx.recyclerview.widget.RecyclerView_OnChildAttachStateChangeListenerImplementor", "classmono_1_1androidx_1_1recyclerview_1_1widget_1_1_recycler_view___on_child_attach_state_change_listener_implementor.html", "classmono_1_1androidx_1_1recyclerview_1_1widget_1_1_recycler_view___on_child_attach_state_change_listener_implementor" ]
+];

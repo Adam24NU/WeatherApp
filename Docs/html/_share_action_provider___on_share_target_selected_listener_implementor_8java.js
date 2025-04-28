@@ -1,0 +1,4 @@
+var _share_action_provider___on_share_target_selected_listener_implementor_8java =
+[
+    [ "mono.androidx.appcompat.widget.ShareActionProvider_OnShareTargetSelectedListenerImplementor", "classmono_1_1androidx_1_1appcompat_1_1widget_1_1_share_action_provider___on_share_target_selected_listener_implementor.html", "classmono_1_1androidx_1_1appcompat_1_1widget_1_1_share_action_provider___on_share_target_selected_listener_implementor" ]
+];

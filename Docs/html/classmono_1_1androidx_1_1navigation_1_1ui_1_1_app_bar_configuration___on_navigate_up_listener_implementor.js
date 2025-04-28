@@ -1,0 +1,7 @@
+var classmono_1_1androidx_1_1navigation_1_1ui_1_1_app_bar_configuration___on_navigate_up_listener_implementor =
+[
+    [ "AppBarConfiguration_OnNavigateUpListenerImplementor", "classmono_1_1androidx_1_1navigation_1_1ui_1_1_app_bar_configuration___on_navigate_up_listener_implementor.html#ad739d72814924deb4449488e00490c8f", null ],
+    [ "monodroidAddReference", "classmono_1_1androidx_1_1navigation_1_1ui_1_1_app_bar_configuration___on_navigate_up_listener_implementor.html#a8f36b4f7a5b288d6993f4e4b1718c432", null ],
+    [ "monodroidClearReferences", "classmono_1_1androidx_1_1navigation_1_1ui_1_1_app_bar_configuration___on_navigate_up_listener_implementor.html#ad2844a0d3e8a1c313d1731940977c3e3", null ],
+    [ "onNavigateUp", "classmono_1_1androidx_1_1navigation_1_1ui_1_1_app_bar_configuration___on_navigate_up_listener_implementor.html#a032410b8ec7aaf96525d1a3895cd6270", null ]
+];

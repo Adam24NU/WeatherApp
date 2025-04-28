@@ -11,7 +11,8 @@ public class DatabaseConnection : IDisposable
     {
         _connectionString = "Server=10.0.2.2,1433,1433;Database=WeatherApp;User Id=WeatherApp;Password=W3ath3rApp;TrustServerCertificate=True;";
     }
-
+    
+    // Constructor
     public DatabaseConnection(string connectionString)
     {
         _connectionString = connectionString;

@@ -1,0 +1,8 @@
+var namespacemono_1_1com_1_1google_1_1android_1_1gms_1_1tasks =
+[
+    [ "OnCanceledListenerImplementor", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1tasks_1_1_on_canceled_listener_implementor.html", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1tasks_1_1_on_canceled_listener_implementor" ],
+    [ "OnCompleteListenerImplementor", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1tasks_1_1_on_complete_listener_implementor.html", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1tasks_1_1_on_complete_listener_implementor" ],
+    [ "OnFailureListenerImplementor", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1tasks_1_1_on_failure_listener_implementor.html", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1tasks_1_1_on_failure_listener_implementor" ],
+    [ "OnSuccessListenerImplementor", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1tasks_1_1_on_success_listener_implementor.html", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1tasks_1_1_on_success_listener_implementor" ],
+    [ "OnTokenCanceledListenerImplementor", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1tasks_1_1_on_token_canceled_listener_implementor.html", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1tasks_1_1_on_token_canceled_listener_implementor" ]
+];

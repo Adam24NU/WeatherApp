@@ -1,0 +1,4 @@
+var _maui_material_button___maui_resizable_drawable_8java =
+[
+    [ "crc6452ffdc5b34af3a0f.MauiMaterialButton_MauiResizableDrawable", "classcrc6452ffdc5b34af3a0f_1_1_maui_material_button___maui_resizable_drawable.html", "classcrc6452ffdc5b34af3a0f_1_1_maui_material_button___maui_resizable_drawable" ]
+];

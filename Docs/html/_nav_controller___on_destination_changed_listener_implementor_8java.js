@@ -1,0 +1,4 @@
+var _nav_controller___on_destination_changed_listener_implementor_8java =
+[
+    [ "mono.androidx.navigation.NavController_OnDestinationChangedListenerImplementor", "classmono_1_1androidx_1_1navigation_1_1_nav_controller___on_destination_changed_listener_implementor.html", "classmono_1_1androidx_1_1navigation_1_1_nav_controller___on_destination_changed_listener_implementor" ]
+];

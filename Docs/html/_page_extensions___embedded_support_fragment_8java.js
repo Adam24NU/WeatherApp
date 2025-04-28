@@ -1,0 +1,4 @@
+var _page_extensions___embedded_support_fragment_8java =
+[
+    [ "crc6477f0d89a9cfd64b1.PageExtensions_EmbeddedSupportFragment", "classcrc6477f0d89a9cfd64b1_1_1_page_extensions___embedded_support_fragment.html", "classcrc6477f0d89a9cfd64b1_1_1_page_extensions___embedded_support_fragment" ]
+];

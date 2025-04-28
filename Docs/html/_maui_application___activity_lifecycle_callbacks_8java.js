@@ -1,0 +1,4 @@
+var _maui_application___activity_lifecycle_callbacks_8java =
+[
+    [ "crc6488302ad6e9e4df1a.MauiApplication_ActivityLifecycleCallbacks", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks" ]
+];

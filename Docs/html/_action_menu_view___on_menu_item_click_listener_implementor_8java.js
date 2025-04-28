@@ -1,0 +1,4 @@
+var _action_menu_view___on_menu_item_click_listener_implementor_8java =
+[
+    [ "mono.androidx.appcompat.widget.ActionMenuView_OnMenuItemClickListenerImplementor", "classmono_1_1androidx_1_1appcompat_1_1widget_1_1_action_menu_view___on_menu_item_click_listener_implementor.html", "classmono_1_1androidx_1_1appcompat_1_1widget_1_1_action_menu_view___on_menu_item_click_listener_implementor" ]
+];

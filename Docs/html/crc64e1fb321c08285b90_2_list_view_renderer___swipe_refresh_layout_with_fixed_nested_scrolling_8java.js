@@ -1,0 +1,4 @@
+var crc64e1fb321c08285b90_2_list_view_renderer___swipe_refresh_layout_with_fixed_nested_scrolling_8java =
+[
+    [ "crc64e1fb321c08285b90.ListViewRenderer_SwipeRefreshLayoutWithFixedNestedScrolling", "classcrc64e1fb321c08285b90_1_1_list_view_renderer___swipe_refresh_layout_with_fixed_nested_scrolling.html", "classcrc64e1fb321c08285b90_1_1_list_view_renderer___swipe_refresh_layout_with_fixed_nested_scrolling" ]
+];

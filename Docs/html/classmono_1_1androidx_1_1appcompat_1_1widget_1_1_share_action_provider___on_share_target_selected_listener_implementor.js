@@ -1,0 +1,7 @@
+var classmono_1_1androidx_1_1appcompat_1_1widget_1_1_share_action_provider___on_share_target_selected_listener_implementor =
+[
+    [ "ShareActionProvider_OnShareTargetSelectedListenerImplementor", "classmono_1_1androidx_1_1appcompat_1_1widget_1_1_share_action_provider___on_share_target_selected_listener_implementor.html#af9b26a8061010c2d3b9273dfb06f808c", null ],
+    [ "monodroidAddReference", "classmono_1_1androidx_1_1appcompat_1_1widget_1_1_share_action_provider___on_share_target_selected_listener_implementor.html#a841744afa235bab698d7a979be9ccc8d", null ],
+    [ "monodroidClearReferences", "classmono_1_1androidx_1_1appcompat_1_1widget_1_1_share_action_provider___on_share_target_selected_listener_implementor.html#a7ca326c06b71364b62befda116454512", null ],
+    [ "onShareTargetSelected", "classmono_1_1androidx_1_1appcompat_1_1widget_1_1_share_action_provider___on_share_target_selected_listener_implementor.html#ad9c01bda79e08a22c827aa296d589b63", null ]
+];

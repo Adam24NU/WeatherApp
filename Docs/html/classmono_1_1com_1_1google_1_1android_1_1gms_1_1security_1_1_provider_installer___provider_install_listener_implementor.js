@@ -1,0 +1,8 @@
+var classmono_1_1com_1_1google_1_1android_1_1gms_1_1security_1_1_provider_installer___provider_install_listener_implementor =
+[
+    [ "ProviderInstaller_ProviderInstallListenerImplementor", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1security_1_1_provider_installer___provider_install_listener_implementor.html#a6074aecdc3fb018eeff8efc272f61b71", null ],
+    [ "monodroidAddReference", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1security_1_1_provider_installer___provider_install_listener_implementor.html#acbb785fea93e91f3f2f0e783a6ff75f2", null ],
+    [ "monodroidClearReferences", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1security_1_1_provider_installer___provider_install_listener_implementor.html#a3ff43f2ea3c21f514ba3cf34ea685bf7", null ],
+    [ "onProviderInstalled", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1security_1_1_provider_installer___provider_install_listener_implementor.html#a9be6f5afc5630cbec9097d1e8cfeddf5", null ],
+    [ "onProviderInstallFailed", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1security_1_1_provider_installer___provider_install_listener_implementor.html#ad98f798cdf2487bba928d38ad9bdbb5d", null ]
+];

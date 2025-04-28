@@ -1,0 +1,4 @@
+var _shell_section_renderer___view_pager_page_changed_8java =
+[
+    [ "crc640ec207abc449b2ca.ShellSectionRenderer_ViewPagerPageChanged", "classcrc640ec207abc449b2ca_1_1_shell_section_renderer___view_pager_page_changed.html", "classcrc640ec207abc449b2ca_1_1_shell_section_renderer___view_pager_page_changed" ]
+];

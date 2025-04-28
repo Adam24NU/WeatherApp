@@ -1,0 +1,4 @@
+var _background_detector___background_state_change_listener_implementor_8java =
+[
+    [ "mono.com.google.android.gms.common.api.internal.BackgroundDetector_BackgroundStateChangeListenerImplementor", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1common_1_1api_1_1internal_1_1_background_detecto64da446698e97cb6a400d9d5c4677c5c.html", "classmono_1_1com_1_1google_1_1android_1_1gms_1_1common_1_1api_1_1internal_1_1_background_detecto64da446698e97cb6a400d9d5c4677c5c" ]
+];

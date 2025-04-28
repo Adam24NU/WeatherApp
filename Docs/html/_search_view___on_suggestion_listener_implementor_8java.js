@@ -1,0 +1,4 @@
+var _search_view___on_suggestion_listener_implementor_8java =
+[
+    [ "mono.androidx.appcompat.widget.SearchView_OnSuggestionListenerImplementor", "classmono_1_1androidx_1_1appcompat_1_1widget_1_1_search_view___on_suggestion_listener_implementor.html", "classmono_1_1androidx_1_1appcompat_1_1widget_1_1_search_view___on_suggestion_listener_implementor" ]
+];

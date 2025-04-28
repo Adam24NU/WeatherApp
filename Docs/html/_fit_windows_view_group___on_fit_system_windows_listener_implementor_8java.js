@@ -1,0 +1,4 @@
+var _fit_windows_view_group___on_fit_system_windows_listener_implementor_8java =
+[
+    [ "mono.androidx.appcompat.widget.FitWindowsViewGroup_OnFitSystemWindowsListenerImplementor", "classmono_1_1androidx_1_1appcompat_1_1widget_1_1_fit_windows_view_group___on_fit_system_windows_listener_implementor.html", "classmono_1_1androidx_1_1appcompat_1_1widget_1_1_fit_windows_view_group___on_fit_system_windows_listener_implementor" ]
+];

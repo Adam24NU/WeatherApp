@@ -1,0 +1,27 @@
+var classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks =
+[
+    [ "MauiApplication_ActivityLifecycleCallbacks", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#a4ec1d99839b4c813138ab0c6ab79128d", null ],
+    [ "monodroidAddReference", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#a61c4ad940ccf101dab112dfdba396d6f", null ],
+    [ "monodroidClearReferences", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#ade03b7d517f41f07dc876f9082b2eb8f", null ],
+    [ "onActivityCreated", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#a743d2a453e54b8d4236d1a2b28e4f5e3", null ],
+    [ "onActivityDestroyed", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#abb650ffa2b1702e8ab0fa59efb987642", null ],
+    [ "onActivityPaused", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#a7564d7d6638fc7bdac946187356bcaa9", null ],
+    [ "onActivityPostCreated", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#a9689387b9118cd01994292fa10cb57ed", null ],
+    [ "onActivityPostDestroyed", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#a52d5489258ef1a618ce09281c96ac08f", null ],
+    [ "onActivityPostPaused", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#a123273937e0fcc6e1afb1169bf05d23b", null ],
+    [ "onActivityPostResumed", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#a9ddd88a273bcbff22f7714ebdf8b7fac", null ],
+    [ "onActivityPostSaveInstanceState", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#a6c6ed230a21c427a7e3706d30d217c63", null ],
+    [ "onActivityPostStarted", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#aa4df1e1bb848e60093940e5c38742a8b", null ],
+    [ "onActivityPostStopped", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#a80317bb971519b731b15804d3ada5f73", null ],
+    [ "onActivityPreCreated", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#a480eb17f3a906a9c38e0e3d8dd78b5d2", null ],
+    [ "onActivityPreDestroyed", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#abdc36c9de08711d6f64375ff75e470a8", null ],
+    [ "onActivityPrePaused", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#ae79e62e07216bd9888dde4c5f415bc3d", null ],
+    [ "onActivityPreResumed", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#a8a2122b79fb9d1cdd0179c016de1edeb", null ],
+    [ "onActivityPreSaveInstanceState", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#a618f789dbc349f5d2ea5548c87cfc57b", null ],
+    [ "onActivityPreStarted", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#a389654f748190a4455317e21f8fb002c", null ],
+    [ "onActivityPreStopped", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#ae1076325f14606a1355f8130816381f6", null ],
+    [ "onActivityResumed", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#a6a4861b6b07ab599431eaba362956624", null ],
+    [ "onActivitySaveInstanceState", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#af826d569228351fd1a5b8b500cf814f1", null ],
+    [ "onActivityStarted", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#a8ae8f6397654ea76d1a5fe280f78eb7f", null ],
+    [ "onActivityStopped", "classcrc6488302ad6e9e4df1a_1_1_maui_application___activity_lifecycle_callbacks.html#ad571f947837a02338f1f555114f66879", null ]
+];

@@ -1,0 +1,7 @@
+var classmono_1_1androidx_1_1navigation_1_1_nav_controller___on_destination_changed_listener_implementor =
+[
+    [ "NavController_OnDestinationChangedListenerImplementor", "classmono_1_1androidx_1_1navigation_1_1_nav_controller___on_destination_changed_listener_implementor.html#a423fb55b02e5670f5890f6ec86f6df9a", null ],
+    [ "monodroidAddReference", "classmono_1_1androidx_1_1navigation_1_1_nav_controller___on_destination_changed_listener_implementor.html#a049838d12379c0303b1b1339b26e2b49", null ],
+    [ "monodroidClearReferences", "classmono_1_1androidx_1_1navigation_1_1_nav_controller___on_destination_changed_listener_implementor.html#a9ff2b77061dfd38da581d460d1ae8a7d", null ],
+    [ "onDestinationChanged", "classmono_1_1androidx_1_1navigation_1_1_nav_controller___on_destination_changed_listener_implementor.html#ae752f46e0386288812eb7156f775e683", null ]
+];

@@ -1,0 +1,4 @@
+var obj_2_debug_2net8_80_android34_2android_2src_2androidx_2window_2extensions_2core_2_r_8java =
+[
+    [ "androidx.window.extensions.core.R", "classandroidx_1_1window_1_1extensions_1_1core_1_1_r.html", null ]
+];

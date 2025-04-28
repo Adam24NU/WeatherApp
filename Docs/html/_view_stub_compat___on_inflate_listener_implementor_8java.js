@@ -1,0 +1,4 @@
+var _view_stub_compat___on_inflate_listener_implementor_8java =
+[
+    [ "mono.androidx.appcompat.widget.ViewStubCompat_OnInflateListenerImplementor", "classmono_1_1androidx_1_1appcompat_1_1widget_1_1_view_stub_compat___on_inflate_listener_implementor.html", "classmono_1_1androidx_1_1appcompat_1_1widget_1_1_view_stub_compat___on_inflate_listener_implementor" ]
+];

@@ -1,0 +1,4 @@
+var crc64e1fb321c08285b90_2_view_cell_renderer___view_cell_container___long_press_gesture_listener_8java =
+[
+    [ "crc64e1fb321c08285b90.ViewCellRenderer_ViewCellContainer_LongPressGestureListener", "classcrc64e1fb321c08285b90_1_1_view_cell_renderer___view_cell_container___long_press_gesture_listener.html", "classcrc64e1fb321c08285b90_1_1_view_cell_renderer___view_cell_container___long_press_gesture_listener" ]
+];

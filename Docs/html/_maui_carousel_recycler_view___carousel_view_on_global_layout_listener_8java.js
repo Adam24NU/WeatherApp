@@ -1,0 +1,4 @@
+var _maui_carousel_recycler_view___carousel_view_on_global_layout_listener_8java =
+[
+    [ "crc645d80431ce5f73f11.MauiCarouselRecyclerView_CarouselViewOnGlobalLayoutListener", "classcrc645d80431ce5f73f11_1_1_maui_carousel_recycler_view___carousel_view_on_global_layout_listener.html", "classcrc645d80431ce5f73f11_1_1_maui_carousel_recycler_view___carousel_view_on_global_layout_listener" ]
+];

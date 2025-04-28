@@ -1,0 +1,4 @@
+var _shell_flyout_recycler_adapter___element_view_holder_8java =
+[
+    [ "crc640ec207abc449b2ca.ShellFlyoutRecyclerAdapter_ElementViewHolder", "classcrc640ec207abc449b2ca_1_1_shell_flyout_recycler_adapter___element_view_holder.html", "classcrc640ec207abc449b2ca_1_1_shell_flyout_recycler_adapter___element_view_holder" ]
+];

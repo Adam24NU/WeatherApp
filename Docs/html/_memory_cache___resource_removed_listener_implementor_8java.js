@@ -1,0 +1,4 @@
+var _memory_cache___resource_removed_listener_implementor_8java =
+[
+    [ "mono.com.bumptech.glide.load.engine.cache.MemoryCache_ResourceRemovedListenerImplementor", "classmono_1_1com_1_1bumptech_1_1glide_1_1load_1_1engine_1_1cache_1_1_memory_cache___resource_removed_listener_implementor.html", "classmono_1_1com_1_1bumptech_1_1glide_1_1load_1_1engine_1_1cache_1_1_memory_cache___resource_removed_listener_implementor" ]
+];
