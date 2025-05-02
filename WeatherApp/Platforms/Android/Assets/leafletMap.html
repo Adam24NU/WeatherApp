@@ -21,22 +21,48 @@
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script>
-        var map = L.map('map').setView([51.505, -0.09], 13); // Default location: London
+        var map = L.map('map').setView([51.505, -0.09], 13); // Default location
 
         // Add OpenStreetMap tiles
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        // Update map location
-        function updateMapLocation(lat, lon) {
-            map.setView([lat, lon], 13);
-            L.marker([lat, lon]).addTo(map)
-                .bindPopup('Sensor Location')
-                .openPopup();
+        function applyJitter(latitude, longitude) {
+            const jitter = 0.0050; // Adjust the amount of jitter
+            const latOffset = (Math.random() - 0.5) * jitter; // Random offset for latitude
+            const lonOffset = (Math.random() - 0.5) * jitter; // Random offset for longitude
+            return [latitude + latOffset, longitude + lonOffset];
         }
 
-        // Expose updateMapLocation to global scope so that we can call it from MAUI WebView
+        function updateMapLocation(lat, lon, sensorType, sensorData) {
+
+            // Move the map to the new location
+            map.setView([lat, lon], 13);
+
+            // Add new markers based on the sensor data
+            sensorData
+                .filter(data => data.type === sensorType) // Filter by sensor type
+                .forEach((data) => {
+                    // Apply jitter to the original latitude and longitude
+                    const [jitterLat, jitterLon] = applyJitter(lat, lon);
+
+                    const marker = L.marker([jitterLat, jitterLon]).addTo(map);
+
+                    const popupContent = `
+                        <strong>Sensor Type:</strong> ${sensorType}<br>
+                        <b>Sensor Name:</b> ${data.sensorName}<br>
+                        <b>Quantity:</b> ${data.quantityName} (${data.unit})<br>
+                        <b>Value:</b> ${data.value}<br>
+                        <b>Timestamp:</b> ${data.date} ${data.time}
+                    `;
+
+                    marker.bindPopup(popupContent);
+                });
+                                
+        }
+
+        // Expose updateMapLocation to global scope so that it can be callled from MAUI WebView
         window.updateMapLocation = updateMapLocation;
     </script>
 </body>

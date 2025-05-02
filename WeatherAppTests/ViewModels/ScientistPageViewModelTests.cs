@@ -1,8 +1,8 @@
 ﻿using Moq;
-using WeatherApp.Models;
-using WeatherApp.Repositories;
-using WeatherApp.Tools;
-using WeatherApp.ViewModels;
+using WeatherApp.Core.Models;
+using WeatherApp.Core.Repositories;
+using WeatherApp.Core.Tools;
+using WeatherApp.Core.ViewModels;
 
 namespace WeatherAppTests.ViewModels
 {

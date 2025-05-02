@@ -1,8 +1,6 @@
 ﻿using OfficeOpenXml;
 using System.Collections.ObjectModel;
 
-
-
 namespace WeatherApp.Views
 {
     public partial class OpsManagerPage : ContentPage

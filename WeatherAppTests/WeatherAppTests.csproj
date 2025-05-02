@@ -4,10 +4,16 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-
+		<SingleProject>true</SingleProject>
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
     </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="Views\**" />
+      <EmbeddedResource Remove="Views\**" />
+      <None Remove="Views\**" />
+    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="coverlet.collector" Version="6.0.4">
@@ -27,12 +33,8 @@
         <Using Include="Xunit" />
     </ItemGroup>
 
-    <ItemGroup>
-		<ProjectReference Include="..\WeatherApp\WeatherApp.csproj" />
+	<ItemGroup>
+		<ProjectReference Include="..\WeatherApp.Core\WeatherApp.Core.csproj" />
 	</ItemGroup>
-
-    <ItemGroup>
-        <Folder Include="Views\" />
-    </ItemGroup>
 
 </Project>

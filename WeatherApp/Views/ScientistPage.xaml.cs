@@ -1,6 +1,6 @@
-﻿using WeatherApp.Repositories;
-using WeatherApp.Tools;
-using WeatherApp.ViewModels;
+﻿using WeatherApp.Core.Repositories;
+using WeatherApp.Core.Tools;
+using WeatherApp.Core.ViewModels;
 
 namespace WeatherApp.Views;
 

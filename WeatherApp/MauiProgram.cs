@@ -1,7 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
-using WeatherApp.Repositories;
+using WeatherApp.Core.Repositories;
+using WeatherApp.Core.Tools;
 using WeatherApp.Tools;
-using WeatherApp.ViewModels;
+using WeatherApp.Core.ViewModels;
 using WeatherApp.Views;
 
 namespace WeatherApp;

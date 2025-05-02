@@ -1,4 +1,4 @@
-using WeatherApp.ViewModels;
+using WeatherApp.Core.ViewModels;
 
 namespace WeatherApp.Views;
 
