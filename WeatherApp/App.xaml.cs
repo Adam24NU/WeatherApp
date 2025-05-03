@@ -15,7 +15,7 @@ namespace WeatherApp
             {
                 // Hardcoding the connection string directly in the code
                 string connectionString =
-                    "Server=10.0.2.2,1433,1433;Database=WeatherApp;User Id=sa;Password=<YourPassw0rd>;TrustServerCertificate=True;";
+                    "Server=10.0.2.2,1433,1433;Database=WeatherApp;User Id=sa;Password=Password123);TrustServerCertificate=True;";
 
                 // Create an instance of Database with the hardcoded connection string
                 var database = new Database(connectionString);

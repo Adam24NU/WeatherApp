@@ -51,16 +51,17 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 		<!-- Leaflet Map HTML -->
 		<MauiAsset Include="Resources\Raw\leaflet-map.html" />
+		
 	</ItemGroup>
 
 	<ItemGroup>
 		<!-- Adding the Maui controls NuGet package -->
+		<PackageReference Include="EPPlus" Version="8.0.3" />
 		<PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.0-preview.3.25171.5" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.0-preview.3.25171.5" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.100" />
 		
 		<!-- Other packages -->
-		<PackageReference Include="EPPlus" Version="8.0.1" />
 		<PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.2" />
 		<PackageReference Include="Microsoft.Data.SqlClient.SNI.runtime" Version="6.0.2" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
