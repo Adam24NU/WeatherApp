@@ -151,17 +151,9 @@ namespace WeatherApp.Pages
                 return;
             }
 
-            var no2Values = airReadings
-                .Select(r => double.TryParse(r.NO2, out var val) ? val : (double?)null)
-                .Where(v => v.HasValue).Select(v => v.Value).ToList();
-
-            var pm25Values = airReadings
-                .Select(r => double.TryParse(r.PM25, out var val) ? val : (double?)null)
-                .Where(v => v.HasValue).Select(v => v.Value).ToList();
-
-            var pm10Values = airReadings
-                .Select(r => double.TryParse(r.PM10, out var val) ? val : (double?)null)
-                .Where(v => v.HasValue).Select(v => v.Value).ToList();
+            var no2Values = airReadings.Select(r => double.TryParse(r.NO2, out var val) ? val : (double?)null).Where(v => v.HasValue).Select(v => v.Value).ToList();
+            var pm25Values = airReadings.Select(r => double.TryParse(r.PM25, out var val) ? val : (double?)null).Where(v => v.HasValue).Select(v => v.Value).ToList();
+            var pm10Values = airReadings.Select(r => double.TryParse(r.PM10, out var val) ? val : (double?)null).Where(v => v.HasValue).Select(v => v.Value).ToList();
 
             if (!no2Values.Any() || !pm25Values.Any() || !pm10Values.Any())
             {
@@ -193,7 +185,6 @@ namespace WeatherApp.Pages
                 }
 
                 await File.WriteAllTextAsync(reportFilePath, sb.ToString());
-
                 DisplayWeatherSummary(weatherReadings);
                 WeatherStatusLabel.TextColor = Colors.Green;
             }
@@ -212,17 +203,9 @@ namespace WeatherApp.Pages
                 return;
             }
 
-            var tempValues = weatherReadings
-                .Select(r => double.TryParse(r.Temperature, out var val) ? val : (double?)null)
-                .Where(v => v.HasValue).Select(v => v.Value).ToList();
-
-            var windValues = weatherReadings
-                .Select(r => double.TryParse(r.WindSpeed, out var val) ? val : (double?)null)
-                .Where(v => v.HasValue).Select(v => v.Value).ToList();
-
-            var humidityValues = weatherReadings
-                .Select(r => double.TryParse(r.RelativeHumidity, out var val) ? val : (double?)null)
-                .Where(v => v.HasValue).Select(v => v.Value).ToList();
+            var tempValues = weatherReadings.Select(r => double.TryParse(r.Temperature, out var val) ? val : (double?)null).Where(v => v.HasValue).Select(v => v.Value).ToList();
+            var windValues = weatherReadings.Select(r => double.TryParse(r.WindSpeed, out var val) ? val : (double?)null).Where(v => v.HasValue).Select(v => v.Value).ToList();
+            var humidityValues = weatherReadings.Select(r => double.TryParse(r.RelativeHumidity, out var val) ? val : (double?)null).Where(v => v.HasValue).Select(v => v.Value).ToList();
 
             if (!tempValues.Any() || !windValues.Any() || !humidityValues.Any())
             {
@@ -254,8 +237,7 @@ namespace WeatherApp.Pages
                 }
 
                 await File.WriteAllTextAsync(reportFilePath, sb.ToString());
-
-                WaterStatusLabel.Text = $"Water Report generated at {reportFilePath}";
+                DisplayWaterSummary(waterReadings);
                 WaterStatusLabel.TextColor = Colors.Green;
             }
             catch (Exception ex)
@@ -263,6 +245,35 @@ namespace WeatherApp.Pages
                 WaterStatusLabel.Text = $"Error: {ex.Message}";
                 WaterStatusLabel.TextColor = Colors.Red;
             }
+        }
+
+        void DisplayWaterSummary(List<WaterReading> waterReadings)
+        {
+            if (waterReadings == null || !waterReadings.Any())
+            {
+                WaterStatusLabel.Text = "No data available.";
+                return;
+            }
+
+            var nitrateValues = waterReadings.Select(r => double.TryParse(r.Nitrate, out var val) ? val : (double?)null).Where(v => v.HasValue).Select(v => v.Value).ToList();
+            var nitriteValues = waterReadings.Select(r => double.TryParse(r.Nitrite, out var val) ? val : (double?)null).Where(v => v.HasValue).Select(v => v.Value).ToList();
+            var phosphateValues = waterReadings.Select(r => double.TryParse(r.Phosphate, out var val) ? val : (double?)null).Where(v => v.HasValue).Select(v => v.Value).ToList();
+            var ecValues = waterReadings.Select(r => double.TryParse(r.EC, out var val) ? val : (double?)null).Where(v => v.HasValue).Select(v => v.Value).ToList();
+
+            if (!nitrateValues.Any() || !nitriteValues.Any() || !phosphateValues.Any() || !ecValues.Any())
+            {
+                WaterStatusLabel.Text = "Insufficient valid numeric data.";
+                return;
+            }
+
+            StringBuilder summary = new StringBuilder();
+            summary.AppendLine("📊 Water Quality Summary:");
+            summary.AppendLine($"🧪 Nitrate: Min = {nitrateValues.Min()}, Max = {nitrateValues.Max()}, Avg = {nitrateValues.Average():F1}");
+            summary.AppendLine($"🧪 Nitrite: Min = {nitriteValues.Min()}, Max = {nitriteValues.Max()}, Avg = {nitriteValues.Average():F1}");
+            summary.AppendLine($"🧫 Phosphate: Min = {phosphateValues.Min()}, Max = {phosphateValues.Max()}, Avg = {phosphateValues.Average():F1}");
+            summary.AppendLine($"🌊 EC: Min = {ecValues.Min()}, Max = {ecValues.Max()}, Avg = {ecValues.Average():F1}");
+
+            WaterStatusLabel.Text = summary.ToString();
         }
 
         private async Task CopyExcelFilesIfNeededAsync()
