@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Storage;
 using WeatherApp.Models;
@@ -11,7 +13,6 @@ namespace WeatherApp.Pages
 {
     public partial class MainPage : TabbedPage
     {
-        // Lists to store loaded data from Excel files
         private List<AirReading> airReadings;
         private List<WeatherReading> weatherReadings;
         private List<WaterReading> waterReadings;
@@ -20,19 +21,16 @@ namespace WeatherApp.Pages
         public MainPage()
         {
             InitializeComponent();
-            // Set license context for EPPlus library
             ExcelPackage.License.SetNonCommercialPersonal("Adam Williams");
             LoadExcelData();
         }
 
-        // Initializes the app by copying Excel files if needed and then loading data
         private async Task InitializeAsync()
         {
             await CopyExcelFilesIfNeededAsync();
             LoadExcelData();
         }
 
-        // Loads data from Excel files into memory and binds to UI
         private void LoadExcelData()
         {
             var airQualityFilePath = Path.Combine(FileSystem.AppDataDirectory, "Air_quality.xlsx");
@@ -48,13 +46,11 @@ namespace WeatherApp.Pages
             if (File.Exists(waterFilePath))
                 waterReadings = LoadWaterReadingsFromExcel(waterFilePath);
 
-            // Bind loaded data to UI CollectionViews
             DataList.ItemsSource = airReadings;
             WeatherList.ItemsSource = weatherReadings;
             WaterList.ItemsSource = waterReadings;
         }
 
-        // Loads Air Quality data from Excel file
         private List<AirReading> LoadAirReadingsFromExcel(string filePath)
         {
             var list = new List<AirReading>();
@@ -62,12 +58,11 @@ namespace WeatherApp.Pages
             var worksheet = package.Workbook.Worksheets[0];
             int rows = worksheet.Dimension.Rows;
 
-            // Start reading from row 11 based on Excel structure
             for (int row = 11; row <= rows; row++)
             {
                 list.Add(new AirReading
                 {
-                    Timestamp = $"{worksheet.Cells[row, 1].Text} {worksheet.Cells[row, 2].Text}", // Combine Date + Time
+                    Timestamp = $"{worksheet.Cells[row, 1].Text} {worksheet.Cells[row, 2].Text}",
                     NO2 = worksheet.Cells[row, 3].Text,
                     PM25 = worksheet.Cells[row, 5].Text,
                     PM10 = worksheet.Cells[row, 6].Text
@@ -76,7 +71,6 @@ namespace WeatherApp.Pages
             return list;
         }
 
-        // Loads Weather data from Excel file
         private List<WeatherReading> LoadWeatherReadingsFromExcel(string filePath)
         {
             var list = new List<WeatherReading>();
@@ -84,22 +78,20 @@ namespace WeatherApp.Pages
             var worksheet = package.Workbook.Worksheets[0];
             int rows = worksheet.Dimension.Rows;
 
-            // Start reading from row 5 based on Excel structure
             for (int row = 5; row <= rows; row++)
             {
                 list.Add(new WeatherReading
                 {
                     Timestamp = worksheet.Cells[row, 1].Text,
                     Temperature = worksheet.Cells[row, 2].Text,
-                    WindSpeed = worksheet.Cells[row, 4].Text,
                     RelativeHumidity = worksheet.Cells[row, 3].Text,
+                    WindSpeed = worksheet.Cells[row, 4].Text,
                     WindDirection = worksheet.Cells[row, 5].Text
                 });
             }
             return list;
         }
 
-        // Loads Water Quality data from Excel file
         private List<WaterReading> LoadWaterReadingsFromExcel(string filePath)
         {
             var list = new List<WaterReading>();
@@ -107,7 +99,6 @@ namespace WeatherApp.Pages
             var worksheet = package.Workbook.Worksheets[0];
             int rows = worksheet.Dimension.Rows;
 
-            // Start reading from row 6 based on Excel structure
             for (int row = 6; row <= rows; row++)
             {
                 list.Add(new WaterReading
@@ -123,19 +114,14 @@ namespace WeatherApp.Pages
             return list;
         }
 
-        // Generates Air Quality Report and saves it as CSV file
         [Obsolete]
         private async void OnGenerateAirQualityReportClicked(object sender, EventArgs e)
         {
             try
             {
                 var documentationFolder = Path.Combine(FileSystem.AppDataDirectory, "Documentation");
-
-                // Create folder if it does not exist
                 if (!Directory.Exists(documentationFolder))
-                {
                     Directory.CreateDirectory(documentationFolder);
-                }
 
                 var reportFilePath = Path.Combine(documentationFolder, "AirQualityReport.csv");
                 var sb = new StringBuilder();
@@ -147,9 +133,7 @@ namespace WeatherApp.Pages
                 }
 
                 await File.WriteAllTextAsync(reportFilePath, sb.ToString());
-
-                // Update UI status label
-                AirQualityStatusLabel.Text = $"Air Quality Report generated at {reportFilePath}";
+                DisplayAirSummary(airReadings);
                 AirQualityStatusLabel.TextColor = Colors.Green;
             }
             catch (Exception ex)
@@ -159,7 +143,41 @@ namespace WeatherApp.Pages
             }
         }
 
-        // Generates Weather Report and saves it as CSV file
+        void DisplayAirSummary(List<AirReading> airReadings)
+        {
+            if (airReadings == null || !airReadings.Any())
+            {
+                AirQualityStatusLabel.Text = "No data available.";
+                return;
+            }
+
+            var no2Values = airReadings
+                .Select(r => double.TryParse(r.NO2, out var val) ? val : (double?)null)
+                .Where(v => v.HasValue).Select(v => v.Value).ToList();
+
+            var pm25Values = airReadings
+                .Select(r => double.TryParse(r.PM25, out var val) ? val : (double?)null)
+                .Where(v => v.HasValue).Select(v => v.Value).ToList();
+
+            var pm10Values = airReadings
+                .Select(r => double.TryParse(r.PM10, out var val) ? val : (double?)null)
+                .Where(v => v.HasValue).Select(v => v.Value).ToList();
+
+            if (!no2Values.Any() || !pm25Values.Any() || !pm10Values.Any())
+            {
+                AirQualityStatusLabel.Text = "Insufficient valid numeric data.";
+                return;
+            }
+
+            StringBuilder summary = new StringBuilder();
+            summary.AppendLine("📊 Air Quality Summary:");
+            summary.AppendLine($"NO2: Min = {no2Values.Min()}, Max = {no2Values.Max()}, Avg = {no2Values.Average():F1}");
+            summary.AppendLine($"PM2.5: Min = {pm25Values.Min()}, Max = {pm25Values.Max()}, Avg = {pm25Values.Average():F1}");
+            summary.AppendLine($"PM10: Min = {pm10Values.Min()}, Max = {pm10Values.Max()}, Avg = {pm10Values.Average():F1}");
+
+            AirQualityStatusLabel.Text = summary.ToString();
+        }
+
         [Obsolete]
         private async void OnGenerateWeatherReportClicked(object sender, EventArgs e)
         {
@@ -176,8 +194,7 @@ namespace WeatherApp.Pages
 
                 await File.WriteAllTextAsync(reportFilePath, sb.ToString());
 
-                // Update UI status label
-                WeatherStatusLabel.Text = $"Weather Report generated at {reportFilePath}";
+                DisplayWeatherSummary(weatherReadings);
                 WeatherStatusLabel.TextColor = Colors.Green;
             }
             catch (Exception ex)
@@ -187,7 +204,41 @@ namespace WeatherApp.Pages
             }
         }
 
-        // Generates Water Quality Report and saves it as CSV file
+        void DisplayWeatherSummary(List<WeatherReading> weatherReadings)
+        {
+            if (weatherReadings == null || !weatherReadings.Any())
+            {
+                WeatherStatusLabel.Text = "No data available.";
+                return;
+            }
+
+            var tempValues = weatherReadings
+                .Select(r => double.TryParse(r.Temperature, out var val) ? val : (double?)null)
+                .Where(v => v.HasValue).Select(v => v.Value).ToList();
+
+            var windValues = weatherReadings
+                .Select(r => double.TryParse(r.WindSpeed, out var val) ? val : (double?)null)
+                .Where(v => v.HasValue).Select(v => v.Value).ToList();
+
+            var humidityValues = weatherReadings
+                .Select(r => double.TryParse(r.RelativeHumidity, out var val) ? val : (double?)null)
+                .Where(v => v.HasValue).Select(v => v.Value).ToList();
+
+            if (!tempValues.Any() || !windValues.Any() || !humidityValues.Any())
+            {
+                WeatherStatusLabel.Text = "Insufficient valid numeric data.";
+                return;
+            }
+
+            StringBuilder summary = new StringBuilder();
+            summary.AppendLine("📊 Weather Summary:");
+            summary.AppendLine($"🌡 Temperature: Min = {tempValues.Min()}°C, Max = {tempValues.Max()}°C, Avg = {tempValues.Average():F1}°C");
+            summary.AppendLine($"💨 Wind Speed:  Min = {windValues.Min()} km/h, Max = {windValues.Max()} km/h, Avg = {windValues.Average():F1} km/h");
+            summary.AppendLine($"💧 Humidity:    Min = {humidityValues.Min()}%, Max = {humidityValues.Max()}%, Avg = {humidityValues.Average():F1}%");
+
+            WeatherStatusLabel.Text = summary.ToString();
+        }
+
         [Obsolete]
         private async void OnGenerateWaterReportClicked(object sender, EventArgs e)
         {
@@ -204,7 +255,6 @@ namespace WeatherApp.Pages
 
                 await File.WriteAllTextAsync(reportFilePath, sb.ToString());
 
-                // Update UI status label
                 WaterStatusLabel.Text = $"Water Report generated at {reportFilePath}";
                 WaterStatusLabel.TextColor = Colors.Green;
             }
@@ -215,7 +265,6 @@ namespace WeatherApp.Pages
             }
         }
 
-        // Copies Excel files from app resources (Raw folder) to AppDataDirectory if not already copied
         private async Task CopyExcelFilesIfNeededAsync()
         {
             var filesToCopy = new List<string>
@@ -229,7 +278,6 @@ namespace WeatherApp.Pages
             {
                 var destinationPath = Path.Combine(FileSystem.AppDataDirectory, filename);
 
-                // Only copy if file does not exist already
                 if (!File.Exists(destinationPath))
                 {
                     using var stream = await FileSystem.OpenAppPackageFileAsync(Path.Combine("Raw", filename));

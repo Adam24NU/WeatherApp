@@ -13,84 +13,134 @@
 
     <!-- Air Quality Tab -->
     <ContentPage Title="Air Quality">
-        <StackLayout Padding="10">
-            <Button Text="📄 Generate Air Quality Report"
-                    Clicked="OnGenerateAirQualityReportClicked"
-                    BackgroundColor="RoyalBlue"
-                    TextColor="White" />
-            <Label x:Name="AirQualityStatusLabel" FontSize="14" Margin="5" TextColor="Black"/>
+        <ScrollView>
+            <StackLayout Padding="10">
+                <Button Text="📄 Generate Air Quality Report"
+                        Clicked="OnGenerateAirQualityReportClicked"
+                        BackgroundColor="RoyalBlue"
+                        TextColor="White" />
+                <Label x:Name="AirQualityStatusLabel" FontSize="14" Margin="5" TextColor="Black"/>
 
-            <CollectionView x:Name="DataList" Margin="10" ItemsLayout="VerticalList">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame BorderColor="LightGray" CornerRadius="10" Padding="10" Margin="5"
-                               BackgroundColor="{Binding IsThresholdBreached, Converter={StaticResource BoolToColorConverter}}">
-                            <StackLayout>
-                                <Label Text="{Binding Timestamp}" FontAttributes="Bold" FontSize="16"/>
-                                <Label Text="{Binding NO2, StringFormat='NO₂: {0}'}" FontSize="14"/>
-                                <Label Text="{Binding PM25, StringFormat='PM2.5: {0}'}" FontSize="14"/>
-                                <Label Text="{Binding PM10, StringFormat='PM10: {0}'}" FontSize="14"/>
-                            </StackLayout>
-                        </Frame>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </StackLayout>
+                <!-- Table Header -->
+                <Grid Padding="5" Margin="10" ColumnSpacing="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1.5*"/>
+                        <ColumnDefinition Width="1.5*"/>
+                        <ColumnDefinition Width="1.5*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Timestamp" FontAttributes="Bold" Grid.Column="0"/>
+                    <Label Text="NO₂" FontAttributes="Bold" Grid.Column="1"/>
+                    <Label Text="PM2.5" FontAttributes="Bold" Grid.Column="2"/>
+                    <Label Text="PM10" FontAttributes="Bold" Grid.Column="3"/>
+                </Grid>
+
+                <!-- Table Rows from CollectionView -->
+                <CollectionView x:Name="DataList" Margin="10" ItemsLayout="VerticalList">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="5" ColumnSpacing="10"
+                                  BackgroundColor="{Binding IsThresholdBreached, Converter={StaticResource BoolToColorConverter}}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="1.5*"/>
+                                    <ColumnDefinition Width="1.5*"/>
+                                    <ColumnDefinition Width="1.5*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding Timestamp}" Grid.Column="0"/>
+                                <Label Text="{Binding NO2}" Grid.Column="1"/>
+                                <Label Text="{Binding PM25}" Grid.Column="2"/>
+                                <Label Text="{Binding PM10}" Grid.Column="3"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
     </ContentPage>
 
     <!-- Weather Tab -->
     <ContentPage Title="Weather">
-        <StackLayout Padding="10">
-            <Button Text="📄 Generate Weather Report"
-                    Clicked="OnGenerateWeatherReportClicked"
-                    BackgroundColor="RoyalBlue"
-                    TextColor="White" />
-            <Label x:Name="WeatherStatusLabel" FontSize="14" Margin="5" TextColor="Black"/>
+        <ScrollView>
+            <StackLayout Padding="10">
+                <Button Text="📄 Generate Weather Report"
+                        Clicked="OnGenerateWeatherReportClicked"
+                        BackgroundColor="RoyalBlue"
+                        TextColor="White" />
 
-            <CollectionView x:Name="WeatherList" Margin="10" ItemsLayout="VerticalList">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame BorderColor="LightGray" CornerRadius="10" Padding="10" Margin="5">
-                            <StackLayout>
-                                <Label Text="{Binding Timestamp}" FontAttributes="Bold" FontSize="16"/>
-                                <Label Text="{Binding Temperature, StringFormat='🌡 Temp: {0}°C'}" FontSize="14" />
-                                <Label Text="{Binding WindSpeed, StringFormat='💨 Wind: {0} km/h'}" FontSize="14" />
-                                <Label Text="{Binding RelativeHumidity, StringFormat='💧 Humidity: {0}%'}" FontSize="14" />
-                                <Label Text="{Binding WindDirection, StringFormat='🧭 Wind Dir: {0}'}" FontSize="14" />
-                            </StackLayout>
-                        </Frame>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </StackLayout>
+                <Label x:Name="WeatherStatusLabel" FontSize="14" Margin="5" TextColor="Black"/>
+
+                <Grid Padding="5" Margin="10" ColumnSpacing="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1.5*"/>
+                        <ColumnDefinition Width="1.5*"/>
+                        <ColumnDefinition Width="1.5*"/>
+                        <ColumnDefinition Width="1.5*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Timestamp" FontAttributes="Bold" Grid.Column="0"/>
+                    <Label Text="🌡 Temp (°C)" FontAttributes="Bold" Grid.Column="1"/>
+                    <Label Text="💨 Wind (km/h)" FontAttributes="Bold" Grid.Column="2"/>
+                    <Label Text="💧 Humidity (%)" FontAttributes="Bold" Grid.Column="3"/>
+                    <Label Text="🧭 Direction" FontAttributes="Bold" Grid.Column="4"/>
+                </Grid>
+
+                <CollectionView x:Name="WeatherList" Margin="10" ItemsLayout="VerticalList">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="5" ColumnSpacing="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="1.5*"/>
+                                    <ColumnDefinition Width="1.5*"/>
+                                    <ColumnDefinition Width="1.5*"/>
+                                    <ColumnDefinition Width="1.5*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding Timestamp}" Grid.Column="0"/>
+                                <Label Text="{Binding Temperature}" Grid.Column="1"/>
+                                <Label Text="{Binding WindSpeed}" Grid.Column="2"/>
+                                <Label Text="{Binding RelativeHumidity}" Grid.Column="3"/>
+                                <Label Text="{Binding WindDirection}" Grid.Column="4"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
     </ContentPage>
 
     <!-- Water Tab -->
     <ContentPage Title="Water">
-        <StackLayout Padding="10">
-            <Button Text="📄 Generate Water Report"
-                    Clicked="OnGenerateWaterReportClicked"
-                    BackgroundColor="RoyalBlue"
-                    TextColor="White" />
-            <Label x:Name="WaterStatusLabel" FontSize="14" Margin="5" TextColor="Black"/>
+        <ScrollView>
+            <StackLayout Padding="10">
+                <Button Text="📄 Generate Water Report"
+                        Clicked="OnGenerateWaterReportClicked"
+                        BackgroundColor="RoyalBlue"
+                        TextColor="White" />
+                <Label x:Name="WaterStatusLabel" FontSize="14" Margin="5" TextColor="Black"/>
 
-            <CollectionView x:Name="WaterList" Margin="10" ItemsLayout="VerticalList">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame BorderColor="LightGray" CornerRadius="10" Padding="10" Margin="5">
-                            <StackLayout>
-                                <Label Text="{Binding Date}" FontAttributes="Bold" FontSize="16"/>
-                                <Label Text="{Binding Time}" FontSize="14" />
-                                <Label Text="{Binding Nitrate, StringFormat='🧪 Nitrate: {0}'}" FontSize="14" />
-                                <Label Text="{Binding Nitrite, StringFormat='🧪 Nitrite: {0}'}" FontSize="14" />
-                                <Label Text="{Binding Phosphate, StringFormat='🧫 Phosphate: {0}'}" FontSize="14" />
-                                <Label Text="{Binding EC, StringFormat='🌊 EC (cfu/100ml): {0}'}" FontSize="14" />
-                            </StackLayout>
-                        </Frame>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </StackLayout>
+                <CollectionView x:Name="WaterList" Margin="10" ItemsLayout="VerticalList">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BorderColor="LightGray" CornerRadius="10" Padding="10" Margin="5">
+                                <StackLayout>
+                                    <Label Text="{Binding Date}" FontAttributes="Bold" FontSize="16"/>
+                                    <Label Text="{Binding Time}" FontSize="14" />
+                                    <Label Text="{Binding Nitrate, StringFormat='🧪 Nitrate: {0}'}" FontSize="14" />
+                                    <Label Text="{Binding Nitrite, StringFormat='🧪 Nitrite: {0}'}" FontSize="14" />
+                                    <Label Text="{Binding Phosphate, StringFormat='🧫 Phosphate: {0}'}" FontSize="14" />
+                                    <Label Text="{Binding EC, StringFormat='🌊 EC (cfu/100ml): {0}'}" FontSize="14" />
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
     </ContentPage>
 
     <!-- Map Navigation Page -->
