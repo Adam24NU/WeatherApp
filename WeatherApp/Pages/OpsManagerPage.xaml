@@ -31,7 +31,7 @@
                             <Label Text="{Binding MeasurementFrequency, StringFormat='🔁 Measurement: {0}'}" />
                             <Label Text="{Binding SafeLevel, StringFormat='📏 Safe Level: {0}'}" />
                             <Label Text="{Binding Status, StringFormat='⚠️ Status: {0}'}" FontAttributes="Italic" />
-                            
+
                             <!-- Report Issue Button -->
                             <Button Text="📣 Report Issue"
                                     Clicked="OnReportIssueClicked"
@@ -41,6 +41,19 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
+    </ContentPage>
+
+    <!-- Verify Data Tab -->
+    <ContentPage Title="Verify Data">
+        <ScrollView>
+            <StackLayout Padding="10">
+                <Label Text="✅ Data Verification Interface" 
+                       FontAttributes="Bold" 
+                       FontSize="18" 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+        </ScrollView>
     </ContentPage>
 
     <!-- Maintenance Overview Tab -->
