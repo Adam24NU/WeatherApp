@@ -155,9 +155,9 @@ namespace WeatherApp
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                string query = "SELECT s.sensor_id, s.sensor_type, p.measurement_frequency, p.safe_level " +
+                string query = "SELECT s.sensor_id, s.sensor_type, p.measurement_frequency, p.safe_level, p.my_time " +
                                "FROM dbo.Sensors s " +
-                               "LEFT JOIN dbo.PhysicalQuantities p ON s.sensor_id = p.sensor_id";  // Removed the JOIN with Maintenance
+                               "LEFT JOIN dbo.PhysicalQuantities p ON s.sensor_id = p.sensor_id WHERE p.my_time IS NOT NULL";  // Removed the JOIN with Maintenance
         
                 SqlCommand command = new SqlCommand(query, connection);
 
@@ -170,6 +170,8 @@ namespace WeatherApp
                             SensorId = reader.GetInt32(reader.GetOrdinal("sensor_id")),
                             SensorType = reader.GetString(reader.GetOrdinal("sensor_type")),
                             Status = "Active",  // Assuming sensor status is always active
+                            Timestamp = new DateTime(1713625200),
+                            DataQualityComment = reader.GetOrdinal("my_time").ToString(),
                             IsFlagged = false // Default value
                         };
 

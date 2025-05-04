@@ -118,8 +118,6 @@ namespace WeatherApp.Pages
             }
         }
         
-        
-        
     }
     
    
