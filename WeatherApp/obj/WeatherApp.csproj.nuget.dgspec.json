@@ -1,26 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/WeatherApp.csproj": {}
+    "C:\\Users\\bartb\\RiderProjects\\WeatherApp\\WeatherApp\\WeatherApp.csproj": {}
   },
   "projects": {
-    "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/WeatherApp.csproj": {
+    "C:\\Users\\bartb\\RiderProjects\\WeatherApp\\WeatherApp\\WeatherApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/WeatherApp.csproj",
+        "projectUniqueName": "C:\\Users\\bartb\\RiderProjects\\WeatherApp\\WeatherApp\\WeatherApp.csproj",
         "projectName": "WeatherApp",
-        "projectPath": "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/WeatherApp.csproj",
-        "packagesPath": "/Users/adam/.nuget/packages/",
-        "outputPath": "/Users/adam/Documents/SE_class/WeatherApp/WeatherApp/obj/",
+        "projectPath": "C:\\Users\\bartb\\RiderProjects\\WeatherApp\\WeatherApp\\WeatherApp.csproj",
+        "packagesPath": "C:\\Users\\bartb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bartb\\RiderProjects\\WeatherApp\\WeatherApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/adam/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\bartb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0-android"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,7 +44,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0-android34.0": {
@@ -75,7 +82,7 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.12, )",
+              "version": "[8.0.15, )",
               "autoReferenced": true
             },
             "Newtonsoft.Json": {
@@ -94,6 +101,28 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.Android.Ref.34",
+              "version": "[34.0.147, 34.0.147]"
+            },
+            {
+              "name": "Microsoft.Android.Runtime.34.android-arm",
+              "version": "[34.0.147, 34.0.147]"
+            },
+            {
+              "name": "Microsoft.Android.Runtime.34.android-arm64",
+              "version": "[34.0.147, 34.0.147]"
+            },
+            {
+              "name": "Microsoft.Android.Runtime.34.android-x64",
+              "version": "[34.0.147, 34.0.147]"
+            },
+            {
+              "name": "Microsoft.Android.Runtime.34.android-x86",
+              "version": "[34.0.147, 34.0.147]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.Android": {
               "privateAssets": "all"
@@ -102,7 +131,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.405/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

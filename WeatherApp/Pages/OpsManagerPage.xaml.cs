@@ -2,12 +2,19 @@
 using System.Linq;
 using Microsoft.Data.SqlClient;  // Needed for SQL operations
 using System;
+using System.Globalization;
 
 namespace WeatherApp.Pages
 {
     public partial class OpsManagerPage : TabbedPage
     {
         private readonly Database _database;
+        
+//definition of variables for verification for Bart manager task
+        private SensorMeta lastAir = new SensorMeta();
+        private SensorMeta lastWater = new SensorMeta();
+        private SensorMeta lastweather = new SensorMeta();
+        
 
         public ObservableCollection<SensorMeta> DisplayedData { get; set; } = new ObservableCollection<SensorMeta>();
         public ObservableCollection<MaintenanceTask> MaintenanceTasks { get; set; } = new ObservableCollection<MaintenanceTask>();
@@ -30,11 +37,19 @@ namespace WeatherApp.Pages
             Console.WriteLine($"Fetched {allData.Count} sensor records.");
 
             foreach (var sensor in allData)
-            {
+            { 
+                if (sensor != null && sensor.SensorType == "Air")
+                    lastAir = sensor;
+                if (sensor != null && sensor.SensorType == "Water")
+                    lastWater = sensor;
+                if (sensor != null && sensor.SensorType == "Weather")
+                    lastweather = sensor;
+                    
                 DisplayedData.Add(sensor);
                 Console.WriteLine($"Added sensor: {sensor.SensorId} - {sensor.SensorType}");
             }
         }
+        
 
         // Load maintenance data from the database
         private void LoadMaintenanceData()
@@ -80,5 +95,37 @@ namespace WeatherApp.Pages
                 }
             }
         }
+        // function for verifing data for Barts manager task
+        private void OnVerifyClicked(object sender, EventArgs e)
+        {
+            if (sender is Button button && button.CommandParameter is SensorMeta sensor)
+            {
+                // Update model
+                sensor.Status = "Verified";
+
+                // Update button visual
+                button.Text = "☑ Verified";
+                button.BackgroundColor = Colors.LightGreen;
+                button.IsEnabled = false; // optional: disable to prevent re-verifying
+
+                // Force UI to refresh bound data
+                var index = DisplayedData.IndexOf(sensor);
+                if (index >= 0)
+                {
+                    DisplayedData.RemoveAt(index);
+                    DisplayedData.Insert(index, sensor);
+                }
+            }
+        }
+        
+        
+        
     }
+    
+   
+   
+
+
+
+
 }
