@@ -95,5 +95,54 @@ namespace WeatherApp.Pages
             // For now, simulate updating backup timestamp
             LastBackupLabel.Text = $"💾 Last Backup: {DateTime.Now:f}";
         }
+        private string FormatBytes(long bytes)
+        {
+            if (bytes >= 1024 * 1024 * 1024)
+                return $"{bytes / (1024.0 * 1024 * 1024):F2} GB";
+            if (bytes >= 1024 * 1024)
+                return $"{bytes / (1024.0 * 1024):F2} MB";
+            if (bytes >= 1024)
+                return $"{bytes / 1024.0:F2} KB";
+            return $"{bytes} B";
+        }
+        private void UpdateStorageInfo()
+        {
+            try
+            {
+                var storageService = DependencyService.Get<IStorageService>();
+                if (storageService != null)
+                {
+                    long total = storageService.GetTotalStorageBytes();
+                    long free = storageService.GetAvailableStorageBytes();
+                    long used = total - free;
+
+                    string result = $"Storage: {FormatBytes(used)} used / {FormatBytes(total)} total";
+                    StorageUsageLabel.Text = result;
+                }
+                else
+                {
+                    StorageUsageLabel.Text = "Storage: Service not available";
+                }
+            }
+            catch (Exception ex)
+            {
+                StorageUsageLabel.Text = $"Storage: Error - {ex.Message}";
+            }
+        }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            UpdateStorageInfo(); // <--- THIS LINE
+        }
+
+
+
     }
+    // Services/IStorageService.cs
+    public interface IStorageService
+    {
+        long GetTotalStorageBytes();
+        long GetAvailableStorageBytes();
+    }
+
 }

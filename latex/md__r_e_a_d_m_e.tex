@@ -1,0 +1,104 @@
+\chapter{🌍 Weather\+App – Environmental Monitoring System}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{🌍 WeatherApp – Environmental Monitoring System@{🌍 WeatherApp – Environmental Monitoring System}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+
+
+This is a cross-\/platform mobile app built with .NET MAUI for a regional environmental agency. It helps monitor air quality, weather conditions, and water quality using real-\/time and historical data from sensors.
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{\texorpdfstring{📱 Features}{📱 Features}}\label{md__r_e_a_d_m_e_autotoc_md2}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysubsection{\texorpdfstring{✅ Environmental Scientist}{✅ Environmental Scientist}}\label{md__r_e_a_d_m_e_autotoc_md3}
+
+\begin{DoxyItemize}
+\item View historical air quality data (NO₂, PM2.\+5)
+\item Visual display using Collection\+View
+\item Real-\/time sensor integration (in progress)
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysubsection{\texorpdfstring{✅ Administrator}{✅ Administrator}}\label{md__r_e_a_d_m_e_autotoc_md4}
+
+\begin{DoxyItemize}
+\item Register new users
+\item Login system with role-\/based access
+\item Placeholder for user management panel
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsection{\texorpdfstring{✅ Operations Manager {\itshape (Upcoming)}}{✅ Operations Manager {\itshape (Upcoming)}}}\label{md__r_e_a_d_m_e_autotoc_md5}
+
+\begin{DoxyItemize}
+\item Maintenance scheduling
+\item Sensor status dashboard
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysection{\texorpdfstring{🔐 Authentication}{🔐 Authentication}}\label{md__r_e_a_d_m_e_autotoc_md7}
+
+\begin{DoxyItemize}
+\item User registration with username, password, and role
+\item Login with validation
+\item Role-\/based navigation (Scientist → Air Quality page, Admin → Admin Dashboard, etc.)
+\item In-\/memory user storage (SQLite planned)
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysection{\texorpdfstring{🛠 Tech Stack}{🛠 Tech Stack}}\label{md__r_e_a_d_m_e_autotoc_md9}
+
+\begin{DoxyItemize}
+\item .NET MAUI (C\#)
+\item EPPlus for reading Excel files
+\item MVU/\+MVVM-\/friendly structure
+\item Git\+Hub for version control, branching \& PRs
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysection{\texorpdfstring{🚀 Getting Started}{🚀 Getting Started}}\label{md__r_e_a_d_m_e_autotoc_md11}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysubsection{\texorpdfstring{Requirements}{Requirements}}\label{md__r_e_a_d_m_e_autotoc_md12}
+
+\begin{DoxyItemize}
+\item Visual Studio 2022+ with .NET MAUI workload
+\item Android Emulator / Device
+\item mac\+OS or Windows
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md13}{}\doxysubsection{\texorpdfstring{How to Run}{How to Run}}\label{md__r_e_a_d_m_e_autotoc_md13}
+
+\begin{DoxyEnumerate}
+\item Clone this repo\+: \`{}\`{}\`{}bash git clone \href{https://github.com/Adam24NU/WeatherApp.git}{\texttt{ https\+://github.\+com/\+Adam24\+NU/\+Weather\+App.\+git}} 2.\+Open in Visual Studio
+\item Set the target to Android Emulator 4.\+Press ▶️ to build \& run
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md14}{}\doxysection{\texorpdfstring{🤝 Contributing}{🤝 Contributing}}\label{md__r_e_a_d_m_e_autotoc_md14}
+We use Git\+Hub issues and feature branches for development. ~\newline
+ Each feature is implemented under a separate branch and merged via pull requests with code reviews.
+
+✅ Branching strategy\+: {\ttfamily main} (stable) + {\ttfamily feature/\texorpdfstring{$\ast$}{*}} ~\newline
+ ✅ Tasks are tracked using \href{https://github.com/Adam24NU/WeatherApp/issues}{\texttt{ Git\+Hub Issues}}
+
+Team members are expected to\+:
+\begin{DoxyItemize}
+\item Create 3+ features tied to user stories
+\item Add tests and documentation
+\item Participate in PR reviews
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md15}{}\doxysection{\texorpdfstring{👥 Team}{👥 Team}}\label{md__r_e_a_d_m_e_autotoc_md15}
+
+\begin{DoxyItemize}
+\item Adam -\/ Developer, UI/\+UX, Git\+Hub workflow
+\item Bart -\/ Developer, UI/\+UX
+\item Jamie -\/ Developer, UI/\+UX
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md16}{}\doxysection{\texorpdfstring{🧪 Testing}{🧪 Testing}}\label{md__r_e_a_d_m_e_autotoc_md16}
+
+\begin{DoxyItemize}
+\item Unit testing (in progress)
+\item Testable services for Excel parsing coming soon
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md17}{}\doxysection{\texorpdfstring{🧭 Roadmap}{🧭 Roadmap}}\label{md__r_e_a_d_m_e_autotoc_md17}
+
+\begin{DoxyItemize}
+\item[\DoxyChecked] Data Pages with Excel integration
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item[\DoxyChecked] User Registration \& Login
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item[\DoxyChecked] Admin Panel for user management
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item[\DoxyChecked] Real-\/time sensor data
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item[\DoxyChecked] Operations Manager dashboard
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md18}{}\doxysection{\texorpdfstring{📄 License}{📄 License}}\label{md__r_e_a_d_m_e_autotoc_md18}
+This project is licensed under the terms of the MIT License. ~\newline
+ See the \href{https://github.com/Adam24NU/WeatherApp/blob/main/LICENSE}{\texttt{ LICENSE}} file for details. 

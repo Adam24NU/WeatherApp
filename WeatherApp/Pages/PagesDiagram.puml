@@ -1,0 +1,41 @@
+﻿@startuml PagesDiagram
+
+skinparam classAttributeIconSize 0
+
+' Inheritance
+class Page
+class ContentPage
+
+' Your actual pages
+class MainPage {
+    +MainPage()
+}
+
+class AdminPage {
+    +AdminPage()
+}
+
+class OpsManagerPage {
+    +OpsManagerPage(Database)
+    -LoadInitialData()
+    -LoadMaintenanceData()
+}
+
+class ScientistMapPage {
+    +ScientistMapPage()
+}
+
+' Inheritance relations
+MainPage -|> ContentPage
+AdminPage -|> ContentPage
+OpsManagerPage -|> TabbedPage
+ScientistMapPage -|> ContentPage
+
+' Additional types
+class TabbedPage
+class Database
+
+' Associations
+OpsManagerPage --> Database : uses
+
+@enduml
