@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.Pages.UserBackupPage"
+             Title="User Backup">
+
+    <StackLayout Padding="20">
+        <Label Text="📋 Backed-Up Users" FontAttributes="Bold" FontSize="20" />
+        <ListView x:Name="UserBackupListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Email}" Detail="{Binding Role}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
