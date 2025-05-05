@@ -255,7 +255,17 @@ public List<MaintenanceTask> GetMaintenanceData()
                     // Use try-catch to handle invalid DateTime parsing
                     try
                     {
-                        task.MaintenanceDate = reader.GetDateTime(reader.GetOrdinal("maintenance_date")).ToString("yyyy-MM-dd HH:mm:ss");
+                        string rawDate = reader.GetValue(reader.GetOrdinal("maintenance_date")).ToString();
+
+                        if (DateTime.TryParse(rawDate, out DateTime parsedDate))
+                        {
+                            task.MaintenanceDate = parsedDate.ToString("yyyy-MM-dd HH:mm:ss");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Failed to parse maintenance_date: {rawDate}");
+                            task.MaintenanceDate = "Invalid Date";
+                        }
                     }
                     catch (Exception ex)
                     {

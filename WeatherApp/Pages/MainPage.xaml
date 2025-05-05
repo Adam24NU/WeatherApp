@@ -11,87 +11,168 @@
         </ResourceDictionary>
     </TabbedPage.Resources>
 
+ 
     <!-- Air Quality Tab -->
-    <ContentPage Title="Air Quality">
-        <StackLayout Padding="10">
-            <Button Text="📄 Generate Air Quality Report"
-                    Clicked="OnGenerateAirQualityReportClicked"
-                    BackgroundColor="RoyalBlue"
-                    TextColor="White" />
-            <Label x:Name="AirQualityStatusLabel" FontSize="14" Margin="5" TextColor="Black"/>
+<ContentPage Title="Air Quality">
+    <Grid Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/> <!-- Report button -->
+            <RowDefinition Height="Auto"/> <!-- Status label -->
+            <RowDefinition Height="Auto"/> <!-- Filter button -->
+            <RowDefinition Height="*"/> <!-- CollectionView -->
+        </Grid.RowDefinitions>
+        
+        <Button Text="🔴 Show Only Breached Readings"
+                Clicked="OnToggleAirFilterClicked"
+                BackgroundColor="DarkOrange"
+                TextColor="White"
+                x:Name="AirFilterToggleButton"
+                Grid.Row="2" />
 
-            <CollectionView x:Name="DataList" Margin="10" ItemsLayout="VerticalList">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame BorderColor="LightGray" CornerRadius="10" Padding="10" Margin="5"
-                               BackgroundColor="{Binding IsThresholdBreached, Converter={StaticResource BoolToColorConverter}}">
-                            <StackLayout>
-                                <Label Text="{Binding Timestamp}" FontAttributes="Bold" FontSize="16"/>
-                                <Label Text="{Binding NO2, StringFormat='NO₂: {0}'}" FontSize="14"/>
-                                <Label Text="{Binding PM25, StringFormat='PM2.5: {0}'}" FontSize="14"/>
-                                <Label Text="{Binding PM10, StringFormat='PM10: {0}'}" FontSize="14"/>
-                            </StackLayout>
-                        </Frame>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </StackLayout>
-    </ContentPage>
+        <Button Text="📄 Generate Air Quality Report"
+                Clicked="OnGenerateAirQualityReportClicked"
+                BackgroundColor="RoyalBlue"
+                TextColor="White"
+                Grid.Row="0" />
 
-    <!-- Weather Tab -->
-    <ContentPage Title="Weather">
-        <StackLayout Padding="10">
-            <Button Text="📄 Generate Weather Report"
-                    Clicked="OnGenerateWeatherReportClicked"
-                    BackgroundColor="RoyalBlue"
-                    TextColor="White" />
-            <Label x:Name="WeatherStatusLabel" FontSize="14" Margin="5" TextColor="Black"/>
+        <Label x:Name="AirQualityStatusLabel"
+               FontSize="14"
+               Margin="5"
+               TextColor="Black"
+               Grid.Row="1"/>
 
-            <CollectionView x:Name="WeatherList" Margin="10" ItemsLayout="VerticalList">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame BorderColor="LightGray" CornerRadius="10" Padding="10" Margin="5">
-                            <StackLayout>
-                                <Label Text="{Binding Timestamp}" FontAttributes="Bold" FontSize="16"/>
-                                <Label Text="{Binding Temperature, StringFormat='🌡 Temp: {0}°C'}" FontSize="14" />
-                                <Label Text="{Binding WindSpeed, StringFormat='💨 Wind: {0} km/h'}" FontSize="14" />
-                                <Label Text="{Binding RelativeHumidity, StringFormat='💧 Humidity: {0}%'}" FontSize="14" />
-                                <Label Text="{Binding WindDirection, StringFormat='🧭 Wind Dir: {0}'}" FontSize="14" />
-                            </StackLayout>
-                        </Frame>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </StackLayout>
-    </ContentPage>
+        <CollectionView x:Name="DataList"
+                        Margin="10"
+                        ItemsLayout="VerticalList"
+                        Grid.Row="3">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="LightGray"
+                           CornerRadius="10"
+                           Padding="10"
+                           Margin="5"
+                           BackgroundColor="{Binding IsThresholdBreached, Converter={StaticResource BoolToColorConverter}}">
+                        <StackLayout>
+                            <Label Text="{Binding Timestamp}" FontAttributes="Bold" FontSize="16"/>
+                            <Label Text="{Binding NO2, StringFormat='NO₂: {0}'}" FontSize="14"/>
+                            <Label Text="{Binding PM25, StringFormat='PM2.5: {0}'}" FontSize="14"/>
+                            <Label Text="{Binding PM10, StringFormat='PM10: {0}'}" FontSize="14"/>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>
 
-    <!-- Water Tab -->
-    <ContentPage Title="Water">
-        <StackLayout Padding="10">
-            <Button Text="📄 Generate Water Report"
-                    Clicked="OnGenerateWaterReportClicked"
-                    BackgroundColor="RoyalBlue"
-                    TextColor="White" />
-            <Label x:Name="WaterStatusLabel" FontSize="14" Margin="5" TextColor="Black"/>
+<!-- Weather Tab -->
+<ContentPage Title="Weather">
+    <Grid Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/> <!-- Report button -->
+            <RowDefinition Height="Auto"/> <!-- Status label -->
+            <RowDefinition Height="Auto"/> <!-- Filter button -->
+            <RowDefinition Height="*"/> <!-- CollectionView -->
+        </Grid.RowDefinitions>
+        
+        <Button Text="🔴 Show Only Breached Readings"
+                Clicked="OnToggleWeatherFilterClicked"
+                BackgroundColor="DarkOrange"
+                TextColor="White"
+                x:Name="WeatherFilterToggleButton"
+                Grid.Row="2" />
 
-            <CollectionView x:Name="WaterList" Margin="10" ItemsLayout="VerticalList">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame BorderColor="LightGray" CornerRadius="10" Padding="10" Margin="5">
-                            <StackLayout>
-                                <Label Text="{Binding Date}" FontAttributes="Bold" FontSize="16"/>
-                                <Label Text="{Binding Time}" FontSize="14" />
-                                <Label Text="{Binding Nitrate, StringFormat='🧪 Nitrate: {0}'}" FontSize="14" />
-                                <Label Text="{Binding Nitrite, StringFormat='🧪 Nitrite: {0}'}" FontSize="14" />
-                                <Label Text="{Binding Phosphate, StringFormat='🧫 Phosphate: {0}'}" FontSize="14" />
-                                <Label Text="{Binding EC, StringFormat='🌊 EC (cfu/100ml): {0}'}" FontSize="14" />
-                            </StackLayout>
-                        </Frame>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </StackLayout>
-    </ContentPage>
+        <Button Text="📄 Generate Weather Report"
+                Clicked="OnGenerateWeatherReportClicked"
+                BackgroundColor="RoyalBlue"
+                TextColor="White"
+                Grid.Row="0" />
+
+        <Label x:Name="WeatherStatusLabel"
+               FontSize="14"
+               Margin="5"
+               TextColor="Black"
+               Grid.Row="1"/>
+
+        <CollectionView x:Name="WeatherList"
+                        Margin="10"
+                        ItemsLayout="VerticalList"
+                        Grid.Row="3">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="LightGray"
+                           CornerRadius="10"
+                           Padding="10"
+                           Margin="5"
+                           BackgroundColor="{Binding IsThresholdBreached, Converter={StaticResource BoolToColorConverter}}">
+                        <StackLayout>
+                            <Label Text="{Binding Timestamp}" FontAttributes="Bold" FontSize="16"/>
+                            <Label Text="{Binding Temperature, StringFormat='🌡 Temp: {0}°C'}" FontSize="14" />
+                            <Label Text="{Binding WindSpeed, StringFormat='💨 Wind: {0} km/h'}" FontSize="14" />
+                            <Label Text="{Binding RelativeHumidity, StringFormat='💧 Humidity: {0}%'}" FontSize="14" />
+                            <Label Text="{Binding WindDirection, StringFormat='🧭 Wind Dir: {0}'}" FontSize="14" />
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>
+
+<!-- Water Tab -->
+<ContentPage Title="Water">
+    <Grid Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/> <!-- Report button -->
+            <RowDefinition Height="Auto"/> <!-- Status label -->
+            <RowDefinition Height="Auto"/> <!-- Filter button -->
+            <RowDefinition Height="*"/> <!-- CollectionView -->
+        </Grid.RowDefinitions>
+        
+        <Button Text="🔴 Show Only Breached Readings"
+                Clicked="OnToggleWaterFilterClicked"
+                BackgroundColor="DarkOrange"
+                TextColor="White"
+                x:Name="WaterFilterToggleButton"
+                Grid.Row="2" />
+
+        <Button Text="📄 Generate Water Report"
+                Clicked="OnGenerateWaterReportClicked"
+                BackgroundColor="RoyalBlue"
+                TextColor="White"
+                Grid.Row="0" />
+
+        <Label x:Name="WaterStatusLabel"
+               FontSize="14"
+               Margin="5"
+               TextColor="Black"
+               Grid.Row="1"/>
+
+        <CollectionView x:Name="WaterList"
+                        Margin="10"
+                        ItemsLayout="VerticalList"
+                        Grid.Row="3">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="LightGray"
+                           CornerRadius="10"
+                           Padding="10"
+                           Margin="5"
+                           BackgroundColor="{Binding IsThresholdBreached, Converter={StaticResource BoolToColorConverter}}">
+                        <StackLayout>
+                            <Label Text="{Binding Date}" FontAttributes="Bold" FontSize="16"/>
+                            <Label Text="{Binding Time}" FontSize="14" />
+                            <Label Text="{Binding Nitrate, StringFormat='🧪 Nitrate: {0}'}" FontSize="14" />
+                            <Label Text="{Binding Nitrite, StringFormat='🧪 Nitrite: {0}'}" FontSize="14" />
+                            <Label Text="{Binding Phosphate, StringFormat='🧫 Phosphate: {0}'}" FontSize="14" />
+                            <Label Text="{Binding EC, StringFormat='🌊 EC (cfu/100ml): {0}'}" FontSize="14" />
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>
 
     <!-- Map Navigation Page -->
     <NavigationPage Title="Map">

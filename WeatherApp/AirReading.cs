@@ -18,6 +18,12 @@
                 return no2Val > 40 || pm25Val > 25;
             }
         }
+
+        // 🔹 New: marks this item as a section header
+        public bool IsHeader { get; set; } = false;
+
+        // 🔹 New: header text for display
+        public string HeaderText { get; set; }
     }
 
 }
