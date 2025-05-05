@@ -14,7 +14,8 @@ INPUT                  = . \
                          AppShell.xaml.cs \
                          App.xaml.cs
 RECURSIVE              = YES
-FILE_PATTERNS          = *.cs
+FILE_PATTERNS          = *.cs *.xaml.cs
+
 EXTENSION_MAPPING      = xaml.cs=C#
 
 # Extraction behavior

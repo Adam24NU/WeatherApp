@@ -3,7 +3,7 @@ using Android.Content;
 using Java.IO;
 using WeatherApp.Services;
 
-[assembly: Dependency(typeof(WeatherApp.Platforms.Android.StorageService_Android))]
+//[assembly: Dependency(typeof(WeatherApp.Platforms.Android.StorageService_Android))]
 namespace WeatherApp.Platforms.Android
 {
     public class StorageService_Android : IStorageService

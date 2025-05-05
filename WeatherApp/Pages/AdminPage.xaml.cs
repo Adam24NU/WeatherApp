@@ -1,5 +1,9 @@
-﻿using WeatherApp.Models;
-using WeatherApp;  // Add reference to Database
+﻿using System.Text;
+using WeatherApp.Models;
+using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
+using WeatherApp;
+using PermissionStatus = Microsoft.Maui.ApplicationModel.PermissionStatus; // Add reference to Database
 
 namespace WeatherApp.Pages
 {
@@ -89,12 +93,36 @@ namespace WeatherApp.Pages
         // Backup Data button handler (simulating backup)
         private async void OnBackupDataClicked(object sender, EventArgs e)
         {
-            // Logic to simulate backup data
-            await DisplayAlert("Backup", "Data backup completed successfully!", "OK");
+            try
+            {
+                var users = _database.GetUsers();
 
-            // For now, simulate updating backup timestamp
-            LastBackupLabel.Text = $"💾 Last Backup: {DateTime.Now:f}";
+                StringBuilder backupContent = new StringBuilder();
+                backupContent.AppendLine("User Backup - " + DateTime.Now.ToString("f"));
+                backupContent.AppendLine("========================================");
+
+                foreach (var user in users)
+                {
+                    backupContent.AppendLine($"ID: {user.UserId}, Email: {user.Email}, Role: {user.Role}");
+                }
+
+                string fileName = $"UserBackup_{DateTime.Now:yyyyMMdd_HHmmss}.txt";
+                string filePath = Path.Combine(FileSystem.AppDataDirectory, fileName);
+                File.WriteAllText(filePath, backupContent.ToString());
+
+                // Navigate directly with data
+                await Navigation.PushAsync(new UserBackupPage(users));
+
+                LastBackupLabel.Text = $"💾 Last Backup: {DateTime.Now:f}";
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", $"Backup failed: {ex.Message}", "OK");
+            }
         }
+
+
+
         private string FormatBytes(long bytes)
         {
             if (bytes >= 1024 * 1024 * 1024)
@@ -109,7 +137,10 @@ namespace WeatherApp.Pages
         {
             try
             {
-                var storageService = DependencyService.Get<IStorageService>();
+                //var storageService = DependencyService.Get<IStorageService>();
+                var storageService = ServiceHelper.GetService<IStorageService>();
+                
+
                 if (storageService != null)
                 {
                     long total = storageService.GetTotalStorageBytes();
@@ -129,11 +160,33 @@ namespace WeatherApp.Pages
                 StorageUsageLabel.Text = $"Storage: Error - {ex.Message}";
             }
         }
-        protected override void OnAppearing()
+        protected override async void OnAppearing()
         {
             base.OnAppearing();
-            UpdateStorageInfo(); // <--- THIS LINE
+
+            bool granted = await PermissionHelper.CheckAndRequestStoragePermissionAsync();
+            if (!granted)
+            {
+                await DisplayAlert("Permission Required", "Storage permission is needed to fetch storage data.", "OK");
+                return;
+            }
+            var status = await Permissions.CheckStatusAsync<Permissions.StorageRead>();
+            if (status != PermissionStatus.Granted)
+            {
+                status = await Permissions.RequestAsync<Permissions.StorageRead>();
+            }
+
+            //return status == PermissionStatus.Granted;
+
+
+            // Call your storage service now that permission is granted
+            var storageService = ServiceHelper.GetService<IStorageService>();
+            long available = storageService.GetAvailableStorageBytes();
+            long total = storageService.GetTotalStorageBytes();
+
+            // Display logic here
         }
+
 
 
 
@@ -144,5 +197,22 @@ namespace WeatherApp.Pages
         long GetTotalStorageBytes();
         long GetAvailableStorageBytes();
     }
+
+
+    public static class PermissionHelper
+    {
+        public static async Task<bool> CheckAndRequestStoragePermissionAsync()
+        {
+            var status = await CrossPermissions.Current.CheckPermissionStatusAsync<StoragePermission>();
+            if (status != Plugin.Permissions.Abstractions.PermissionStatus.Granted)
+            {
+                status = await CrossPermissions.Current.RequestPermissionAsync<StoragePermission>();
+            }
+
+            return status == Plugin.Permissions.Abstractions.PermissionStatus.Granted;
+        }
+    }
+
+    
 
 }

@@ -1,6 +1,11 @@
 ﻿using WeatherApp.Authentication;  // Assuming this is where your pages are
 using Microsoft.Extensions.Logging;  // Ensure this is included at the top
 using WeatherApp.Pages;
+using WeatherApp.Services;
+
+#if ANDROID
+using WeatherApp.Platforms.Android;
+#endif
 
 namespace WeatherApp;
 
@@ -19,6 +24,10 @@ public static class MauiProgram
 
 #if DEBUG
         builder.Logging.AddDebug();
+#endif
+        
+#if ANDROID
+        builder.Services.AddSingleton<WeatherApp.Services.IStorageService, StorageService_Android>();
 #endif
 
         // Register the SQL Server connection

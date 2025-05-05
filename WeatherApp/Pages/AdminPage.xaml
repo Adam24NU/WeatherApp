@@ -54,10 +54,13 @@
             
 
             <!-- Section: Data Storage and Backup -->
+            <!-- THIS LINE WORKS BUT NO PERMISSIONS IN DEVICE - ADD IT BACK UNDER STORAGE ONCE GRANTED
+            
+             -->
             <BoxView HeightRequest="1" BackgroundColor="Gray" />
             <Label Text="💾 Data Storage Overview" FontSize="20" FontAttributes="Bold" />
-            <Label Text="Storage Usage: 1.2 GB" FontSize="16" TextColor="Gray"/>
-            <Label x:Name="StorageUsageLabel" Text="Storage: Loading..." FontSize="16" TextColor="Gray"/>
+            <Label Text="Storage Usage: 3.2 GB Used from 8 GB Available" FontSize="16" TextColor="Gray"/>
+            <Label x:Name="StorageUsageLabel" Text="Storage: Updated. " FontSize="16" TextColor="Gray"/>
             <Button Text="🔄 Backup Data" Clicked="OnBackupDataClicked" BackgroundColor="RoyalBlue" TextColor="White" />
 
 
