@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['isflagged_0',['IsFlagged',['../class_weather_app_1_1_sensor_meta.html#a6aece6fcc84b0b03c36de6c7ca62f9a5',1,'WeatherApp::SensorMeta']]],
-  ['isthresholdbreached_1',['IsThresholdBreached',['../class_weather_app_1_1_models_1_1_air_reading.html#a1366413042c31ebc09667c0165880fde',1,'WeatherApp::Models::AirReading']]]
+  ['ec_0',['EC',['../class_weather_app_1_1_models_1_1_water_reading.html#a245df8e5ce090e23f03f24d3ab8729d5',1,'WeatherApp::Models::WaterReading']]],
+  ['email_1',['Email',['../class_weather_app_1_1_models_1_1_user.html#ac79702540ea3b9dc0617b2a04a73543a',1,'WeatherApp::Models::User']]]
 ];

@@ -1,45 +1,48 @@
-﻿using OfficeOpenXml;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿// Import necessary libraries
+using OfficeOpenXml; // Used to read Excel files
 using System.Text;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Storage;
-using WeatherApp.Models;
+using WeatherApp.Models;            // Your custom model classes (AirReading, etc.)
 
 namespace WeatherApp.Pages
 {
+    // This class represents the main page of the app — a tabbed interface for Air, Weather, and Water tabs
     public partial class MainPage : TabbedPage
     {
+        // Lists to store sensor readings after loading from Excel
         private List<AirReading> airReadings;
         private List<WeatherReading> weatherReadings;
         private List<WaterReading> waterReadings;
 
+        // Toggle flags for filtering only breached (red-highlighted) readings
         private bool showOnlyBreachedAir = false;
         private bool showOnlyBreachedWeather = false;
         private bool showOnlyBreachedWater = false;
 
-        [Obsolete]
+        // Constructor: called when MainPage is created
+        [Obsolete] // Marked obsolete due to legacy EPPlus usage (safe to ignore in this case)
         public MainPage()
         {
-            InitializeComponent();
-            ExcelPackage.License.SetNonCommercialPersonal("Adam Williams");
-            LoadExcelData();
+            InitializeComponent(); // Load XAML UI
+            ExcelPackage.License.SetNonCommercialPersonal("Adam Williams"); // EPPlus license
+            LoadExcelData(); // Load data from Excel files
         }
 
+        // Initializes the app: first copies Excel files if needed, then loads them
         private async Task InitializeAsync()
         {
             await CopyExcelFilesIfNeededAsync();
             LoadExcelData();
         }
 
+        // Reads Excel data from file and binds to UI controls
         private void LoadExcelData()
         {
+            // Define paths to Excel files
             var airQualityFilePath = Path.Combine(FileSystem.AppDataDirectory, "Air_quality.xlsx");
             var weatherFilePath = Path.Combine(FileSystem.AppDataDirectory, "Weather.xlsx");
             var waterFilePath = Path.Combine(FileSystem.AppDataDirectory, "WaterQuality.xlsx");
 
+            // Load files if they exist
             if (File.Exists(airQualityFilePath))
                 airReadings = LoadAirReadingsFromExcel(airQualityFilePath);
 
@@ -49,11 +52,13 @@ namespace WeatherApp.Pages
             if (File.Exists(waterFilePath))
                 waterReadings = LoadWaterReadingsFromExcel(waterFilePath);
 
+            // Bind data to CollectionViews
             DataList.ItemsSource = airReadings;
             WeatherList.ItemsSource = weatherReadings;
             WaterList.ItemsSource = waterReadings;
         }
 
+        // Toggles Air tab between showing all readings and only breached ones
         private void OnToggleAirFilterClicked(object sender, EventArgs e)
         {
             showOnlyBreachedAir = !showOnlyBreachedAir;
@@ -64,11 +69,13 @@ namespace WeatherApp.Pages
 
             DataList.ItemsSource = filtered;
 
+            // Update button label to match the current state
             AirFilterToggleButton.Text = showOnlyBreachedAir
                 ? "✅ Show All Readings"
                 : "🔴 Show Only Breached Readings";
         }
 
+        // Same logic for the Weather tab
         private void OnToggleWeatherFilterClicked(object sender, EventArgs e)
         {
             showOnlyBreachedWeather = !showOnlyBreachedWeather;
@@ -84,6 +91,7 @@ namespace WeatherApp.Pages
                 : "🔴 Show Only Breached Readings";
         }
 
+        // Same logic for the Water tab
         private void OnToggleWaterFilterClicked(object sender, EventArgs e)
         {
             showOnlyBreachedWater = !showOnlyBreachedWater;
@@ -99,6 +107,7 @@ namespace WeatherApp.Pages
                 : "🔴 Show Only Breached Readings";
         }
 
+        // Load air quality readings from Excel file
         private List<AirReading> LoadAirReadingsFromExcel(string filePath)
         {
             var list = new List<AirReading>();
@@ -106,7 +115,7 @@ namespace WeatherApp.Pages
             var worksheet = package.Workbook.Worksheets[0];
             int rows = worksheet.Dimension.Rows;
 
-            for (int row = 11; row <= rows; row++)
+            for (int row = 11; row <= rows; row++) // Start from row 11 based on your Excel format
             {
                 list.Add(new AirReading
                 {
@@ -119,6 +128,7 @@ namespace WeatherApp.Pages
             return list;
         }
 
+        // Load weather readings
         private List<WeatherReading> LoadWeatherReadingsFromExcel(string filePath)
         {
             var list = new List<WeatherReading>();
@@ -126,7 +136,7 @@ namespace WeatherApp.Pages
             var worksheet = package.Workbook.Worksheets[0];
             int rows = worksheet.Dimension.Rows;
 
-            for (int row = 5; row <= rows; row++)
+            for (int row = 5; row <= rows; row++) // Excel starts at row 5
             {
                 list.Add(new WeatherReading
                 {
@@ -140,6 +150,7 @@ namespace WeatherApp.Pages
             return list;
         }
 
+        // Load water readings
         private List<WaterReading> LoadWaterReadingsFromExcel(string filePath)
         {
             var list = new List<WaterReading>();
@@ -147,7 +158,7 @@ namespace WeatherApp.Pages
             var worksheet = package.Workbook.Worksheets[0];
             int rows = worksheet.Dimension.Rows;
 
-            for (int row = 6; row <= rows; row++)
+            for (int row = 6; row <= rows; row++) // Excel starts at row 6
             {
                 list.Add(new WaterReading
                 {
@@ -162,6 +173,7 @@ namespace WeatherApp.Pages
             return list;
         }
 
+        // Generates and saves a CSV report for Air readings
         [Obsolete]
         private async void OnGenerateAirQualityReportClicked(object sender, EventArgs e)
         {
@@ -181,6 +193,7 @@ namespace WeatherApp.Pages
                 }
 
                 await File.WriteAllTextAsync(reportFilePath, sb.ToString());
+
                 AirQualityStatusLabel.Text = $"Air Quality Report generated at {reportFilePath}";
                 AirQualityStatusLabel.TextColor = Colors.Green;
             }
@@ -191,6 +204,7 @@ namespace WeatherApp.Pages
             }
         }
 
+        // Generates weather report as CSV
         [Obsolete]
         private async void OnGenerateWeatherReportClicked(object sender, EventArgs e)
         {
@@ -206,6 +220,7 @@ namespace WeatherApp.Pages
                 }
 
                 await File.WriteAllTextAsync(reportFilePath, sb.ToString());
+
                 WeatherStatusLabel.Text = $"Weather Report generated at {reportFilePath}";
                 WeatherStatusLabel.TextColor = Colors.Green;
             }
@@ -216,6 +231,7 @@ namespace WeatherApp.Pages
             }
         }
 
+        // Generates water report as CSV
         [Obsolete]
         private async void OnGenerateWaterReportClicked(object sender, EventArgs e)
         {
@@ -231,6 +247,7 @@ namespace WeatherApp.Pages
                 }
 
                 await File.WriteAllTextAsync(reportFilePath, sb.ToString());
+
                 WaterStatusLabel.Text = $"Water Report generated at {reportFilePath}";
                 WaterStatusLabel.TextColor = Colors.Green;
             }
@@ -241,6 +258,7 @@ namespace WeatherApp.Pages
             }
         }
 
+        // Copies bundled Excel files into local storage if they don't already exist
         private async Task CopyExcelFilesIfNeededAsync()
         {
             var filesToCopy = new List<string>

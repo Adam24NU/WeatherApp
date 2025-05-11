@@ -25,9 +25,9 @@ public static class MauiProgram
         builder.Services.AddSingleton<Database>();  // Register Database
 
         // Register your pages (adjust to match your project structure)
-        builder.Services.AddTransient<RegisterPage>();  // Ensure your RegisterPage is here
-        builder.Services.AddTransient<LoginPage>();     // Likewise, ensure other pages are included if needed
-        builder.Services.AddTransient<AdminPage>();     // Example for AdminPage if required
+        builder.Services.AddTransient<RegisterPage>();  
+        builder.Services.AddTransient<LoginPage>();     
+        builder.Services.AddTransient<AdminPage>();    
 
         return builder.Build();
     }

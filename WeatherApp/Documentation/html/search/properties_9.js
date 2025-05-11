@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['userid_0',['UserId',['../class_weather_app_1_1_models_1_1_user.html#a5caf801f2734a41c5e2ec68ae10ba119',1,'WeatherApp::Models::User']]]
+  ['quantity_0',['Quantity',['../class_weather_app_1_1_pages_1_1_reference_data.html#ab72419c3654d4c75a7062c55c72f088c',1,'WeatherApp::Pages::ReferenceData']]]
 ];

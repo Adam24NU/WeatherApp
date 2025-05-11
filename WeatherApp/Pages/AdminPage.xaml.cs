@@ -81,11 +81,12 @@ namespace WeatherApp.Pages
             }
         }
 
-        // Simulate firmware update action (still optional in this case)
+        // Simulate firmware update action 
         private async void OnFirmwareUpdateClicked(object sender, EventArgs e)
         {
             await DisplayAlert("Firmware Update", "Sensor firmware update pushed successfully!", "OK");
         }
+        
         // Backup Data button handler (simulating backup)
         private async void OnBackupDataClicked(object sender, EventArgs e)
         {

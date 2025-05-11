@@ -18,6 +18,7 @@ var annotated_dup =
         [ "AdminPage", "class_weather_app_1_1_pages_1_1_admin_page.html", "class_weather_app_1_1_pages_1_1_admin_page" ],
         [ "MainPage", "class_weather_app_1_1_pages_1_1_main_page.html", "class_weather_app_1_1_pages_1_1_main_page" ],
         [ "OpsManagerPage", "class_weather_app_1_1_pages_1_1_ops_manager_page.html", "class_weather_app_1_1_pages_1_1_ops_manager_page" ],
+        [ "ReferenceData", "class_weather_app_1_1_pages_1_1_reference_data.html", "class_weather_app_1_1_pages_1_1_reference_data" ],
         [ "ScientistMapPage", "class_weather_app_1_1_pages_1_1_scientist_map_page.html", "class_weather_app_1_1_pages_1_1_scientist_map_page" ]
       ] ],
       [ "WinUI", "namespace_weather_app_1_1_win_u_i.html", [

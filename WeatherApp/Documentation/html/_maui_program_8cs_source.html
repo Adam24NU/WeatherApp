@@ -132,9 +132,9 @@ $(function(){initNavTree('_maui_program_8cs_source.html',''); initResizable(true
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        builder.Services.AddSingleton&lt;Database&gt;();  <span class="comment">// Register Database</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="comment">// Register your pages (adjust to match your project structure)</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        builder.Services.AddTransient&lt;RegisterPage&gt;();  <span class="comment">// Ensure your RegisterPage is here</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        builder.Services.AddTransient&lt;LoginPage&gt;();     <span class="comment">// Likewise, ensure other pages are included if needed</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        builder.Services.AddTransient&lt;AdminPage&gt;();     <span class="comment">// Example for AdminPage if required</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        builder.Services.AddTransient&lt;RegisterPage&gt;();  </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        builder.Services.AddTransient&lt;LoginPage&gt;();     </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        builder.Services.AddTransient&lt;AdminPage&gt;();    </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">return</span> builder.Build();</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>

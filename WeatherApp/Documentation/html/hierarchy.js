@@ -32,6 +32,7 @@ var hierarchy =
     [ "MauiWinUIApplication", null, [
       [ "WeatherApp.WinUI.App", "class_weather_app_1_1_win_u_i_1_1_app.html", null ]
     ] ],
+    [ "WeatherApp.Pages.ReferenceData", "class_weather_app_1_1_pages_1_1_reference_data.html", null ],
     [ "_Microsoft.Android.Resource.Designer.ResourceConstant", null, [
       [ "WeatherApp.Resource", "class_weather_app_1_1_resource.html", null ]
     ] ],

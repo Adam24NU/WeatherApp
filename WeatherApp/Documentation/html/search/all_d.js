@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['opsmanagerpage_0',['OpsManagerPage',['../class_weather_app_1_1_pages_1_1_ops_manager_page.html',1,'WeatherApp.Pages.OpsManagerPage'],['../class_weather_app_1_1_pages_1_1_ops_manager_page.html#ad29381aabd0f218afd2276717dfd7794',1,'WeatherApp.Pages.OpsManagerPage.OpsManagerPage()']]],
-  ['opsmanagerpage_2examl_2ecs_1',['OpsManagerPage.xaml.cs',['../_ops_manager_page_8xaml_8cs.html',1,'']]]
+  ['nitrate_0',['Nitrate',['../class_weather_app_1_1_models_1_1_water_reading.html#a5cf08508c5c4da3a97be13ff689e7334',1,'WeatherApp::Models::WaterReading']]],
+  ['nitrite_1',['Nitrite',['../class_weather_app_1_1_models_1_1_water_reading.html#a8499cda474e5e6475aaf2bdc70b73d82',1,'WeatherApp::Models::WaterReading']]],
+  ['no2_2',['NO2',['../class_weather_app_1_1_models_1_1_air_reading.html#a9e1955fe93a81f0bb6dce6c264870c7d',1,'WeatherApp::Models::AirReading']]],
+  ['nullvisibilityconverter_3',['NullVisibilityConverter',['../class_weather_app_1_1_null_visibility_converter.html',1,'WeatherApp']]],
+  ['nullvisibilityconverter_2ecs_4',['NullVisibilityConverter.cs',['../_null_visibility_converter_8cs.html',1,'']]]
 ];

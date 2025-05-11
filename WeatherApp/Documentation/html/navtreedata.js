@@ -47,7 +47,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_8_n_e_t_core_app_00_version_0av8_80_8_assembly_attributes_8cs.html",
-"class_weather_app_1_1_sensor_meta.html#af4946ad248d8d6ab5a77c657eb4f15f1"
+"class_weather_app_1_1_pages_1_1_reference_data.html#ab72419c3654d4c75a7062c55c72f088c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
